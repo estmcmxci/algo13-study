@@ -24,17 +24,27 @@ and measure no gas.
 ```bash
 git clone https://github.com/estmcmxci/ens-dnssec-alg13-study.git
 cd ens-dnssec-alg13-study
-cp .env.example .env          # any mainnet endpoint works for tiers 1 and 2
+cp .env.example .env
 forge install foundry-rs/forge-std --no-git
 ```
 
-**Tier 1 — the population, about 10 seconds, any public RPC.**
+**On endpoints.** Not every public RPC survives this. Tested 2026-07-29 from a clean clone:
+
+| endpoint | tiers 1–2 | tier 3 traces |
+|---|---|---|
+| `evm.stupidtech.net/v1/1` — the default | yes | **yes** |
+| `ethereum-rpc.publicnode.com` | yes | no — archive requests need a token |
+| `eth.drpc.org` | **no** — HTTP 408 under Foundry's fork workload | — |
+
+**Tier 1 — the population, about 10 seconds.**
 
 ```bash
 node research/scripts/c3-names.mjs
 ```
 
-One `eth_getLogs` for `Claim` events. Returns 2,145.
+One `eth_getLogs` for `Claim` events. Returns **2,145**, pinned to the study's cutoff block
+25,627,360. Set `CUTOFF_BLOCK=latest` to count the present-day population instead — it will be
+higher, because imports have continued since.
 
 **Tier 2 — the headline, about a minute.**
 

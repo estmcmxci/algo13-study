@@ -13,9 +13,14 @@ function decodeName(dataHex){
   while(i<raw.length){ const l=raw[i]; if(l===0)break; labels.push(raw.slice(i+1,i+1+l).toString('utf8')); i+=1+l; }
   return labels.join('.');
 }
+// Extraction cutoff of the published study. Pinned so this script reproduces the
+// figures in the write-up rather than drifting as new imports land. Override with
+// CUTOFF_BLOCK=latest to count the present-day population instead.
+const CUTOFF = process.env.CUTOFF_BLOCK || '0x1870ae0';   // 25,627,360 (2026-07-27)
+console.log('cutoff block:', CUTOFF === 'latest' ? 'latest' : parseInt(CUTOFF,16).toLocaleString());
 const out=[];
 for(const v of ['current','legacy']){
-  const logs=await rpc('eth_getLogs',[{fromBlock:'0x0',toBlock:'latest',address:REG[v],topics:[T[v]]}],{endpoint:'public'});
+  const logs=await rpc('eth_getLogs',[{fromBlock:'0x0',toBlock:CUTOFF,address:REG[v],topics:[T[v]]}],{endpoint:'public'});
   console.log(v+' Claim logs:',logs.length);
   for(const l of logs){ let name=null,err=null; try{name=decodeName(l.data);}catch(e){err=String(e.message).slice(0,60);}
     out.push({tx:l.transactionHash,block:parseInt(l.blockNumber,16),logIndex:parseInt(l.logIndex,16),
