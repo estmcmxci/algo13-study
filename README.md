@@ -7,11 +7,13 @@ which routed ENS's DNSSEC algorithm-13 (ECDSA P-256) verification to the
 Every DNS import ENS has recorded was re-executed against both the old and new verifier at their
 deployed mainnet bytecode, using each transaction's real proof.
 
-| | |
-|---|---|
-| cost per verification | `1,340,706 → 10,493` — a saving of `1,330,213` |
-| population | 2,145 successful imports across 4.93 years; 2,283 replay records |
-| extraction cutoff | block 25,627,360 (2026-07-27) |
+**The findings live in the brief, not here.** This repository holds the harness, the data and the
+means to check any figure in it — deliberately without restating them, so there is one place a
+number can be wrong.
+
+> **Read the study →** *(link pending publication)*
+
+Extraction cutoff: block **25,627,360** (2026-07-27). Every script here is pinned to it.
 
 ---
 
@@ -108,16 +110,9 @@ not between source revisions. Each vector is cryptographically verified before i
 recorded — gas on a failing vector is meaningless — and each measurement is asserted
 deterministic across repeated runs.
 
-Addresses under test:
-
-| | |
-|---|---|
-| P-256 old, current oracle | [`0x0faa24e5…`](https://evm.now/address/0x0faa24e538ba4620165933f68a9d142f79a68091) |
-| P-256 new, EIP-7951 | [`0xb091c4f6…`](https://evm.now/address/0xb091c4f6fac16edda5ee1e0f4738f80011905878) |
-| DNSSEC oracle (`dnssec.ens.eth`) | [`0x0fc31529…`](https://evm.now/address/0x0fc3152971714e5ed7723fafa650f86a4baf30c5) |
-
-The swap was activated in [one transaction](https://evm.now/tx/0x36cadd8ab8167ec1841b21d4993c01fe183afbe00859532e54762dd28e5a28dd)
-at block 24,619,423 (2026-03-09), which rewired algorithms 5, 8 and 13 together.
+The addresses under test are declared at the top of
+[`test/Unified.t.sol`](test/Unified.t.sol) — read them there rather than trusting this file to
+have copied them correctly.
 
 ## Changes made for publication
 
