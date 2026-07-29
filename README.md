@@ -94,6 +94,7 @@ test/                   Foundry harness. Unified.t.sol produces the headline fig
 research/scripts/       Node extraction and derivation scripts
 research/derived/       census and replay outputs
 research/gtld/          root-zone and gTLD algorithm census
+research/replay/hardhat-cross/   Hardhat/EDR cross-check — the second EVM implementation
 research/manifests/     per-artifact checksums
 research/audit/         verification records
 research/sources/       persisted third-party excerpts
@@ -122,9 +123,9 @@ at block 24,619,423 (2026-03-09), which rewired algorithms 5, 8 and 13 together.
 
 Two, both recorded so this tree can be diffed against the working one:
 
-1. **`research/scripts/endpoints.mjs`** reads the endpoint from the environment, falling back to
-   `.env` at the repo root. The study read it from `ens-contracts/.env`, a path that does not
-   exist here.
+1. **`research/scripts/endpoints.mjs`** and **`research/replay/hardhat-cross/hardhat.config.js`**
+   read the endpoint from the environment, falling back to `.env` at the repo root. The study read
+   it from `ens-contracts/.env`, a path that does not exist here.
 2. **`research/derived/p3-replay.jsonl`** is deduplicated by `callId` — 2,716 records to 2,283.
    The working file carried 433 exact duplicates. No measurement changed: every distinct
    `(callId, delta_gas)` pair is preserved, and the published totals reproduce from the

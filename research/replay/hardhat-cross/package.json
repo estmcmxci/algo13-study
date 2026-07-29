@@ -1,0 +1,9 @@
+{
+  "name": "alg13-hardhat-cross",
+  "private": true,
+  "type": "module",
+  "description": "Self-contained Hardhat 3.1.4 project for battery leg 4 (cross-implementation agreement). Deliberately OUTSIDE ens-contracts so that checkout stays pristine.",
+  "devDependencies": {
+    "hardhat": "3.1.4"
+  }
+}
