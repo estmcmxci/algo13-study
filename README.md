@@ -127,6 +127,19 @@ The addresses under test are declared at the top of
 [`test/Unified.t.sol`](test/Unified.t.sol) — read them there rather than trusting this file to
 have copied them correctly.
 
+## Continuous verification
+
+[`.github/workflows/verify.yml`](.github/workflows/verify.yml) re-runs tiers 1 and 2 on every push
+and weekly, asserting the exact figures the study publishes — the population, both verifier costs,
+every RSA modulus cost, and the RFC 5702 basis vector. It also re-checks every repo-located
+manifest checksum.
+
+The point is that a stale command fails here, on a schedule, rather than in front of a reviewer.
+Set a `MAINNET_RPC_URL` repo secret to run it against your own endpoint.
+
+**What this does not cover:** it proves the commands work at repo HEAD, not that the study's
+printed copy of them is current. If the invocation changes here, the write-up needs updating too.
+
 ## Changes made for publication
 
 Two, both recorded so this tree can be diffed against the working one:

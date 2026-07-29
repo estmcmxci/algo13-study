@@ -1,0 +1,96 @@
+name: verify published figures
+
+# The brief tells reviewers to run these commands and see these numbers. This job
+# asserts that is still true — on every push, and weekly so rot is found by a robot
+# rather than by the person you are trying to persuade.
+#
+# Scope: this proves the commands work at repo HEAD. It does NOT prove the brief's
+# copy of them is current. If the invocation here changes, update the brief too.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    - cron: '0 9 * * 1'      # Mondays, 09:00 UTC
+  workflow_dispatch:
+
+env:
+  # Set the MAINNET_RPC_URL repo secret to use your own endpoint. Falls back to the
+  # public one the study used, which serves all three tiers but is a free service.
+  RPC: ${{ secrets.MAINNET_RPC_URL || 'https://evm.stupidtech.net/v1/1' }}
+
+jobs:
+  tier1-population:
+    name: "tier 1 — population is 2,145 at the cutoff"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '24' }
+
+      - name: run the census script
+        env:
+          MAINNET_API_KEY: ${{ env.RPC }}
+        run: node research/scripts/c3-names.mjs | tee tier1.txt
+
+      - name: assert the published figure
+        run: |
+          grep -q 'cutoff block: 25,627,360' tier1.txt \
+            || { echo "::error::cutoff is not pinned to the published block"; exit 1; }
+          grep -q 'total claims: 2145' tier1.txt \
+            || { echo "::error::population is no longer 2,145 — the brief says it is"; exit 1; }
+
+  tier2-headline:
+    name: "tier 2 — headline is 1,340,706 → 10,493"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: foundry-rs/foundry-toolchain@v1
+
+      - name: install forge-std exactly as the README instructs
+        run: forge install foundry-rs/forge-std --no-git
+
+      - name: run the harness
+        run: forge test --match-path "test/Unified.t.sol" --fork-url "$RPC" -vv | tee tier2.txt
+
+      - name: assert every figure the brief and citation layer publish
+        run: |
+          fail=0
+          check () {
+            grep -q "$1" tier2.txt || { echo "::error::expected '$1' — not found"; fail=1; }
+          }
+          check 'p256_old_current 1340706'   # §1.1, §3.3 — old verifier
+          check 'p256_new 10493'             # §1.1, §3.3 — new verifier
+          check 'rsa_real_1024 31807'        # §3.4 per-modulus table
+          check 'rsa_real_1280 42736'
+          check 'rsa_real_2048 81733'
+          check 'rsa_real_4096 230837'
+          check 'rsa_rfc5702_vector 12873'   # §3.3 — the basis-validation vector
+          exit $fail
+
+  manifest:
+    name: "manifest checksums still verify"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: verify every repo-located artifact
+        run: |
+          python3 - <<'PY'
+          import json, hashlib, os, sys
+          arts = json.load(open('research/manifests/reproducibility-manifest.json'))['artifacts']
+          ok = bad = 0; failures = []
+          for a in arts:
+              if a.get('location') != 'repo' or a.get('sha256') is None:
+                  continue
+              p = a.get('repoPath', a['file'])
+              if not os.path.exists(p):
+                  failures.append(('MISSING', p)); bad += 1; continue
+              h = hashlib.sha256(open(p, 'rb').read()).hexdigest()
+              if h == a['sha256']: ok += 1
+              else: failures.append(('HASH', p)); bad += 1
+          print(f'{ok} verify, {bad} fail')
+          for kind, f in failures:
+              print(f'::error::{kind} {f}')
+          sys.exit(1 if bad else 0)
+          PY
