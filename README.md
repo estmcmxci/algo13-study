@@ -96,11 +96,24 @@ test/                   Foundry harness. Unified.t.sol produces the headline fig
 research/scripts/       Node extraction and derivation scripts
 research/derived/       census and replay outputs
 research/gtld/          root-zone and gTLD algorithm census
+research/replay/         the deep replay harness — see the note below
 research/replay/hardhat-cross/   Hardhat/EDR cross-check — the second EVM implementation
 research/manifests/     per-artifact checksums
 research/audit/         verification records
 research/sources/       persisted third-party excerpts
 ```
+
+### `research/replay/` does not run standalone
+
+`battery.mjs`, `census.mjs`, `harness.mjs` and `lib.mjs` are the replay harness that produced
+`p3-replay.jsonl`. They require an `ens-contracts` checkout adjacent to this tree — they
+`createRequire` from `ens-contracts/package.json` to reach its vendored `@noble/hashes` and
+Hardhat, which is a real dependency and not a path that can be patched away.
+
+They are committed **unmodified** so the method is readable and their checksums still match the
+original manifest. They are not part of the three tiers above, and nothing in this README claims
+they run from a clean clone. `research/replay/hardhat-cross/` is separate and does run, given an
+endpoint.
 
 ## How the measurement works
 
