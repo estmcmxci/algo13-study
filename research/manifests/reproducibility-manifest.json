@@ -1,0 +1,1409 @@
+{
+ "study": "algorithm13-direct-import-empirical",
+ "task": "#f40b5886 / f40b5886-1060-4d6d-b513-71be8740f884",
+ "extractionCutoffBlock": 25627360,
+ "chainId": 1,
+ "boundaries": {
+  "B_precompile": 23935694,
+  "P_ENS": {
+   "block": 24619423,
+   "txIndex": 259,
+   "logIndex": 584
+  },
+  "legacyOracleMigration": 13103261
+ },
+ "environment": {
+  "node": "v24.1.0",
+  "foundry": "forge 1.5.0-stable (anvil, --evm-version osaka)",
+  "hardhat": "3.1.4 (isolated project research/replay/hardhat-cross, EDR 0.12.0-next.22)",
+  "note": "ens-contracts checkout declares hardhat 3.1.4 but has 3.0.1 installed; the cross-check used the isolated 3.1.4 project so the checkout stayed pristine",
+  "solidity": "no verifier recompiled - deployed mainnet runtime bytecode installed via state override"
+ },
+ "dataSources": {
+  "alchemy": "archive state, receipts, transactions, blocks, eth_call, trace_transaction (URL read at runtime from ens-contracts/.env, NEVER committed)",
+  "alchemyCLI": "debug_traceTransaction / debug_traceCall / trace_block (account-level entitlement)",
+  "publicRpc": "https://evm.stupidtech.net/v1/1 - eth_getLogs (Alchemy free tier capped getLogs at 10 blocks) and debug_traceTransaction",
+  "dune": "ethereum.transactions, ethereum.traces, prices.usd_daily"
+ },
+ "duneQueries": [
+  {
+   "id": 8130605,
+   "purpose": "pilot: narrow-window direct-import calls",
+   "credits": 0.19
+  },
+  {
+   "id": 8130611,
+   "purpose": "full call census, tx + trace level",
+   "credits": 22.061
+  },
+  {
+   "id": "(failed-call rows)",
+   "purpose": "reverted direct-import calls, row level",
+   "credits": 15.214
+  },
+  {
+   "id": 8130740,
+   "purpose": "daily ETH/USD for valuation",
+   "credits": 0.007
+  },
+  {
+   "id": 8136137,
+   "purpose": "has OffchainDNSResolver EVER been called in a transaction (0 traces, 0 txs)",
+   "credits": 19.81
+  },
+  {
+   "id": 8136215,
+   "purpose": "baselines for the volume-surge control (mainnet txs, ENS activity, gas price)",
+   "credits": 2.741
+  },
+  {
+   "id": 8141587,
+   "purpose": "dashboard panel 1 v2 - per-verification cost, method-labelled",
+   "credits": 0.015
+  },
+  {
+   "id": 8141954,
+   "purpose": "ENS operation gas comparison (failed - cardinality on varbinary)",
+   "credits": 0
+  },
+  {
+   "id": 8141956,
+   "purpose": "ENS operation gas comparison v2 - median gas by contract and selector",
+   "credits": 4.626
+  },
+  {
+   "id": "8136610,8136614,8136617,8136624,8136628,8136641",
+   "purpose": "dashboard panels 1-6 (v1)",
+   "credits": 0.097
+  },
+  {
+   "queryId": 8142530,
+   "visualizationId": 12133757,
+   "panel": 1,
+   "version": 3,
+   "basis": "harness",
+   "note": "Panel 1 v3. Superseded viz 12132741 (106x) DELETED, not left live.",
+   "costCredits": 0.022
+  },
+  {
+   "queryId": 8142708,
+   "visualizationId": 12133941,
+   "panel": 3,
+   "costCredits": 0.034
+  },
+  {
+   "queryId": 8142710,
+   "visualizationId": 12133944,
+   "panel": 4,
+   "costCredits": 0.018
+  },
+  {
+   "queryId": 8142713,
+   "visualizationId": 12133948,
+   "panel": 5,
+   "costCredits": 0.038
+  },
+  {
+   "queryId": 8142720,
+   "visualizationId": 12133956,
+   "panel": 6,
+   "costCredits": 0.02
+  }
+ ],
+ "duneCreditsTotal": 64.894,
+ "duneCreditCeiling": 1000,
+ "duneQuota": 2500,
+ "alchemyCU": {
+  "baselineMTD": 626490,
+  "finalMTD": 5221774,
+  "delta": 4595284,
+  "approxUSD": 2.07,
+  "capUSD": 25,
+  "note": "plus ~40 CU for later verifier-wiring probes and Part E address checks"
+ },
+ "populations": {
+  "successfulClaims": 2145,
+  "registrarCalls": 2127,
+  "revertedDirectImportCalls": 156,
+  "replayRows": 2283,
+  "replayedOk": 2282,
+  "excluded": 1
+ },
+ "exclusions": [
+  {
+   "callId": "1:0x1a56de84223c86117563d2d0041f7943e028a1dd903bdc310f1504de92c355c3:",
+   "block": 14865359,
+   "period": "historical_hypothetical",
+   "registrarVersion": "legacy",
+   "population": "reverted",
+   "selector": "0x224199c2",
+   "reason": "calldata does not decode under its own selector ABI (\"calldata truncated reading arg 2\"), consistent with the call having failed on-chain out of gas",
+   "n13": 0,
+   "reachedAlg13": false,
+   "estimandImpact": "ZERO - n13 = 0, so it contributes nothing to any delta. Exclusion is auditable and costs nothing."
+  }
+ ],
+ "runInterruption": {
+  "cause": "network outage at approx census row 1660",
+  "rowsAffected": 87,
+  "signature": "anvil not ready ... after 0.3s (upstream unreachable) + 1 failed-to-get-storage",
+  "blockRange": "24295635..24725538 (contiguous)",
+  "resolution": "all 87 re-measured successfully after connectivity restored; none dropped",
+  "resumePredicate": "replay_status == ok, NOT callId presence (verified before resuming)"
+ },
+ "artifacts": [
+  {
+   "file": "output/addendum-volume-response.md",
+   "bytes": 10571,
+   "sha256": "1807af170b4697f55d693ce6e17d550e4235873f8db827f52ec62842897eaef7"
+  },
+  {
+   "file": "output/algorithm-adoption-and-cost.md",
+   "bytes": 40243,
+   "sha256": "9fa2a9112bd89ae269d3173aee052ab75dab52fc53f61e79319745e8bc1180ea"
+  },
+  {
+   "file": "output/checkpoint-1-readiness.md",
+   "bytes": 7898,
+   "sha256": "8cf75c6324efab5f6a92266ab3aeafa5029d7620980ee11be1197a6d49dc19e8"
+  },
+  {
+   "file": "output/checkpoint-2-population.md",
+   "bytes": 7109,
+   "sha256": "ba4b1fed496acc6f4d4fa69982ab10287793b337cfb21b81b64d39f6e213cef8"
+  },
+  {
+   "file": "output/checkpoint-3-attribution.md",
+   "bytes": 7567,
+   "sha256": "07361b765d4957ff1f4cd2b01a44c76e5e4fa03d2e4ca937f4bb059e822e09b1"
+  },
+  {
+   "file": "output/checkpoint-4-replay.md",
+   "bytes": 8490,
+   "sha256": "9ece2b1f809e532e5215ba7180c7464ebc5f4e3efaee8c8f8e65ea45b4542421"
+  },
+  {
+   "file": "output/corrections-to-package.md",
+   "bytes": 14574,
+   "sha256": "bfff8733cb0491d4290ce12fe32389db20e9062bcef77762668c615bd049eb20"
+  },
+  {
+   "file": "output/data-reference.md",
+   "bytes": 48070,
+   "sha256": "155ae78771594cc55fcf05e7497a92a6145ea081687d5c12df70aac543eb7f93"
+  },
+  {
+   "file": "output/ens-dnssec-alg13-eip7951-study.pdf",
+   "bytes": 1053314,
+   "sha256": "9065badaea870160e3f218729f114dcf9d2150db91053639890f179c550f2601"
+  },
+  {
+   "file": "output/ens-operation-gas-comparison.md",
+   "bytes": 7193,
+   "sha256": "e16df5011008730e99c4a4ddf4f71a3d1b49d7bb53525c860812ce1061d879cf"
+  },
+  {
+   "file": "output/final-report.md",
+   "bytes": 23436,
+   "sha256": "8bbaeab16b83dd4e3dfc0f2aaf34419ea872528b8ea7a5973f79aed2564b29c7"
+  },
+  {
+   "file": "output/final-report.md.bak",
+   "bytes": 21838,
+   "sha256": "fa49544f7361ad12e0926909ee93f88803b42b8d972f28f7807a7edf27c15941"
+  },
+  {
+   "file": "output/forum-post-draft.md",
+   "bytes": 7735,
+   "sha256": "f8dda30030a263518199a92e69876a87b232414d43876dad5185e6f8ea2ca0a6"
+  },
+  {
+   "file": "output/forum-post-draft.pdf",
+   "bytes": 107764,
+   "sha256": "7a4e1ee3fc65dc94e3274f8f1b147012ed6daca8024f3cab1f389c485d3668c5"
+  },
+  {
+   "file": "output/grant-brief.md",
+   "bytes": 18140,
+   "sha256": "c684861c5c110de3c7df760a08ab77ab990d5892f725ef985b07ccbc31a61e7e"
+  },
+  {
+   "file": "output/grant-brief.pdf",
+   "bytes": 256133,
+   "sha256": "d19e7ef26f5d4054e42f83bd1aa5128f8903d521f9a89aab5100ecc4f7fc6303"
+  },
+  {
+   "file": "output/gtld-algorithm-census.md",
+   "bytes": 9583,
+   "sha256": "15a1a183b1ef91a1be83570d3af255bda95502b1297040eac60f2e7fd19f828e"
+  },
+  {
+   "file": "output/inherited-assumptions-inventory.md",
+   "bytes": 6597,
+   "sha256": "0796b566747fcea4bd2de809cdbe192399ca7a3a79d6cf4bc379944504e9a15d"
+  },
+  {
+   "file": "output/phase-3-interim-status.md",
+   "bytes": 5355,
+   "sha256": "975686e0937e17158a9a371c9550843c25bbb100f036e01e24137958a48b51ff"
+  },
+  {
+   "file": "output/rpc-corruption-escalation.md",
+   "bytes": 4152,
+   "sha256": "63db63e9a1777510eaa5da32c6bf7275323a69103beba9defcb72c8b6f9042f4"
+  },
+  {
+   "file": "research/audit/VERDICT.md",
+   "bytes": 8473,
+   "sha256": "89d37b6eabfbe5079bf0fd4e8a8c68dc6308eced4d4edcd3416c7c86039916af"
+  },
+  {
+   "file": "research/decoder/README.md",
+   "bytes": 10312,
+   "sha256": "4e3718f2fae3562cd7776564ada001d21a10cc5353fe60e7fafd04203f6661b5"
+  },
+  {
+   "file": "research/decoder/abi.mjs",
+   "bytes": 4706,
+   "sha256": "822a454d96a8fb1e843ce6c2308cafc2e0d1c5cd4db5cc067225fb38eba43272"
+  },
+  {
+   "file": "research/decoder/algorithms.mjs",
+   "bytes": 5724,
+   "sha256": "2986558b79e22b578fd96c6b6e702d998400d850b6535e8d2c9e0a75d2ad0b05"
+  },
+  {
+   "file": "research/decoder/bytes.mjs",
+   "bytes": 2862,
+   "sha256": "3e6407b5c3cf8bcb3bb45ca0214366c65e3024f075e0fa3b585b389c03a31e75"
+  },
+  {
+   "file": "research/decoder/cli.mjs",
+   "bytes": 1792,
+   "sha256": "e7a7cf5606caf9873b21c53c5a51c247ef98fab892624c2ca5ba03be4f16e4e0"
+  },
+  {
+   "file": "research/decoder/config.mjs",
+   "bytes": 1686,
+   "sha256": "547475e4c63183609a95bdd401c19e37c3ab40639a8efc6338bd378de6406a4d"
+  },
+  {
+   "file": "research/decoder/errors.mjs",
+   "bytes": 1652,
+   "sha256": "0eeecdc8e5ccdb71dd67ca6bdc6c6b60a998fc4a67833c839a5d76e57dfc8f90"
+  },
+  {
+   "file": "research/decoder/index.mjs",
+   "bytes": 7885,
+   "sha256": "1998779717afd2d4a2c811f925c34271186af88119e44eadc5e8171f773d4025"
+  },
+  {
+   "file": "research/decoder/oracle.mjs",
+   "bytes": 13345,
+   "sha256": "2cb91e35a219a50b75e4d9f9ac4771e648f87aca259f94bc65341a6e17110bbe"
+  },
+  {
+   "file": "research/decoder/run-census-timechecked.mjs",
+   "bytes": 4295,
+   "sha256": "0725f3b58726f1b0a8eeb3bf49c6d41d82d155e19ba4122cf8d45c71cba56f5b"
+  },
+  {
+   "file": "research/decoder/run-census.mjs",
+   "bytes": 5855,
+   "sha256": "428cfbe6bd47ac7e84cadfaece3bd7c41989ce0617d8973bbacf718046cf4a06"
+  },
+  {
+   "file": "research/decoder/test/decoder.test.mjs",
+   "bytes": 25349,
+   "sha256": "af46340756b0082639397af0a2626a995dd600dedabee73835225adfa2b138bc"
+  },
+  {
+   "file": "research/decoder/test/encode.mjs",
+   "bytes": 3021,
+   "sha256": "7fedcda2cfaa956b06464428b2122d5b90145e1e5717b6766fa59b6f19cc669a"
+  },
+  {
+   "file": "research/decoder/test/fixtures.mjs",
+   "bytes": 10749,
+   "sha256": "2fab40b50192e5b5656753f9f3a47712e0880f8f534b38ea63b726c6529cb94a"
+  },
+  {
+   "file": "research/decoder/test/two-dispatch.mjs",
+   "bytes": 6036,
+   "sha256": "ac4a415164408a6be9b8bd222ccc797a4b7c09d6672767fd737e15641817e9ed"
+  },
+  {
+   "file": "research/decoder/wire.mjs",
+   "bytes": 6858,
+   "sha256": "a8164ad41e516f9e831f16944a87df9c61697092f665b45906f9e2e065df810e"
+  },
+  {
+   "file": "research/derived/c1-alg-composition.jsonl",
+   "bytes": 628004,
+   "sha256": "b88e2dd76f0b078ad087f2ec2ccc67b858badbe5eae28918aa8793a36031af39"
+  },
+  {
+   "file": "research/derived/c3-imported-names.json",
+   "bytes": 422776,
+   "sha256": "2a5b48b21a59c352d2d9bcf7df2a21c411466c59c627ec6df04406f2d4e19291"
+  },
+  {
+   "file": "research/derived/f1-real-vectors.json",
+   "bytes": 9466,
+   "sha256": "f97ae49f93b8e37f5bf7676e5e97fe662172b6c0f3a3328395b63ce7290a713d"
+  },
+  {
+   "file": "research/derived/f1-rederived.json",
+   "bytes": 283,
+   "sha256": "6ee959ed73b9952c2eef5022c41545371d4b80ad7355e6df714368688d8f685f"
+  },
+  {
+   "file": "research/derived/f1-rsa-keysizes.jsonl",
+   "bytes": 631907,
+   "sha256": "8f24c5da7741c698fb54718279e0a08f46f379d0618201a1a3e15c229766fd70"
+  },
+  {
+   "file": "research/derived/f1-rsa-summary.json",
+   "bytes": 343,
+   "sha256": "0f7872954112665a2977e47e0eef724a4600908066dc545420b644b767c45bf5"
+  },
+  {
+   "file": "research/derived/f2-comparison-rederived.json",
+   "bytes": 1635,
+   "sha256": "88853dfb21ca70a23286a2dbe842e43b3198b70eb911b4b648702d75f560431b"
+  },
+  {
+   "file": "research/derived/f3-rsasha1-vectors.json",
+   "bytes": 4498,
+   "sha256": "6c72b518911b0a0311be925e065975d2cd11e506a3c93c375dbce075c6fed77f"
+  },
+  {
+   "file": "research/derived/p1-calls-for-decode.json",
+   "bytes": 15114254,
+   "sha256": "012f7d2b8a2987c38c04c59671ce7d1eccdc7ba6fc7ae9d8332f3f7aca5d4c64"
+  },
+  {
+   "file": "research/derived/p1-census.jsonl",
+   "bytes": 16094194,
+   "sha256": "2e5ab63ccd5b0e5f9c6b22450a5d730283cbf2a6c745baa73f0835fd879994a1"
+  },
+  {
+   "file": "research/derived/p1-census.log",
+   "bytes": 2516,
+   "sha256": "09fc6cf969ca60ea97f4c523a09319dd20d7b13015892a23e3f0df820ffe862f"
+  },
+  {
+   "file": "research/derived/p1-claims.json",
+   "bytes": 398779,
+   "sha256": "952b43537c6fd008f1efc474fba46c8c1fd7041b7fc331f440a92874aacb90c3"
+  },
+  {
+   "file": "research/derived/p1-failed-calls.json",
+   "bytes": 60174,
+   "sha256": "a6eaa34cee26b1dcf9f7b359aa9c895b628b61c063f752e633b718651eee5041"
+  },
+  {
+   "file": "research/derived/p1-failed-census.jsonl",
+   "bytes": 1076719,
+   "sha256": "eb0b39744bb8cc3a64a354ddbb9a5713dea7fa352546d6f37df937b12d8a0de4"
+  },
+  {
+   "file": "research/derived/p1-standalone-submissions.json",
+   "bytes": 130,
+   "sha256": "f6c23db930ea8c00d9ef5bd2d0b641f8db2850283a880a688a31d46fad2dfd9f"
+  },
+  {
+   "file": "research/derived/p1-tracefilter-raw.json",
+   "bytes": 12203765,
+   "sha256": "6888d0975d6013cbbe2a6eccbbc53085f804ffe280cc0b6383a55da62b104f6b"
+  },
+  {
+   "file": "research/derived/p2-decode-timechecked.jsonl",
+   "bytes": 1412858,
+   "sha256": "7f42a3e01a73d98919161a0c9096b1c821e4205d0e31ba1975e95ae859c4df2a"
+  },
+  {
+   "file": "research/derived/p2-decode.jsonl",
+   "bytes": 1302254,
+   "sha256": "d0aec6c66e608d6edfd438e18fd33f241956744c8ef569eb602a7d33f56bd257"
+  },
+  {
+   "file": "research/derived/p2-reconciliation.json",
+   "bytes": 3886,
+   "sha256": "54b70b531a0cf7655be12746b08df3b9cfffd18dd057d8e9391340d259bdcefe"
+  },
+  {
+   "file": "research/derived/p3-assumption-audit.json",
+   "bytes": 239,
+   "sha256": "8cf1e2483c9116af11f022293d17c801d8f927a98f361996619395a7554434ec"
+  },
+  {
+   "file": "research/derived/p3-battery.json",
+   "bytes": 49349,
+   "sha256": "7d76a57315fdffd96a6aa02d210d1f708d499f2285e72ff978db54d88802bf52"
+  },
+  {
+   "file": "research/derived/p3-block-timestamps.json",
+   "bytes": 504238,
+   "sha256": "6a579d3b1c1404a6f7aa181f17e11e0c0638f0e14e5bf3451238a048f9f8ea42"
+  },
+  {
+   "file": "research/derived/p3-census-run.log",
+   "bytes": 8299,
+   "sha256": "1046303fded742033fdb284c49dec2f7ee0f322c6adf4219383d546f0a25a3ce"
+  },
+  {
+   "file": "research/derived/p3-leg4-hardhat.json",
+   "bytes": 394,
+   "sha256": "e787bc054da78e0b48409e3b05da4d75d5676316f4bfae8e9423dd91c279df98"
+  },
+  {
+   "file": "research/derived/p3-mutable-audit-events.json",
+   "bytes": 2478,
+   "sha256": "53c209eb9487c1d472b1f9a7bddb49d20941cfaac5328aeefdc3692f0f19ff1b"
+  },
+  {
+   "file": "research/derived/p3-mutable-audit-redo.json",
+   "bytes": 548,
+   "sha256": "6878b94c29e9793d9ab15faaa323f3eda87bc35c202dd3e2da9e73de70ea49b5"
+  },
+  {
+   "file": "research/derived/p3-mutable-audit.json",
+   "bytes": 8325,
+   "sha256": "a1d7d3de24a71c0300a2f3f0b2f0081ed7a8494e66fdb546417b88fe5b3f07c0"
+  },
+  {
+   "file": "research/derived/p3-override-map.json",
+   "bytes": 2334985,
+   "sha256": "5c6d45777f664efd7ea9054992a058c2b5efda5cac861cfd53a7a0573ea6d29b"
+  },
+  {
+   "file": "research/derived/p3-reference-measurements.json",
+   "bytes": 2012,
+   "sha256": "4257579d7728c8ca2de43db8af57627c368d74ef97e8facfc01dc713d8203f19"
+  },
+  {
+   "file": "research/derived/p3-replay-progress.log",
+   "bytes": 8391,
+   "sha256": "f5ab9f968c2de13a847c3e7283a8a38fbf56c4634bee8f076656519357be7972"
+  },
+  {
+   "file": "research/derived/p3-replay.jsonl",
+   "bytes": 2397303,
+   "sha256": "534ebc5705dafe62d3967e7df8ef0c9f698b5a05f5779af1c873e4ee3fc8a760"
+  },
+  {
+   "file": "research/derived/p3-strata-subset.json",
+   "bytes": 42856,
+   "sha256": "431de5b218ad48143e1d367efe73722451ab2c793ca67a55fb56daa61512bc42"
+  },
+  {
+   "file": "research/derived/p4-eth-usd-daily.json",
+   "bytes": 60800,
+   "sha256": "cd57c5903cd5b639d7fd9fa98f1f4bb2115eede0fceee2c528de6d4eb951f247"
+  },
+  {
+   "file": "research/derived/p5-disagreements.json",
+   "bytes": 5600,
+   "sha256": "c04b98b237bd80c3f17b61d7b4e536a3284adf430cbb5abcb47e737eeb1ad84c"
+  },
+  {
+   "file": "research/derived/p5-reverify.log",
+   "bytes": 525,
+   "sha256": "1e98073f57456790907a8d5f08b4dc7abb277fc86d26b99b7ae4c6c2bde4107d"
+  },
+  {
+   "file": "research/derived/p5-trace-reverify-v2.jsonl",
+   "bytes": 832667,
+   "sha256": "351453f9c77e23fb03d14939a4716774ee791bc2bc33a6f6713c7200114ca93f"
+  },
+  {
+   "file": "research/derived/p5-trace-reverify.jsonl",
+   "bytes": 773134,
+   "sha256": "d47cbf6e67420395042e49846152fead64257b67113017af191933bd6eba409a"
+  },
+  {
+   "file": "research/derived/p6-valuation-panels.json",
+   "bytes": 20319,
+   "sha256": "dfd7262a9f877342b7a1af4d86bbd52dd5388261fea04b6e1742f60cfac5590a"
+  },
+  {
+   "file": "research/derived/rpc-telemetry.jsonl",
+   "bytes": 73912,
+   "sha256": "f7070cda67bec039399c4737b476bcd4bd9928e8cb47fce1e67c858c79b0faae"
+  },
+  {
+   "file": "research/derived/step2-provenance.json",
+   "bytes": 4601,
+   "sha256": "5d8635e80dd236986b4bbbb6b69dbae8b4872d6ec626d5d5f1cf8566a88e8696"
+  },
+  {
+   "file": "research/gtld/census-v2.jsonl",
+   "bytes": 243271,
+   "sha256": "8a97383eb8675f8a724f4b4d05e06c3807f549b56fd716c3655bb574692fa39d"
+  },
+  {
+   "file": "research/gtld/census.jsonl",
+   "bytes": 311107,
+   "sha256": "7df81f17d3e6facdd48c6d3ef77c7d36e8252daa155bc5e02b4ba454fe540020"
+  },
+  {
+   "file": "research/gtld/census.log",
+   "bytes": 159,
+   "sha256": "c22165825843e6c9a5985ad859a79d048cee4c3196e1ca368bbbb4b8d6e83eda"
+  },
+  {
+   "file": "research/gtld/census.mjs",
+   "bytes": 2801,
+   "sha256": "91518deebc26413fe52d6d62e35234b4b974821a5911765fb7ab901013ccad0c"
+  },
+  {
+   "file": "research/gtld/crosscheck.jsonl",
+   "bytes": 21963,
+   "sha256": "dc41208cd1f30d810fe0e7fe477cdf1bb54e10d1270c031711c265ec685656b2"
+  },
+  {
+   "file": "research/gtld/crosscheck.mjs",
+   "bytes": 3058,
+   "sha256": "449cf6bb1ea10bfa6cb9ad5bb5ed7e6915c29aac344dd5403a12d3cba2ae67a1"
+  },
+  {
+   "file": "research/gtld/nic-chain.jsonl",
+   "bytes": 135323,
+   "sha256": "66c7a3e2e7ab952fcd0d46d1b9409a5485cdaddc1187b42c67f96dc554116567"
+  },
+  {
+   "file": "research/gtld/nic-chain.log",
+   "bytes": 61,
+   "sha256": "da4a0cdcfc9a5404c455d6a384b25209bddbf7bdf533fdefb0f2502f29182cd9"
+  },
+  {
+   "file": "research/gtld/nic-chain.mjs",
+   "bytes": 1769,
+   "sha256": "da2c4179f2370d231ed8453ac2347a87d335d63c2d61adc76fd41d30d766528f"
+  },
+  {
+   "file": "research/gtld/nic-summary.json",
+   "bytes": 115,
+   "sha256": "911859803544e7cc51bc6d57e3d89f80f28d32af8fc31a888b3d1ed08a115396"
+  },
+  {
+   "file": "research/gtld/ns-census.jsonl",
+   "bytes": 476738,
+   "sha256": "b3c6eb24916f3cc72c4df97280b181e886c59506cecdadd2ff96aa3d91a2bc7b"
+  },
+  {
+   "file": "research/gtld/ns-census.log",
+   "bytes": 146,
+   "sha256": "94081fc1cff9d0379037574bcbf6656da51c2dec951cd6cb89247e759abbfbbf"
+  },
+  {
+   "file": "research/gtld/ns-census.mjs",
+   "bytes": 1610,
+   "sha256": "60bf12b317233f4a1a247eab33a1c535b2c88fb47fcf5eeebce372006b1c3d2e"
+  },
+  {
+   "file": "research/gtld/population.json",
+   "bytes": 11082,
+   "sha256": "aa44837d9f3fb1e543362540b67015229308d4d1d4ddbbcdb11e4ba48057c476"
+  },
+  {
+   "file": "research/gtld/raw-ns/",
+   "bytes": null,
+   "sha256": "(0 raw response files; individually checksummed in the consuming dataset)"
+  },
+  {
+   "file": "research/gtld/raw-root/",
+   "bytes": null,
+   "sha256": "(1438 raw response files; individually checksummed in the consuming dataset)"
+  },
+  {
+   "file": "research/gtld/raw/",
+   "bytes": null,
+   "sha256": "(1102 raw response files; individually checksummed in the consuming dataset)"
+  },
+  {
+   "file": "research/gtld/reparse.mjs",
+   "bytes": 2011,
+   "sha256": "521edf55c7d668a62b48ed924021b8fed5e54fecd7facb30eeab1bdae37386da"
+  },
+  {
+   "file": "research/gtld/rfc/rfc5702.txt",
+   "bytes": 19425,
+   "sha256": "04871fb7e95f0ee18298bea6960527579f2a892d9c1a2658b6c3f21b3ec03446"
+  },
+  {
+   "file": "research/gtld/rfc/rfc6605.txt",
+   "bytes": 14332,
+   "sha256": "fa9b6f1fb4fb8426bdb0c56c134af3f1d962414082e3953f1c4e4e861ff459ee"
+  },
+  {
+   "file": "research/gtld/rfc/rfc8624.txt",
+   "bytes": 24118,
+   "sha256": "2014214b11d214fcb802da95432f7bed09fd11f2cce25f9dfcd04a0f121beff4"
+  },
+  {
+   "file": "research/gtld/root-census.jsonl",
+   "bytes": 308741,
+   "sha256": "1b4d951697d112c1af5b4e007b0cd12bdc60b4d9abeb536432d51d443756eae6"
+  },
+  {
+   "file": "research/gtld/root-census.log",
+   "bytes": 123,
+   "sha256": "2ebaaaecd0a8633b024ad8a1f32f057da3aa5816b77624b75751c172efa71e2d"
+  },
+  {
+   "file": "research/gtld/root-census.mjs",
+   "bytes": 2107,
+   "sha256": "ec18618ea6e9752d8dea9aa3d4cbe5a291b3698e8cee3f29e45610ae8724046f"
+  },
+  {
+   "file": "research/gtld/summary.json",
+   "bytes": 158,
+   "sha256": "32454489665c10c88b548172469733d11bfa6bdf6b0effdce811924549925b50"
+  },
+  {
+   "file": "research/manifests/bytecode-pins.json",
+   "bytes": 5134,
+   "sha256": "cd2697d51aea7481b77bae033a3918fb74bad708860838d77f938be4a665aff1"
+  },
+  {
+   "file": "research/manifests/reproducibility-manifest.json",
+   "bytes": 10536,
+   "sha256": "b20813c75059d8494be44ce25477d98bb3b4ff92565a440f5a1d1c1b71d1ef86"
+  },
+  {
+   "file": "research/raw/",
+   "bytes": null,
+   "sha256": "(2 raw response files; individually checksummed in the consuming dataset)"
+  },
+  {
+   "file": "research/replay-ref/foundry.toml",
+   "bytes": 93,
+   "sha256": "5aa252743c6bf05653ea412e7a0e4f101755491f5e82871495cc8f4bd612b88c"
+  },
+  {
+   "file": "research/replay-ref/test/AccessCost.t.sol",
+   "bytes": 1927,
+   "sha256": "17ecacb938cf958a8e67fc9b56bab9eebbf50a6687000ca0bae3377222e5853c"
+  },
+  {
+   "file": "research/replay-ref/test/AlgCosts.t.sol",
+   "bytes": 3636,
+   "sha256": "da3d2b2abdbd3767fc37c7e60dd0edec276f1352ba50914c5749b79051c00b33"
+  },
+  {
+   "file": "research/replay-ref/test/AlgCosts2.t.sol",
+   "bytes": 2832,
+   "sha256": "628ab72337247d82e97a6861b99a7a13407175907c7dded7492a64dcc199ec74"
+  },
+  {
+   "file": "research/replay-ref/test/Leg7.t.sol",
+   "bytes": 3044,
+   "sha256": "a8919912d15da0c62e29847713d02f64320a145f87507dc8643d6a1b8cbb3aea"
+  },
+  {
+   "file": "research/replay-ref/test/RealAddr.t.sol",
+   "bytes": 1753,
+   "sha256": "7851de5527b7c8e18fc077f467f508ea8f0461f69a0cc31b4f69735e3366e3b5"
+  },
+  {
+   "file": "research/replay-ref/test/RealPair.t.sol",
+   "bytes": 3034,
+   "sha256": "37565f40d71ef77e6464cbad32470e62583ec67d9d7a9165dba7876bed308781"
+  },
+  {
+   "file": "research/replay-ref/test/RsaSha1.t.sol",
+   "bytes": 5213,
+   "sha256": "86b45af323d6572f748557270f78dbdff443d2e0ccf6ac98d87e0147601e22b6"
+  },
+  {
+   "file": "research/replay-ref/test/RsaSizes.t.sol",
+   "bytes": 10899,
+   "sha256": "d4ead2722f764d6fdb7d433724d0ebf3b2ebf0ef5057b1c3d8faa36a1c1f309f"
+  },
+  {
+   "file": "research/replay-ref/test/ThreeRegimes.t.sol",
+   "bytes": 2131,
+   "sha256": "e8a1da68374d4fe79f0ad3422a9713f883a76d9f5b24dfa7701d821ca11c33fc"
+  },
+  {
+   "file": "research/replay-ref/test/Unified.t.sol",
+   "bytes": 3578,
+   "sha256": "b0817d710076c70ff94970221daea3189256358b578a56db2f960aced48a9bc8"
+  },
+  {
+   "file": "research/replay-ref/test/WarmCold.t.sol",
+   "bytes": 2006,
+   "sha256": "136ba0d6ae037193715eddc59021a775b8219580b394a72eee11e4a57545962d"
+  },
+  {
+   "file": "research/replay/battery.mjs",
+   "bytes": 15846,
+   "sha256": "e1c49e8c87b577ed567d5851ab48973e50a083d399a4008acaef7fd89ef1bfa3"
+  },
+  {
+   "file": "research/replay/census.mjs",
+   "bytes": 4117,
+   "sha256": "cf32697bc1ab909461bd08ec5defbb5db6ca75cd1882427603f0b5714a302eae"
+  },
+  {
+   "file": "research/replay/hardhat-cross/artifacts/artifacts.d.ts",
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "file": "research/replay/hardhat-cross/cross-verifiers.js",
+   "bytes": 3011,
+   "sha256": "736fb783452745e68ccab089220f48278d63d172552eda1d5234adf854a5b544"
+  },
+  {
+   "file": "research/replay/hardhat-cross/hardhat.config.js",
+   "bytes": 546,
+   "sha256": "8f8b0dfb8bae812145529101e215ab132b28973d79bd8e5e3300b21bf0cbc80b"
+  },
+  {
+   "file": "research/replay/hardhat-cross/package-lock.json",
+   "bytes": 42524,
+   "sha256": "362106970218e5842b52db1e5583a7fa45b17bf4d3aa30b100498986944263e5"
+  },
+  {
+   "file": "research/replay/hardhat-cross/package.json",
+   "bytes": 303,
+   "sha256": "0bfe473e7e16db25328e1d2cfa8f9cb4679670786228589dc52d19fb483b84b0"
+  },
+  {
+   "file": "research/replay/hardhat-cross/probe-osaka.js",
+   "bytes": 1566,
+   "sha256": "598db3b817ae0ebd4981a90ee27e9edb52ea8f991810476de6ad42348ba944f3"
+  },
+  {
+   "file": "research/replay/harness.mjs",
+   "bytes": 10690,
+   "sha256": "064a68e9bab7da211e27367a881f820c9d2f3a35cd08b6722928f10e2973fc45"
+  },
+  {
+   "file": "research/replay/lib.mjs",
+   "bytes": 8713,
+   "sha256": "61f3e0cd329e93da97067740c035aad757fe7f5b4be3eb043eff63cb49800550"
+  },
+  {
+   "file": "research/scripts/assert-pins.mjs",
+   "bytes": 2133,
+   "sha256": "b0ab4a5db8a55bfd1647e35b83b7c2e71eb8659777517768cafabc2ebb66d262"
+  },
+  {
+   "file": "research/scripts/c1-alg-composition.mjs",
+   "bytes": 3146,
+   "sha256": "7e447d3b3f0842a9654d893e3967d86b0c9fbaaa7af26f1b1908382e8aec3fc4"
+  },
+  {
+   "file": "research/scripts/c3-names.mjs",
+   "bytes": 2084,
+   "sha256": "5de5a7305837aa8f4ea9ddd53f033cf798b9a988072c5c3afe6755b288af054b"
+  },
+  {
+   "file": "research/scripts/endpoints.mjs",
+   "bytes": 2621,
+   "sha256": "6228e32b9042b133690b97fb0442b72b6ec7117de3fdf765b9e93a402d79c7f4"
+  },
+  {
+   "file": "research/scripts/f1-extract-vectors.mjs",
+   "bytes": 2507,
+   "sha256": "c8b841e25251eab39c3a4f7252792948cc192a1e7bfddb401eadb7725381173c"
+  },
+  {
+   "file": "research/scripts/f1-rsa-keysizes.mjs",
+   "bytes": 3705,
+   "sha256": "6d7364809be594e3379e0cdc40470acbd1c455b98d1955279f4408c1fc8021cd"
+  },
+  {
+   "file": "research/scripts/f2-rederive-comparison.mjs",
+   "bytes": 4488,
+   "sha256": "56ce15dc6b87fba7f3359b77fdab9ee65d58cddd057593723e2d84a566b66882"
+  },
+  {
+   "file": "research/scripts/f3-rsasha1-vectors.mjs",
+   "bytes": 2846,
+   "sha256": "22c4f488d555765407f012483c04c9bad298a8f198cf5fd35ed4123f86832eeb"
+  },
+  {
+   "file": "research/scripts/p1-census.mjs",
+   "bytes": 4458,
+   "sha256": "deafdb12aec0c30e7c7e34628779ccdf659054b52f206316c181305b76fb7673"
+  },
+  {
+   "file": "research/scripts/p1-corruption-survey.mjs",
+   "bytes": 1522,
+   "sha256": "810f2c7355fcabb117a22dfc50f010e78d7f2f835d2fbe4004701a30eb2e1e78"
+  },
+  {
+   "file": "research/scripts/p1-failed-census.mjs",
+   "bytes": 3159,
+   "sha256": "c0756d17ed9a7c19344bbacfbc8a5d02cf3b05dc8d279fd0e6fec6d49f0d5b9a"
+  },
+  {
+   "file": "research/scripts/p1-gap.mjs",
+   "bytes": 738,
+   "sha256": "d6d486f8e33b8259d8f24471c9675b644c7a3a9f6ad139fde511a7c4d0522529"
+  },
+  {
+   "file": "research/scripts/p1-gap2.mjs",
+   "bytes": 1786,
+   "sha256": "e7c88488b890e8cd4beaa6df844c5ff52f1493a6080ef244f74171c26d2f43ad"
+  },
+  {
+   "file": "research/scripts/p1-population.mjs",
+   "bytes": 3406,
+   "sha256": "cc2bcbe798df604ccfc52cf0f4314c9ffe45280f02731c15b40bdb48ac414b70"
+  },
+  {
+   "file": "research/scripts/p1-probe-tracefilter.mjs",
+   "bytes": 1042,
+   "sha256": "d576a7c3b64926ce17afb10499fdee7da434e0e330885d744d7732ac313b4a2f"
+  },
+  {
+   "file": "research/scripts/p1-probe2.mjs",
+   "bytes": 783,
+   "sha256": "e09ee63877bae0a166236652f608ca32f02ad06360707523a6729a14411af302"
+  },
+  {
+   "file": "research/scripts/p1-probe3.mjs",
+   "bytes": 1048,
+   "sha256": "a12f8ff3ea4e65ada9a1267e14b35c95a07c31a7940293404bbd691c4f6dea62"
+  },
+  {
+   "file": "research/scripts/p1-probe4.mjs",
+   "bytes": 1223,
+   "sha256": "a56828611aa211a4cd05aa2f201724e41f09e8ad565f4ef2c8b47090eb4021cd"
+  },
+  {
+   "file": "research/scripts/p1-probe5.mjs",
+   "bytes": 1510,
+   "sha256": "6a67279498f7c2fc69d51a5a1013f219f32a1c270e16151af338096ae131e84b"
+  },
+  {
+   "file": "research/scripts/p1-smoke.mjs",
+   "bytes": 667,
+   "sha256": "76f0b7e118a8eaae090249311cfb614d754afd77f070310cd276aa6f0efbf454"
+  },
+  {
+   "file": "research/scripts/p1-test-validated-trace.mjs",
+   "bytes": 811,
+   "sha256": "e6429155553c39d8d57e1fe1cd7b7eecf15d42656b947eddf7af14cabf526274"
+  },
+  {
+   "file": "research/scripts/p1-verify-endpoints.mjs",
+   "bytes": 1169,
+   "sha256": "324812a34714341ade0dbfc9b7b75c3631e65a4d1caaaff6bc57f0de03f05aa7"
+  },
+  {
+   "file": "research/scripts/p3-anchors.mjs",
+   "bytes": 1240,
+   "sha256": "68bca4e3434b8cb92d57f1633d3a0c6dc6602660b901c671874591f008f1e0ad"
+  },
+  {
+   "file": "research/scripts/p3-assumption-audit.mjs",
+   "bytes": 3536,
+   "sha256": "008234cfee3a21b8843fdd1d6e337ab64e8e6ed05625aafdecd899e1daaa5be6"
+  },
+  {
+   "file": "research/scripts/p3-audit-redo.mjs",
+   "bytes": 1603,
+   "sha256": "de18907543afb677057c1def8a3c00926137fa192bdb3fbf3e4dac3294ab3408"
+  },
+  {
+   "file": "research/scripts/p3-legacy-oracle-history.mjs",
+   "bytes": 438,
+   "sha256": "64b07e1289cf61af5e1f839256601532692d766dbac5718589a29719b2944353"
+  },
+  {
+   "file": "research/scripts/p3-mutable-audit-events.mjs",
+   "bytes": 1721,
+   "sha256": "0de98b180b95494ff52b8a0326736ba31366f456b643af379d79469edc427828"
+  },
+  {
+   "file": "research/scripts/p3-mutable-audit-probe.mjs",
+   "bytes": 3492,
+   "sha256": "24c0da81d47c43a6b4fed1ae2f134b0752998aa2674ffd9c89aa19577a7bd83f"
+  },
+  {
+   "file": "research/scripts/p3-orig-oracle.mjs",
+   "bytes": 522,
+   "sha256": "3877ef5373815a2177798d49f2b13642be399e1ebb2c78bab947d7c159ccfc79"
+  },
+  {
+   "file": "research/scripts/p3-override-map.mjs",
+   "bytes": 3588,
+   "sha256": "b710325a756796558def6c06d5ef8b535bb20bb0d0704f4210d88f6ba4c26e65"
+  },
+  {
+   "file": "research/scripts/p3-pin-orig-oracle.mjs",
+   "bytes": 1531,
+   "sha256": "a5522ca8e238dc9c1c8fb64087a6b0a75a6a7eed726dd7adf4b52f7db7682aaf"
+  },
+  {
+   "file": "research/scripts/p3-strata.mjs",
+   "bytes": 1687,
+   "sha256": "b104f63d7dab715c3cfdb0e9f6bef658e0bed6a70a074c089c1cc7b2b2641776"
+  },
+  {
+   "file": "research/scripts/p3-timestamps.mjs",
+   "bytes": 1390,
+   "sha256": "a60ee2a9dfb068f5aee964b17d8c675ac38a2927befee26b8f0d5d0510961268"
+  },
+  {
+   "file": "research/scripts/p5-reverify-fix.mjs",
+   "bytes": 3317,
+   "sha256": "6b06ae94b94b03839f11861a60160843429c20ac916348e83d6795e0bb094cd6"
+  },
+  {
+   "file": "research/scripts/p5-trace-reverify.mjs",
+   "bytes": 3808,
+   "sha256": "4508b52984104bf834082487b5ca104b607f9ad805f84d496240eca36ddb673f"
+  },
+  {
+   "file": "research/scripts/rpc.mjs",
+   "bytes": 3385,
+   "sha256": "20d444bfdc3f68e4e01d237f2312786c8a4d2184a8630bd6da1f835dbb02f106"
+  },
+  {
+   "file": "research/scripts/rpc2.mjs",
+   "bytes": 2094,
+   "sha256": "d14a2c873d5c1f8bf10105585cc3c0ee667c2f3d4467c6a6e841651124235b91"
+  },
+  {
+   "file": "research/scripts/rpc3.mjs",
+   "bytes": 2026,
+   "sha256": "0eaff84f59d65f2f0b8981c8874da28703135f674a8fb111953c65ef9a64fdfa"
+  },
+  {
+   "file": "research/scripts/step1-bprecompile.mjs",
+   "bytes": 2442,
+   "sha256": "afcddad3f7bcd1612e2bce8b6409c115faf867e9a0e66d1383f9db4e40695213"
+  },
+  {
+   "file": "research/scripts/step1b-precompile-gas.mjs",
+   "bytes": 1505,
+   "sha256": "4e43d4e1cce505c3bef3c7eb5dda5f9d02f89855a746abc7f854b62a848bc230"
+  },
+  {
+   "file": "research/scripts/step2-provenance.mjs",
+   "bytes": 4557,
+   "sha256": "40fcb981c545fdc6661ae87bd1dd761e05e7fe2c8b02bea684705f6d34e3369d"
+  },
+  {
+   "file": "research/scripts/step2b-p256new-conflict.mjs",
+   "bytes": 1620,
+   "sha256": "d89c103f7bd90a4d3ede8332b3646eb334de2c43f5b2c98362d45d67b399847b"
+  },
+  {
+   "file": "research/scripts/step2c-endpoint-consistency.mjs",
+   "bytes": 1018,
+   "sha256": "e665cdef4b8eea345b0ea54c4247ef589a4f271bee14939a008fc110e23d942c"
+  },
+  {
+   "file": "research/scripts/step2d-bisect-stability.mjs",
+   "bytes": 837,
+   "sha256": "42c4721d57e000c79352ef9788223538137cfd140187cfdad6c1b9d4d89c3b14"
+  },
+  {
+   "file": "research/scripts/step2e-false-empty.mjs",
+   "bytes": 1549,
+   "sha256": "b04c118f45f49b3093d6ac68eca12056d5bb96950404aaf2c9684d0cad030e0e"
+  },
+  {
+   "file": "research/scripts/step2f-final.mjs",
+   "bytes": 1985,
+   "sha256": "ad4babe8f8121f44a45853a7027ac5bfd7bdbfc262590f60fcd8cdb6f179bf57"
+  },
+  {
+   "file": "research/scripts/step2g-rest.mjs",
+   "bytes": 1612,
+   "sha256": "1fbf1d534f991d00ca1444a332fd59d9b422924c5ffa99b1df022970a52f6342"
+  },
+  {
+   "file": "research/scripts/step2h-burst.mjs",
+   "bytes": 1018,
+   "sha256": "8278fba2888ca6ae1c701b0b2c1c33f7c4ce9f6fe93ab7f96cec140a5d306305"
+  },
+  {
+   "file": "research/scripts/step2i-wiring.mjs",
+   "bytes": 1858,
+   "sha256": "2b1742d50839ac82d34d22776b51e8e2caec8462bf3947f1340ba843f1d263f0"
+  },
+  {
+   "file": "research/scripts/step2j-legacy-oracle.mjs",
+   "bytes": 1350,
+   "sha256": "b54dde4916a39574aed63d046033c3f05f1d715008664439c543ca31aff55472"
+  },
+  {
+   "file": "research/scripts/step2k-periods.mjs",
+   "bytes": 1412,
+   "sha256": "9f549be474d235aadbe10c3cd7a91e4b498ef4e5fbdb13c22aad220ecaa8c92b"
+  },
+  {
+   "file": "research/scripts/step2l-verifiers.mjs",
+   "bytes": 769,
+   "sha256": "4445a2c8e4e2805c5ccee8c238c0256480510a1dad14bb09932e94ed4345c09a"
+  },
+  {
+   "file": "research/scripts/step3-pin-bytecode.mjs",
+   "bytes": 3148,
+   "sha256": "717af0cdabc67e9bbc386acf9f5e3212e8748e2c0f8ed9c2834e7bee818fadb6"
+  },
+  {
+   "file": "research/scripts/test-assert-pins.mjs",
+   "bytes": 882,
+   "sha256": "c5ea0b2db38e462940a927a26e7443efa8bde9fe74be25d951b9c3c55a622ca3"
+  },
+  {
+   "file": "research/sources/external-excerpts.md",
+   "bytes": 12092,
+   "sha256": "597a731080d60940c9c3291d8f0bde27a12df15a81aad5b3141823bae0ad3d1c"
+  },
+  {
+   "file": "research/sources/raw/clowes-tsg.html",
+   "bytes": 27616,
+   "sha256": "27670a5b547347d5a3abef67a306d416d3ece766155528ff836d658b2604c537"
+  },
+  {
+   "file": "research/sources/raw/clowes-tsg.txt",
+   "bytes": 5861,
+   "sha256": "acc42c1c2238be587c7f9be694409dcf296ab63f0bbf6ebb4cd4b972f22fc127"
+  },
+  {
+   "file": "research/sources/raw/ens-q2-2026.html",
+   "bytes": 769126,
+   "sha256": "897f53bef29defbb602afedd89a82cb1098716fe437a0aa315e0b8923e932faa"
+  },
+  {
+   "file": "research/sources/raw/ens-q2-2026.txt",
+   "bytes": 24523,
+   "sha256": "e1354ce70539d1928641de25bf5a94fc90cb12f2842d59e4222d9d57be0de03d"
+  }
+ ],
+ "regeneratedAt": "2026-07-28",
+ "dashboard": {
+  "id": 217124,
+  "url": "https://dune.com/steglabs5451/ens-dnssec-algorithm-13-eip-7951-impact-pr-509",
+  "rebuild": "final, 2026-07-28 — rebuilt against the artifact final claim set",
+  "panels": 9,
+  "inventory": [
+   {
+    "panel": 1,
+    "title": "Per-verification cost — 128x",
+    "queryId": 8142530,
+    "visualizationId": 12133757,
+    "status": "v3, harness basis",
+    "basisOnPanel": true
+   },
+   {
+    "panel": 2,
+    "title": "Whole-flow reduction — 84.9%",
+    "queryId": null,
+    "visualizationId": 12127293,
+    "status": "retained, basis note added",
+    "basisOnPanel": true
+   },
+   {
+    "panel": 3,
+    "title": "Count versus cost",
+    "queryId": 8142708,
+    "visualizationId": 12133941,
+    "status": "NEW",
+    "basisOnPanel": true
+   },
+   {
+    "panel": 4,
+    "title": "Outlier to reversal",
+    "queryId": 8142710,
+    "visualizationId": 12133944,
+    "status": "NEW",
+    "basisOnPanel": true
+   },
+   {
+    "panel": 5,
+    "title": "RSA key-size distribution by level",
+    "queryId": 8142713,
+    "visualizationId": 12133948,
+    "status": "NEW",
+    "basisOnPanel": true
+   },
+   {
+    "panel": 6,
+    "title": "Coverage and its dependency",
+    "queryId": 8142720,
+    "visualizationId": 12133956,
+    "status": "REWORKED — replaces 98.1%-only panel",
+    "basisOnPanel": true
+   },
+   {
+    "panel": 7,
+    "title": "Census integrity",
+    "queryId": null,
+    "visualizationId": 12127305,
+    "status": "retained, coverage sentence + independent verification added"
+   },
+   {
+    "panel": 8,
+    "title": "The canonical record was wrong",
+    "queryId": null,
+    "visualizationId": 12127310,
+    "status": "retained, harness basis + verification tallies added",
+    "basisOnPanel": true
+   },
+   {
+    "panel": 9,
+    "title": "Which change did users respond to?",
+    "queryId": null,
+    "visualizationId": 12127325,
+    "status": "retained, causation disclaimer strengthened"
+   }
+  ],
+  "deletedVisualizations": [
+   {
+    "visualizationId": 12132741,
+    "reason": "superseded 106x per-verification panel — deleted, not unlinked"
+   },
+   {
+    "visualizationId": 12127297,
+    "reason": "superseded coverage panel leading on 98.1% alone — deleted, not unlinked"
+   }
+  ],
+  "ratioDisclosure": "Panel 1 states 128x with the 107x-149x range and names that the independent re-derivation arrived at the higher figure.",
+  "denominatorFix": "Panel 3 built on one denominator (full census 9,931). The 64.9%/6.3% pairing mixed a full-census count with a realized-period gas share; on one population the figures are 65.3%/8.5% and 34.7%/91.5%."
+ },
+ "externalSources": {
+  "file": "research/sources/external-excerpts.md",
+  "note": "excerpts only, not full copies; tiered as OFFICIAL RECORD / STANDARD / FIRST-HAND TESTIMONY / AUTHOR OWN",
+  "clowesTSG": {
+   "url": "https://thomasclowes.com/dns-ens-and-the-icann-technical-study-group/",
+   "byline": "Thomas Clowes",
+   "published": "2026-04-29",
+   "retrieved": "2026-07-28",
+   "httpStatus": 200,
+   "bytes": 27616,
+   "sha256": "27670a5b547347d5a3abef67a306d416d3ece766155528ff836d658b2604c537",
+   "tier": "FIRST-HAND TESTIMONY",
+   "note": "Previously recorded as unlocatable; reachable by direct URL. Supports data-reference §4.1-§4.4 as verified-as-quoted. The hard-problem passage is an attendee comment relayed by Clowes, not his own assertion and not ICANN policy."
+  },
+  "ensQ2_2026": {
+   "url": "https://discuss.ens.domains/t/ens-labs-quarterly-progress-reports/20565/8",
+   "publisher": "ENS Labs",
+   "retrieved": "2026-07-28",
+   "httpStatus": 200,
+   "bytes": 769126,
+   "tier": "OFFICIAL PUBLICATION",
+   "sha256": "897f53bef29defbb602afedd89a82cb1098716fe437a0aa315e0b8923e932faa",
+   "closes": "TSG seat item (data-reference S4.14)"
+  }
+ },
+ "laterWork": {
+  "partC": "per-import algorithm composition, provider concentration, TLD cross-reference",
+  "partD": "three-hypothesis discrimination on gTLD algorithm share",
+  "partE": "doma.xyz dependency timing and claimant analysis",
+  "gtldCensus": "1,099 post-2012 gTLDs + full 1,438-TLD root zone",
+  "rsaKeySizes": "modulus distribution from real proofs + gas at each size (f1-*)",
+  "comparisonRederivation": {
+   "date": "2026-07-28",
+   "reason": "RSA costs in the §3 comparison rested on the RFC 5702 test vector, superseded by real-modulus measurement",
+   "harness": "research/replay-ref/test/Unified.t.sol — one harness, one basis, all figures",
+   "basisValidation": "RFC 5702 reproduces at 12,873 and the new verifier at 10,493, identical to the values already published, establishing commensurability",
+   "gas": {
+    "p256_old_current": 1340706,
+    "p256_old_legacy": 1645872,
+    "p256_new": 10493,
+    "rsa_rfc5702_superseded": 12873,
+    "rsa_1024": 31807,
+    "rsa_1280": 42736,
+    "rsa_2048": 81733,
+    "rsa_4096": 230837
+   },
+   "productionWeightedRSA": 66051,
+   "rsaVerificationsObserved": 6482,
+   "corrected": {
+    "oldP256_over_RSA": "20.3x (was ~104x)",
+    "RSA_over_newP256": "6.29x - new P-256 is cheaper (was 1.23x parity)"
+   },
+   "weightingIndependent": "new P-256 cheaper than RSA at every observed modulus size; narrowest margin 3.03x at 1024-bit",
+   "crossCheck": "census delta 1,329,589 + 10,493 = 1,340,082 vs harness 1,340,706 - agree to 0.047%"
+  },
+  "basisReversal": {
+   "date": "2026-07-28",
+   "contaminationSwept": [
+    "output/final-report.md",
+    "output/forum-post-draft.md",
+    "output/corrections-to-package.md (A1, A2)",
+    "output/gtld-algorithm-census.md",
+    "output/inherited-assumptions-inventory.md (A12)",
+    "output/data-reference.md (S1.1, S1.2, S1.3, S1.5, S3.9, SX.1)",
+    "Dune panel 1 + panel 5 text"
+   ],
+   "notContaminated": [
+    "checkpoints 1-4 (delta correctly labelled as delta)",
+    "research/derived/p6-valuation-panels.json (meanPerVerification, correctly a mean delta)",
+    "panels 2,3,4,6"
+   ],
+   "authorArtifact": "output/grant-brief.md lines 25, 36, 97, 110 - manager-owned, listed not edited"
+  },
+  "rsasha1Measurement": {
+   "date": "2026-07-28",
+   "why": "RSASHA1 was shown as an em-dash in the gas column; it does not share RSASHA256 cost curve because the EVM has no SHA-1 precompile",
+   "verifier": "0x58E0383E21f25DaB957F6664240445A514E9f5e8",
+   "measured": {
+    "alg5_2048_736B": 512762,
+    "alg7_2048_314B": 298605
+   },
+   "comparison": "RSASHA256 at 2048-bit is 81,733 - RSASHA1 costs 3.7x-6.3x more per verification",
+   "gap": "no 1024-bit alg-5/7 vector extractable; 21 verifications priced by subtracting the measured 24,646 modexp difference",
+   "bounds": {
+    "low": 10829424,
+    "high": 18967390
+   },
+   "chosen": "high (conservative against the alg-13-dominance claim)"
+  }
+ },
+ "credentialSweep": {
+  "date": "2026-07-28",
+  "scope": "research/ and output/, 4,846 non-vendored files",
+  "alchemyKeyOccurrences": 0,
+  "alchemyHostOccurrences": 0,
+  "sepoliaKey": 0,
+  "infuraKey": 0,
+  "bearerTokens": 0,
+  "privateKeys": 0,
+  "falsePositives": "\"alchemy\" appears only as an endpoint LABEL, as the imported domain alchemy.black, and as the field n13_alchemy",
+  "remediated": "one absolute home path in p3-battery.json replaced with «HOME»",
+  "gitignore": "added at repo subdir root; excludes .env, node_modules, all raw/ response dirs and *.log",
+  "rerun2": {
+   "date": "2026-07-28",
+   "scope": "8 new/modified files",
+   "result": "clean - zero occurrences of key, keyed endpoint URL, or home path"
+  },
+  "incident2": {
+   "date": "2026-07-28",
+   "cause": "auditor shadowed global URL constructor; Node TypeError embedded the keyed endpoint and printed it",
+   "onDiskInPackage": "CLEAN - key absent from every package artifact",
+   "persistedIn": "4 local session transcripts under ~/.claude/projects (1 from this incident 2026-07-28, 3 pre-existing from an unrelated project 2026-06-29/30)",
+   "gitExposure": "none - .env untracked",
+   "action": "ROTATE MAINNET_API_KEY - REQUIRED"
+  }
+ },
+ "basisRuling": {
+  "date": "2026-07-28",
+  "ruling": "HARNESS BASIS THROUGHOUT",
+  "supersedes": "census-mean-primary (106x)",
+  "values": {
+   "oldCost": 1340706,
+   "newCost": 10493,
+   "saving": 1330213,
+   "ratio": "127.8x",
+   "reductionPct": 99.22,
+   "legacyOldCost": 1645872,
+   "legacySaving": 1635379,
+   "legacyRatio": "156.9x"
+  },
+  "reasons": [
+   "internally consistent - 1,340,706 - 10,493 = 1,330,213 exactly, where the census framing yields a headline whose own subtraction fails (1,317,088 vs a claimed 1,330,213, a 13,125 mismatch)",
+   "self-validating - reproduces 12,873 and 10,493 exactly, the values already carried by the brief",
+   "independently corroborated - census delta 1,329,589 + new cost 10,493 = 1,340,082 vs harness 1,340,706, 0.047% apart, no shared code"
+  ],
+  "note": "No measurement changed. 1,329,589 is the census DELTA and was used as the old verifier COST.",
+  "unmoved": {
+   "daoExecutableUnderstatement": "6.8x - derived on both bases (6.770x harness, 6.766x census)"
+  },
+  "moved": {
+   "newSideUnderstatement": "3.6x -> 3.0x",
+   "ratio": "106x -> 127.8x",
+   "reductionPct": "99.1% -> 99.2%",
+   "rsaShareAfter": "87.9% -> 89.6%",
+   "totalReduction": "92.8% -> 92.9%"
+  }
+ },
+ "verificationTallies": {
+  "claims": 60,
+  "confirmed": 41,
+  "corrected": 11,
+  "verifiedAsQuoted": 4,
+  "partiallyVerified": 1,
+  "unverifiable": 3,
+  "originallyUnverifiable": 8,
+  "retrievalFailures": 5,
+  "genuineGaps": 3,
+  "note": "11 corrected, every one caught by measurement rather than review. 5 of 8 UNVERIFIABLE verdicts were my retrieval failures on live, directly-fetchable sources."
+ },
+ "independentVerification": {
+  "agent": "coder",
+  "verdict": "research/audit/VERDICT.md",
+  "reproduced": [
+   "saving 1,330,213",
+   "realized gas saved 1,123,866,630",
+   "9,931 verifications 6,444/3,449/38",
+   "2,145 imports / 2,127 calls",
+   "4.93y / 1.19 per day",
+   "realized totals + headroom on harness basis"
+  ],
+  "differs": {
+   "absoluteCosts": "1,339,194 / 8,981 vs 1,340,706 / 10,493 - constant 1,512 offset both sides",
+   "ratio": "149.1x vs 127.8x - same saving, context-sensitive divisor"
+  },
+  "unreproducible": [
+   "reverted enumeration 156 - trace_filter tier-gated"
+  ],
+  "auditorFindingsNotMine": [
+   "c3-imported-names.json has 2,146 rows, one past cutoff",
+   "2 of 156 reverted are tx-level successes",
+   "1 call never replayed - true coverage 2,282/2,283",
+   "legacy verifier ~23% dearer than current-oracle"
+  ],
+  "stance": "Disagreements reported, not reconciled. Saving is basis-independent; ratio is basis-qualified."
+ },
+ "duneQuotaPlan": 2500,
+ "populationBasis": {
+  "fullCensus": {
+   "applies": [
+    "§3.6",
+    "§3.7"
+   ],
+   "n": "9,931 verifications / 2,127 calls",
+   "table": {
+    "RSASHA256": {
+     "n": 6444,
+     "byCount": "64.9%",
+     "byGas": "8.4%"
+    },
+    "ECDSAP256SHA256": {
+     "n": 3449,
+     "byCount": "34.7%",
+     "byGas": "91.2%"
+    },
+    "RSASHA1": {
+     "n": 38,
+     "byCount": "0.4%",
+     "byGas": "0.4%"
+    }
+   },
+   "totalGasBefore": 5069145940
+  },
+  "realizedPeriod": {
+   "applies": [
+    "§1.4",
+    "§1.5",
+    "§3.9"
+   ],
+   "n": "1,890 verifications / 315 imports",
+   "values": {
+    "totalReduction": "92.9%",
+    "alg13ShareBefore": "93.7%",
+    "afterSwap": "89.6% RSA / 10.4% alg13"
+   },
+   "fullCensusEquivalents": {
+    "totalReduction": "90.5%",
+    "alg13ShareBefore": "91.2%",
+    "afterSwap": "92.5% / 7.5%"
+   }
+  },
+  "rule": "Impact figures on the realized period (the window the change affected); structural composition on the full census (where the counts already were). Every published figure names its population inline."
+ }
+}

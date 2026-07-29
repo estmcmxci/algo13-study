@@ -1,0 +1,1 @@
+{"Status":0,"TC":false,"RD":true,"RA":true,"AD":true,"CD":false,"Question":[{"name":"kddi","type":43}],"Answer":[{"name":"kddi","type":43,"TTL":86400,"data":"2134 RSASHA256 2 871a87191b82d082df95647615db803c3cf6e7b80578b018118c2dd27d7fa00b"}]}

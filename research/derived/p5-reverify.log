@@ -1,0 +1,14 @@
+re-verify: 2127 txs (2127 calls), 0 done, 2127 to do
+  200/2127  agree=198 disagree=2 err=0
+  400/2127  agree=396 disagree=4 err=0
+  600/2127  agree=593 disagree=7 err=0
+  800/2127  agree=793 disagree=7 err=0
+  1000/2127  agree=988 disagree=12 err=0
+  1200/2127  agree=1187 disagree=13 err=0
+  1400/2127  agree=1384 disagree=16 err=0
+  1600/2127  agree=1583 disagree=17 err=0
+  1800/2127  agree=1777 disagree=23 err=0
+  2000/2127  agree=1977 disagree=23 err=0
+
+DONE  agree=2104 disagree=23 errors=0
+disagreements written: 23

@@ -1,0 +1,1 @@
+{"Status":0,"TC":false,"RD":true,"RA":true,"AD":true,"CD":false,"Question":[{"name":"icu","type":43}],"Answer":[{"name":"icu","type":43,"TTL":82808,"data":"31762 RSASHA256 2 ccc397a837f6491166129e1d99ed03cca6635166b2f5b58c65b5cf516ae92b8f"},{"name":"icu","type":43,"TTL":82808,"data":"46625 RSASHA256 2 bb6ac27bbb99b05da380516d9c342bec3585259e22e4791472908e4370067886"}]}

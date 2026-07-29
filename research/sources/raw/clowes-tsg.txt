@@ -1,0 +1,65 @@
+DNS, ENS, and the ICANN Technical Study Group
+Thomas&#x27; Blog
+Home
+About Thomas
+Get In Touch
+29 Apr 2026
+4 min read
+icann
+DNS, ENS, and the ICANN Technical Study Group
+During the ICANN Contracted Parties summit in Manchester, ICANN announced their intention to form a Technical Study Group entitled " gTLD Integrations with Alternative Naming Systems ". This is a surprising development as it suggests that ICANN may start evaluating how its registries interact with naming systems it does not control.
+This announcement came during a panel entitled ' Responsible Bridging of the Web2/Web3 Namespace ' that was selected through a democratic voting process from submitted proposals - that is to say, there is clearly interest from the ICANN community around alternate namespaces.
+The panel provided some high level technical insight into the problem domain (from Paul Hoffman) as well as updates from the other panelists.
+Responsible Integration into the Domain Ecosystem
+Back in February I provided technical insight on the workings of the Ethereum Name Service (ENS) to the RIDE Work Party an initiative led by ICANN's Security and Stability Advisory Committee (SSAC).
+During this panel, Rick Wilhelm (CTO of PIR.org and SSAC Chair) announced that the SSAC are in the process of writing their report. Crucially he noted that they do not intend to tell alternate namespaces how they should operate or implement their products. Rather they will outline how the DNS system works in relevant contexts such that integrators can do so in a responsible manner. The focus is not to regulate how we function, but rather to provide guidance for safe, stable DNS integration.
+Noting this, what happened next was particularly intriguing..
+The ICANN View - Registry Service?
+Francisco Arias (VP, GDS Technical Services at ICANN) provided an update from ICANN. He stated that integration with alternate namespaces requires recognition as a Registry Service (RS), and as a result announced the formation of the aforementioned Technical Study Group. He noted that it would be made up of a small, diverse group to facilitate quick progress, with transparent processes and publicly available materials.
+This positioning seems directly contradictory to the positioning and advice coming out of the SSAC.
+The Terminology
+To understand why Francisco’s comments are so significant, we need to look at the specific definitions ICANN uses, some of which are contractual constraints that registries are legally bound by.
+A Registry Operator (RO) (like Verisign for .com, or Public Interest Registry for .org) runs the back-end of a TLD . The Registry Operator is bound by a Registry Agreement (RA) which outlines " the rights, duties, liabilities, and obligations between a registry operator applicant and ICANN ".
+A Registry Service (RS) is essentially any functionality the registry provides that affects how domain names are registered, resolved, or behave. This includes:
+DNS resolution
+WHOIS / RDAP data access
+DNSSEC signing
+EPP provisioning (registrars talking to the registry)
+Premium pricing, reserved names, etc.
+Crucially, ICANN defines this broadly. It’s not just “ technical DNS stuff ” - it’s anything that could impact security, stability, or competition in the DNS ecosystem.
+The Registry Services Evaluation Process (RSEP) is the process through which ICANN reviews requests by registries to introduce or change a Registry Service.
+Bridging the Ecosystems
+What I find most interesting here is the implication - ICANN now intends to evaluate how its registries interact with systems entirely outside of its control.
+I’ve been engaging with ICANN on ENS-related technical topics, and I attend these conferences to understand exactly what this community expects from alternative namespaces. ENS has always been committed to responsible DNS integration; our goal is to provide utility to users without creating technical instability or consumer confusion.
+This positioning is demonstrated further by ENS Labs participation at ICANN events and their public comments on the new gTLD round - for example, this submission from Alexander Urbelis on name collision procedure.
+I am particularly intrigued by what happens next and intend to share these thoughts directly with Francisco. Additionally I would like to represent ENS on the Technical Study Group such that we can continue to constructively collaborate.
+One immediate thought: while ICANN's efforts look at registry-level integrations, there are registrar -level integration mechanisms yet to be addressed - there is an argument to be had that an on-chain representation of a DNS name is an added service at the registrar level, similar in nature to packaging an email or hosting with a domain registration.
+Additional Notes
+I specifically noted some comments from attendees that I wanted to note and will relay within the ENS ecosystem:
+It was highlighted that technical integration may be straightforward but appropriate governance - especially around domain lifecycle and consumer expectations - is the hard problem .
+It was noted that there is a governance gap - many alternative namespaces do not have robust governance, in contrast to DNS, leading to fragmentation and risk.
+Issues such as domain renewals, life cycle synchronization, data transformation, and attack vectors were flagged. I am a fan of Paul Hoffman's definition of a bridge, and note that it is an important albeit nuanced problem.
+Published by:
+You might also like...
+10
+Jun
+Turning ENS Names into Discoverable AI Agents
+4 min read
+12
+May
+EnhancedAccessControl in ENSv2
+3 min read
+01
+May
+What ENS Data Suggests About Pricing, Retention, and Speculation
+4 min read
+17
+Mar
+Indexing the Ethereum Name Service
+8 min read
+09
+Dec
+From Stagnation to Structure: Fixing ENS Governance
+12 min read
+Thomas&#x27; Blog © 2026
+Powered by Ghost

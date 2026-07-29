@@ -1,0 +1,1 @@
+{"Status":0,"TC":false,"RD":true,"RA":true,"AD":true,"CD":false,"Question":[{"name":"at","type":43}],"Answer":[{"name":"at","type":43,"TTL":86400,"data":"1253 ECDSAP256SHA256 2 ba17c1bacb3fb49f7760ad1f7e71e17ab39ee0df3e9d3bf23fd3d70d6cf1719e"},{"name":"at","type":43,"TTL":86400,"data":"60960 ECDSAP256SHA256 2 a00073dd75c499465fe829381ce3f5488fc353d06e68c7f90a04d26a0d71a694"}]}

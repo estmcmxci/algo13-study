@@ -1,0 +1,1 @@
+{"Status":0,"TC":false,"RD":true,"RA":true,"AD":true,"CD":false,"Question":[{"name":"xn--54b7fta0cc","type":43}],"Answer":[{"name":"xn--54b7fta0cc","type":43,"TTL":86400,"data":"63049 RSASHA256 1 91e8936dfe81e7350daf041bd12b77f29643a13d"},{"name":"xn--54b7fta0cc","type":43,"TTL":86400,"data":"63049 RSASHA256 2 dcdd04c4493e029dee060d18a91e87be930b9ce4c54fc7921f51f27455843dcb"}]}

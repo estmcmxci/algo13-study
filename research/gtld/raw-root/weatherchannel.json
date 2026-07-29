@@ -1,0 +1,1 @@
+{"Status":0,"TC":false,"RD":true,"RA":true,"AD":true,"CD":false,"Question":[{"name":"weatherchannel","type":43}],"Answer":[{"name":"weatherchannel","type":43,"TTL":86400,"data":"47695 RSASHA256 2 b2f90e6997386b0411808f05702d0f9ac00f5c0d129262394c86e1ba79977be2"}]}

@@ -1,0 +1,1 @@
+{"Status":0,"TC":false,"RD":true,"RA":true,"AD":true,"CD":false,"Question":[{"name":"gallup","type":43}],"Answer":[{"name":"gallup","type":43,"TTL":86400,"data":"34159 RSASHA256 2 ae9bba11562a260aaa062e2eb9881443044fdb8998b6a81c25d34d0d6bf49cb5"}]}

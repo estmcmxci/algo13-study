@@ -1,0 +1,1 @@
+{"Status":0,"TC":false,"RD":true,"RA":true,"AD":true,"CD":false,"Question":[{"name":"bmw","type":43}],"Answer":[{"name":"bmw","type":43,"TTL":86400,"data":"27910 RSASHA256 2 39614cab4109a1b7b9917e39631416e97086839970f15957fd37ca05fffe1470"},{"name":"bmw","type":43,"TTL":86400,"data":"43579 RSASHA256 2 b543b5adba44e6e32d11c93bb4e729d80fa1197f59b2ae505a1e292605234793"}]}

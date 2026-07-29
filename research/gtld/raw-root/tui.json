@@ -1,0 +1,1 @@
+{"Status":0,"TC":false,"RD":true,"RA":true,"AD":true,"CD":false,"Question":[{"name":"tui","type":43}],"Answer":[{"name":"tui","type":43,"TTL":86400,"data":"23341 RSASHA256 2 6e0f7acb53334cd152a11d99f274fc3bb7da5aeb5ee1d08b74490ce25e116642"},{"name":"tui","type":43,"TTL":86400,"data":"35342 RSASHA256 2 60bac1e816660ea6cc89bbe453c4cac50ee7fbc9bbac3ca6f8eebfb1a24af721"}]}

@@ -1,0 +1,26 @@
+{
+  "claimEvents_total": 2145,
+  "claimEvents_legacy": 1324,
+  "claimEvents_current": 821,
+  "claim_txs_distinct": 2145,
+  "claimEvents_realized": 315,
+  "claim_txs_realized": 315,
+  "first_claim_block": 13083904,
+  "last_claim_block": 25622490,
+  "blockRangeUsed": {
+    "cutoff": 25627360,
+    "realizedFrom": 24619423
+  },
+  "txs_with_multiple_claims": 0,
+  "multi_claim_detail": [],
+  "raw_trace_files": 2127,
+  "registrar_calls_from_raw_traces": 2127,
+  "registrar_calls_by_version": {
+    "legacy": 1306,
+    "current": 821
+  },
+  "distinct_registrar_callIds": 2127,
+  "claim_txs_without_trace_file": 18,
+  "trace_files_without_claim": 0,
+  "rpcCalls": 2
+}

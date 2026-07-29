@@ -1,0 +1,1024 @@
+{
+ "panels": {
+  "monthly": [
+   {
+    "month": "2021-08",
+    "calls": 31,
+    "eligible": 4,
+    "eligibilityRate": 0.129,
+    "dispatches": 8,
+    "deltaGas": "29091899",
+    "eth": 2.078213,
+    "usd": 6640.26,
+    "reverted": 6
+   },
+   {
+    "month": "2021-09",
+    "calls": 62,
+    "eligible": 19,
+    "eligibilityRate": 0.3065,
+    "dispatches": 38,
+    "deltaGas": "81854295",
+    "eth": 4.65199,
+    "usd": 15582.39,
+    "reverted": 7
+   },
+   {
+    "month": "2021-10",
+    "calls": 28,
+    "eligible": 11,
+    "eligibilityRate": 0.3929,
+    "dispatches": 22,
+    "deltaGas": "39519034",
+    "eth": 3.025901,
+    "usd": 10557.68,
+    "reverted": 4
+   },
+   {
+    "month": "2021-11",
+    "calls": 55,
+    "eligible": 12,
+    "eligibilityRate": 0.2182,
+    "dispatches": 24,
+    "deltaGas": "83537179",
+    "eth": 10.716805,
+    "usd": 48092.67,
+    "reverted": 19
+   },
+   {
+    "month": "2021-12",
+    "calls": 59,
+    "eligible": 19,
+    "eligibilityRate": 0.322,
+    "dispatches": 38,
+    "deltaGas": "97737528",
+    "eth": 7.708399,
+    "usd": 31663.12,
+    "reverted": 15
+   },
+   {
+    "month": "2022-01",
+    "calls": 37,
+    "eligible": 7,
+    "eligibilityRate": 0.1892,
+    "dispatches": 14,
+    "deltaGas": "29387082",
+    "eth": 3.38514,
+    "usd": 10096.26,
+    "reverted": 7
+   },
+   {
+    "month": "2022-02",
+    "calls": 51,
+    "eligible": 15,
+    "eligibilityRate": 0.2941,
+    "dispatches": 30,
+    "deltaGas": "88360657",
+    "eth": 5.263192,
+    "usd": 14996.28,
+    "reverted": 11
+   },
+   {
+    "month": "2022-03",
+    "calls": 52,
+    "eligible": 18,
+    "eligibilityRate": 0.3462,
+    "dispatches": 35,
+    "deltaGas": "63526784",
+    "eth": 1.818096,
+    "usd": 5411.21,
+    "reverted": 2
+   },
+   {
+    "month": "2022-04",
+    "calls": 45,
+    "eligible": 15,
+    "eligibilityRate": 0.3333,
+    "dispatches": 30,
+    "deltaGas": "57210365",
+    "eth": 2.452881,
+    "usd": 7603.24,
+    "reverted": 4
+   },
+   {
+    "month": "2022-05",
+    "calls": 73,
+    "eligible": 35,
+    "eligibilityRate": 0.4795,
+    "dispatches": 67,
+    "deltaGas": "125908197",
+    "eth": 3.896372,
+    "usd": 8875.14,
+    "reverted": 6
+   },
+   {
+    "month": "2022-06",
+    "calls": 51,
+    "eligible": 29,
+    "eligibilityRate": 0.5686,
+    "dispatches": 58,
+    "deltaGas": "102587438",
+    "eth": 3.991002,
+    "usd": 5193,
+    "reverted": 3
+   },
+   {
+    "month": "2022-07",
+    "calls": 107,
+    "eligible": 63,
+    "eligibilityRate": 0.5888,
+    "dispatches": 125,
+    "deltaGas": "211084633",
+    "eth": 3.179088,
+    "usd": 4097.11,
+    "reverted": 5
+   },
+   {
+    "month": "2022-08",
+    "calls": 82,
+    "eligible": 54,
+    "eligibilityRate": 0.6585,
+    "dispatches": 105,
+    "deltaGas": "193904801",
+    "eth": 1.915047,
+    "usd": 3239.14,
+    "reverted": 8
+   },
+   {
+    "month": "2022-09",
+    "calls": 105,
+    "eligible": 63,
+    "eligibilityRate": 0.6,
+    "dispatches": 118,
+    "deltaGas": "202409377",
+    "eth": 1.649001,
+    "usd": 2472.26,
+    "reverted": 10
+   },
+   {
+    "month": "2022-10",
+    "calls": 82,
+    "eligible": 51,
+    "eligibilityRate": 0.622,
+    "dispatches": 103,
+    "deltaGas": "171685541",
+    "eth": 2.429921,
+    "usd": 3408.61,
+    "reverted": 2
+   },
+   {
+    "month": "2022-11",
+    "calls": 68,
+    "eligible": 31,
+    "eligibilityRate": 0.4559,
+    "dispatches": 64,
+    "deltaGas": "127622708",
+    "eth": 1.697017,
+    "usd": 2195.77,
+    "reverted": 7
+   },
+   {
+    "month": "2022-12",
+    "calls": 50,
+    "eligible": 24,
+    "eligibilityRate": 0.48,
+    "dispatches": 45,
+    "deltaGas": "83049451",
+    "eth": 1.163543,
+    "usd": 1450.58,
+    "reverted": 4
+   },
+   {
+    "month": "2023-01",
+    "calls": 28,
+    "eligible": 10,
+    "eligibilityRate": 0.3571,
+    "dispatches": 20,
+    "deltaGas": "48912844",
+    "eth": 0.914977,
+    "usd": 1342.76,
+    "reverted": 5
+   },
+   {
+    "month": "2023-02",
+    "calls": 29,
+    "eligible": 17,
+    "eligibilityRate": 0.5862,
+    "dispatches": 34,
+    "deltaGas": "60245442",
+    "eth": 1.611637,
+    "usd": 2640.54,
+    "reverted": 2
+   },
+   {
+    "month": "2023-03",
+    "calls": 38,
+    "eligible": 22,
+    "eligibilityRate": 0.5789,
+    "dispatches": 44,
+    "deltaGas": "73614308",
+    "eth": 1.612678,
+    "usd": 2678.27,
+    "reverted": 2
+   },
+   {
+    "month": "2023-04",
+    "calls": 27,
+    "eligible": 12,
+    "eligibilityRate": 0.4444,
+    "dispatches": 24,
+    "deltaGas": "40838744",
+    "eth": 1.184521,
+    "usd": 2211.47,
+    "reverted": 1
+   },
+   {
+    "month": "2023-05",
+    "calls": 38,
+    "eligible": 21,
+    "eligibilityRate": 0.5526,
+    "dispatches": 42,
+    "deltaGas": "68880577",
+    "eth": 3.393682,
+    "usd": 6226.44,
+    "reverted": 2
+   },
+   {
+    "month": "2023-06",
+    "calls": 51,
+    "eligible": 44,
+    "eligibilityRate": 0.8627,
+    "dispatches": 89,
+    "deltaGas": "145690780",
+    "eth": 2.590205,
+    "usd": 4679.76,
+    "reverted": 0
+   },
+   {
+    "month": "2023-07",
+    "calls": 35,
+    "eligible": 25,
+    "eligibilityRate": 0.7143,
+    "dispatches": 50,
+    "deltaGas": "81882568",
+    "eth": 1.691403,
+    "usd": 3196.32,
+    "reverted": 0
+   },
+   {
+    "month": "2023-08",
+    "calls": 24,
+    "eligible": 10,
+    "eligibilityRate": 0.4167,
+    "dispatches": 20,
+    "deltaGas": "32704737",
+    "eth": 0.56564,
+    "usd": 993.75,
+    "reverted": 1
+   },
+   {
+    "month": "2023-09",
+    "calls": 37,
+    "eligible": 21,
+    "eligibilityRate": 0.5676,
+    "dispatches": 44,
+    "deltaGas": "75077641",
+    "eth": 0.694666,
+    "usd": 1125.19,
+    "reverted": 1
+   },
+   {
+    "month": "2023-10",
+    "calls": 47,
+    "eligible": 31,
+    "eligibilityRate": 0.6596,
+    "dispatches": 64,
+    "deltaGas": "110721491",
+    "eth": 1.14874,
+    "usd": 1951.83,
+    "reverted": 5
+   },
+   {
+    "month": "2023-11",
+    "calls": 20,
+    "eligible": 12,
+    "eligibilityRate": 0.6,
+    "dispatches": 27,
+    "deltaGas": "44161279",
+    "eth": 1.095219,
+    "usd": 2198.57,
+    "reverted": 1
+   },
+   {
+    "month": "2023-12",
+    "calls": 18,
+    "eligible": 14,
+    "eligibilityRate": 0.7778,
+    "dispatches": 32,
+    "deltaGas": "52191864",
+    "eth": 1.374023,
+    "usd": 3080.69,
+    "reverted": 0
+   },
+   {
+    "month": "2024-01",
+    "calls": 19,
+    "eligible": 9,
+    "eligibilityRate": 0.4737,
+    "dispatches": 20,
+    "deltaGas": "37529168",
+    "eth": 0.518054,
+    "usd": 1218.36,
+    "reverted": 3
+   },
+   {
+    "month": "2024-03",
+    "calls": 9,
+    "eligible": 8,
+    "eligibilityRate": 0.8889,
+    "dispatches": 18,
+    "deltaGas": "29279161",
+    "eth": 0.689803,
+    "usd": 2401.19,
+    "reverted": 1
+   },
+   {
+    "month": "2024-04",
+    "calls": 26,
+    "eligible": 20,
+    "eligibilityRate": 0.7692,
+    "dispatches": 48,
+    "deltaGas": "63883284",
+    "eth": 0.746138,
+    "usd": 2466.46,
+    "reverted": 1
+   },
+   {
+    "month": "2024-05",
+    "calls": 22,
+    "eligible": 20,
+    "eligibilityRate": 0.9091,
+    "dispatches": 40,
+    "deltaGas": "53329636",
+    "eth": 0.374465,
+    "usd": 1259.15,
+    "reverted": 0
+   },
+   {
+    "month": "2024-06",
+    "calls": 23,
+    "eligible": 21,
+    "eligibilityRate": 0.913,
+    "dispatches": 52,
+    "deltaGas": "68925044",
+    "eth": 0.499518,
+    "usd": 1776.26,
+    "reverted": 1
+   },
+   {
+    "month": "2024-07",
+    "calls": 21,
+    "eligible": 19,
+    "eligibilityRate": 0.9048,
+    "dispatches": 42,
+    "deltaGas": "55791945",
+    "eth": 0.295553,
+    "usd": 985.64,
+    "reverted": 1
+   },
+   {
+    "month": "2024-08",
+    "calls": 25,
+    "eligible": 23,
+    "eligibilityRate": 0.92,
+    "dispatches": 56,
+    "deltaGas": "74439499",
+    "eth": 0.097779,
+    "usd": 251.97,
+    "reverted": 0
+   },
+   {
+    "month": "2024-09",
+    "calls": 27,
+    "eligible": 26,
+    "eligibilityRate": 0.963,
+    "dispatches": 66,
+    "deltaGas": "89412155",
+    "eth": 0.506918,
+    "usd": 1265.41,
+    "reverted": 1
+   },
+   {
+    "month": "2024-10",
+    "calls": 13,
+    "eligible": 13,
+    "eligibilityRate": 1,
+    "dispatches": 36,
+    "deltaGas": "47651935",
+    "eth": 0.751779,
+    "usd": 1875.5,
+    "reverted": 0
+   },
+   {
+    "month": "2024-11",
+    "calls": 7,
+    "eligible": 6,
+    "eligibilityRate": 0.8571,
+    "dispatches": 16,
+    "deltaGas": "21197344",
+    "eth": 0.218289,
+    "usd": 691.44,
+    "reverted": 0
+   },
+   {
+    "month": "2024-12",
+    "calls": 18,
+    "eligible": 16,
+    "eligibilityRate": 0.8889,
+    "dispatches": 42,
+    "deltaGas": "55810330",
+    "eth": 0.547116,
+    "usd": 1981.81,
+    "reverted": 0
+   },
+   {
+    "month": "2025-01",
+    "calls": 16,
+    "eligible": 12,
+    "eligibilityRate": 0.75,
+    "dispatches": 26,
+    "deltaGas": "34584877",
+    "eth": 0.154172,
+    "usd": 522.31,
+    "reverted": 0
+   },
+   {
+    "month": "2025-02",
+    "calls": 27,
+    "eligible": 26,
+    "eligibilityRate": 0.963,
+    "dispatches": 68,
+    "deltaGas": "90232048",
+    "eth": 0.109924,
+    "usd": 301.43,
+    "reverted": 0
+   },
+   {
+    "month": "2025-03",
+    "calls": 27,
+    "eligible": 26,
+    "eligibilityRate": 0.963,
+    "dispatches": 58,
+    "deltaGas": "77111052",
+    "eth": 0.075002,
+    "usd": 149.72,
+    "reverted": 0
+   },
+   {
+    "month": "2025-04",
+    "calls": 23,
+    "eligible": 22,
+    "eligibilityRate": 0.9565,
+    "dispatches": 54,
+    "deltaGas": "71747363",
+    "eth": 0.051412,
+    "usd": 85.46,
+    "reverted": 0
+   },
+   {
+    "month": "2025-05",
+    "calls": 27,
+    "eligible": 20,
+    "eligibilityRate": 0.7407,
+    "dispatches": 48,
+    "deltaGas": "73314723",
+    "eth": 0.103627,
+    "usd": 258.42,
+    "reverted": 2
+   },
+   {
+    "month": "2025-06",
+    "calls": 16,
+    "eligible": 14,
+    "eligibilityRate": 0.875,
+    "dispatches": 40,
+    "deltaGas": "56210755",
+    "eth": 0.101391,
+    "usd": 256.83,
+    "reverted": 1
+   },
+   {
+    "month": "2025-07",
+    "calls": 19,
+    "eligible": 18,
+    "eligibilityRate": 0.9474,
+    "dispatches": 50,
+    "deltaGas": "66623156",
+    "eth": 0.049507,
+    "usd": 168.27,
+    "reverted": 0
+   },
+   {
+    "month": "2025-08",
+    "calls": 20,
+    "eligible": 20,
+    "eligibilityRate": 1,
+    "dispatches": 56,
+    "deltaGas": "74308792",
+    "eth": 0.053032,
+    "usd": 229.3,
+    "reverted": 0
+   },
+   {
+    "month": "2025-09",
+    "calls": 23,
+    "eligible": 21,
+    "eligibilityRate": 0.913,
+    "dispatches": 54,
+    "deltaGas": "71758887",
+    "eth": 0.034665,
+    "usd": 154.16,
+    "reverted": 2
+   },
+   {
+    "month": "2025-10",
+    "calls": 25,
+    "eligible": 19,
+    "eligibilityRate": 0.76,
+    "dispatches": 48,
+    "deltaGas": "63723286",
+    "eth": 0.050517,
+    "usd": 206.81,
+    "reverted": 0
+   },
+   {
+    "month": "2025-11",
+    "calls": 22,
+    "eligible": 20,
+    "eligibilityRate": 0.9091,
+    "dispatches": 50,
+    "deltaGas": "66112027",
+    "eth": 0.00914,
+    "usd": 28.38,
+    "reverted": 0
+   },
+   {
+    "month": "2025-12",
+    "calls": 20,
+    "eligible": 20,
+    "eligibilityRate": 1,
+    "dispatches": 48,
+    "deltaGas": "63744418",
+    "eth": 0.005134,
+    "usd": 15.69,
+    "reverted": 0
+   },
+   {
+    "month": "2026-01",
+    "calls": 28,
+    "eligible": 26,
+    "eligibilityRate": 0.9286,
+    "dispatches": 68,
+    "deltaGas": "101082141",
+    "eth": 0.04741,
+    "usd": 143.25,
+    "reverted": 2
+   },
+   {
+    "month": "2026-02",
+    "calls": 28,
+    "eligible": 27,
+    "eligibilityRate": 0.9643,
+    "dispatches": 68,
+    "deltaGas": "90288141",
+    "eth": 0.024011,
+    "usd": 48.9,
+    "reverted": 0
+   },
+   {
+    "month": "2026-03",
+    "calls": 61,
+    "eligible": 59,
+    "eligibilityRate": 0.9672,
+    "dispatches": 138,
+    "deltaGas": "183481156",
+    "eth": 0.051901,
+    "usd": 109.78,
+    "reverted": 0
+   },
+   {
+    "month": "2026-04",
+    "calls": 123,
+    "eligible": 123,
+    "eligibilityRate": 1,
+    "dispatches": 319,
+    "deltaGas": "423799280",
+    "eth": 0.474209,
+    "usd": 1080.57,
+    "reverted": 0
+   },
+   {
+    "month": "2026-05",
+    "calls": 81,
+    "eligible": 80,
+    "eligibilityRate": 0.9877,
+    "dispatches": 260,
+    "deltaGas": "346005609",
+    "eth": 0.281897,
+    "usd": 652.08,
+    "reverted": 0
+   },
+   {
+    "month": "2026-06",
+    "calls": 31,
+    "eligible": 29,
+    "eligibilityRate": 0.9355,
+    "dispatches": 82,
+    "deltaGas": "109360726",
+    "eth": 0.031426,
+    "usd": 54.25,
+    "reverted": 0
+   },
+   {
+    "month": "2026-07",
+    "calls": 25,
+    "eligible": 24,
+    "eligibilityRate": 0.96,
+    "dispatches": 64,
+    "deltaGas": "85265727",
+    "eth": 0.027864,
+    "usd": 41,
+    "reverted": 0
+   }
+  ],
+  "cumulative": [
+   {
+    "month": "2021-08",
+    "cumulativeDeltaGas": "29091899",
+    "cumulativeEth": 2.078213
+   },
+   {
+    "month": "2021-09",
+    "cumulativeDeltaGas": "110946194",
+    "cumulativeEth": 6.730203
+   },
+   {
+    "month": "2021-10",
+    "cumulativeDeltaGas": "150465228",
+    "cumulativeEth": 9.756104
+   },
+   {
+    "month": "2021-11",
+    "cumulativeDeltaGas": "234002407",
+    "cumulativeEth": 20.472909
+   },
+   {
+    "month": "2021-12",
+    "cumulativeDeltaGas": "331739935",
+    "cumulativeEth": 28.181308
+   },
+   {
+    "month": "2022-01",
+    "cumulativeDeltaGas": "361127017",
+    "cumulativeEth": 31.566448
+   },
+   {
+    "month": "2022-02",
+    "cumulativeDeltaGas": "449487674",
+    "cumulativeEth": 36.82964
+   },
+   {
+    "month": "2022-03",
+    "cumulativeDeltaGas": "513014458",
+    "cumulativeEth": 38.647736
+   },
+   {
+    "month": "2022-04",
+    "cumulativeDeltaGas": "570224823",
+    "cumulativeEth": 41.100617
+   },
+   {
+    "month": "2022-05",
+    "cumulativeDeltaGas": "696133020",
+    "cumulativeEth": 44.996989
+   },
+   {
+    "month": "2022-06",
+    "cumulativeDeltaGas": "798720458",
+    "cumulativeEth": 48.987991
+   },
+   {
+    "month": "2022-07",
+    "cumulativeDeltaGas": "1009805091",
+    "cumulativeEth": 52.167079
+   },
+   {
+    "month": "2022-08",
+    "cumulativeDeltaGas": "1203709892",
+    "cumulativeEth": 54.082126
+   },
+   {
+    "month": "2022-09",
+    "cumulativeDeltaGas": "1406119269",
+    "cumulativeEth": 55.731127
+   },
+   {
+    "month": "2022-10",
+    "cumulativeDeltaGas": "1577804810",
+    "cumulativeEth": 58.161048
+   },
+   {
+    "month": "2022-11",
+    "cumulativeDeltaGas": "1705427518",
+    "cumulativeEth": 59.858065
+   },
+   {
+    "month": "2022-12",
+    "cumulativeDeltaGas": "1788476969",
+    "cumulativeEth": 61.021608
+   },
+   {
+    "month": "2023-01",
+    "cumulativeDeltaGas": "1837389813",
+    "cumulativeEth": 61.936585
+   },
+   {
+    "month": "2023-02",
+    "cumulativeDeltaGas": "1897635255",
+    "cumulativeEth": 63.548222
+   },
+   {
+    "month": "2023-03",
+    "cumulativeDeltaGas": "1971249563",
+    "cumulativeEth": 65.1609
+   },
+   {
+    "month": "2023-04",
+    "cumulativeDeltaGas": "2012088307",
+    "cumulativeEth": 66.345421
+   },
+   {
+    "month": "2023-05",
+    "cumulativeDeltaGas": "2080968884",
+    "cumulativeEth": 69.739103
+   },
+   {
+    "month": "2023-06",
+    "cumulativeDeltaGas": "2226659664",
+    "cumulativeEth": 72.329308
+   },
+   {
+    "month": "2023-07",
+    "cumulativeDeltaGas": "2308542232",
+    "cumulativeEth": 74.020711
+   },
+   {
+    "month": "2023-08",
+    "cumulativeDeltaGas": "2341246969",
+    "cumulativeEth": 74.586351
+   },
+   {
+    "month": "2023-09",
+    "cumulativeDeltaGas": "2416324610",
+    "cumulativeEth": 75.281017
+   },
+   {
+    "month": "2023-10",
+    "cumulativeDeltaGas": "2527046101",
+    "cumulativeEth": 76.429757
+   },
+   {
+    "month": "2023-11",
+    "cumulativeDeltaGas": "2571207380",
+    "cumulativeEth": 77.524976
+   },
+   {
+    "month": "2023-12",
+    "cumulativeDeltaGas": "2623399244",
+    "cumulativeEth": 78.898999
+   },
+   {
+    "month": "2024-01",
+    "cumulativeDeltaGas": "2660928412",
+    "cumulativeEth": 79.417053
+   },
+   {
+    "month": "2024-03",
+    "cumulativeDeltaGas": "2690207573",
+    "cumulativeEth": 80.106856
+   },
+   {
+    "month": "2024-04",
+    "cumulativeDeltaGas": "2754090857",
+    "cumulativeEth": 80.852994
+   },
+   {
+    "month": "2024-05",
+    "cumulativeDeltaGas": "2807420493",
+    "cumulativeEth": 81.227459
+   },
+   {
+    "month": "2024-06",
+    "cumulativeDeltaGas": "2876345537",
+    "cumulativeEth": 81.726977
+   },
+   {
+    "month": "2024-07",
+    "cumulativeDeltaGas": "2932137482",
+    "cumulativeEth": 82.02253
+   },
+   {
+    "month": "2024-08",
+    "cumulativeDeltaGas": "3006576981",
+    "cumulativeEth": 82.120309
+   },
+   {
+    "month": "2024-09",
+    "cumulativeDeltaGas": "3095989136",
+    "cumulativeEth": 82.627227
+   },
+   {
+    "month": "2024-10",
+    "cumulativeDeltaGas": "3143641071",
+    "cumulativeEth": 83.379006
+   },
+   {
+    "month": "2024-11",
+    "cumulativeDeltaGas": "3164838415",
+    "cumulativeEth": 83.597295
+   },
+   {
+    "month": "2024-12",
+    "cumulativeDeltaGas": "3220648745",
+    "cumulativeEth": 84.144411
+   },
+   {
+    "month": "2025-01",
+    "cumulativeDeltaGas": "3255233622",
+    "cumulativeEth": 84.298583
+   },
+   {
+    "month": "2025-02",
+    "cumulativeDeltaGas": "3345465670",
+    "cumulativeEth": 84.408507
+   },
+   {
+    "month": "2025-03",
+    "cumulativeDeltaGas": "3422576722",
+    "cumulativeEth": 84.483509
+   },
+   {
+    "month": "2025-04",
+    "cumulativeDeltaGas": "3494324085",
+    "cumulativeEth": 84.534921
+   },
+   {
+    "month": "2025-05",
+    "cumulativeDeltaGas": "3567638808",
+    "cumulativeEth": 84.638548
+   },
+   {
+    "month": "2025-06",
+    "cumulativeDeltaGas": "3623849563",
+    "cumulativeEth": 84.739939
+   },
+   {
+    "month": "2025-07",
+    "cumulativeDeltaGas": "3690472719",
+    "cumulativeEth": 84.789446
+   },
+   {
+    "month": "2025-08",
+    "cumulativeDeltaGas": "3764781511",
+    "cumulativeEth": 84.842478
+   },
+   {
+    "month": "2025-09",
+    "cumulativeDeltaGas": "3836540398",
+    "cumulativeEth": 84.877143
+   },
+   {
+    "month": "2025-10",
+    "cumulativeDeltaGas": "3900263684",
+    "cumulativeEth": 84.92766
+   },
+   {
+    "month": "2025-11",
+    "cumulativeDeltaGas": "3966375711",
+    "cumulativeEth": 84.9368
+   },
+   {
+    "month": "2025-12",
+    "cumulativeDeltaGas": "4030120129",
+    "cumulativeEth": 84.941934
+   },
+   {
+    "month": "2026-01",
+    "cumulativeDeltaGas": "4131202270",
+    "cumulativeEth": 84.989344
+   },
+   {
+    "month": "2026-02",
+    "cumulativeDeltaGas": "4221490411",
+    "cumulativeEth": 85.013355
+   },
+   {
+    "month": "2026-03",
+    "cumulativeDeltaGas": "4404971567",
+    "cumulativeEth": 85.065256
+   },
+   {
+    "month": "2026-04",
+    "cumulativeDeltaGas": "4828770847",
+    "cumulativeEth": 85.539465
+   },
+   {
+    "month": "2026-05",
+    "cumulativeDeltaGas": "5174776456",
+    "cumulativeEth": 85.821362
+   },
+   {
+    "month": "2026-06",
+    "cumulativeDeltaGas": "5284137182",
+    "cumulativeEth": 85.852788
+   },
+   {
+    "month": "2026-07",
+    "cumulativeDeltaGas": "5369402909",
+    "cumulativeEth": 85.880652
+   }
+  ],
+  "byPeriodPopulation": [
+   {
+    "key": "historical_hypothetical|successful",
+    "calls": 1734,
+    "eligible": 1110,
+    "dispatches": 2406,
+    "deltaGas": "3634665299",
+    "eth": 65.956673,
+    "usd": 164894.33
+   },
+   {
+    "key": "feasible_counterfactual|successful",
+    "calls": 78,
+    "eligible": 77,
+    "dispatches": 198,
+    "deltaGas": "263072920",
+    "eth": 0.076629,
+    "usd": 206.27
+   },
+   {
+    "key": "realized|successful",
+    "calls": 315,
+    "eligible": 309,
+    "dispatches": 845,
+    "deltaGas": "1123866630",
+    "eth": 0.865837,
+    "usd": 1934.75
+   },
+   {
+    "key": "historical_hypothetical|reverted",
+    "calls": 153,
+    "eligible": 0,
+    "dispatches": 0,
+    "deltaGas": "337100484",
+    "eth": 18.98034,
+    "usd": 67540.86
+   },
+   {
+    "key": "feasible_counterfactual|reverted",
+    "calls": 2,
+    "eligible": 0,
+    "dispatches": 0,
+    "deltaGas": "10697576",
+    "eth": 0.001175,
+    "usd": 3.87
+   }
+  ],
+  "regimes": [
+   {
+    "regime": "alg13_verifier_old_legacy_oracle",
+    "n": 718,
+    "meanPerVerification": 1633454
+   },
+   {
+    "regime": "alg13_verifier_old_current_oracle",
+    "n": 778,
+    "meanPerVerification": 1329589
+   }
+  ],
+  "n13Distribution": {
+   "0": 631,
+   "1": 28,
+   "2": 1223,
+   "3": 5,
+   "4": 240,
+   "null": 155
+  }
+ },
+ "notes": {
+  "headline": "lead with the 107x ratio and the 6.8x correction, not the dollar figure",
+  "historicalHypothetical": "unrealizable; never sum with feasible or realized",
+  "priceGaps": "1 row lacks a USD price (2026-07-27 unpublished); gas and ETH unaffected"
+ }
+}

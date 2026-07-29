@@ -1,0 +1,1 @@
+{"Status":0,"TC":false,"RD":true,"RA":true,"AD":true,"CD":false,"Question":[{"name":"cam","type":43}],"Answer":[{"name":"cam","type":43,"TTL":86400,"data":"5089 RSASHA256 2 a17021ada565f6b13749741dc51a25b0f524bae6b753343155cfe8426cd29462"},{"name":"cam","type":43,"TTL":86400,"data":"63412 RSASHA256 2 574852572a5d0fa1b6c9d1b008851e74a34298e5dcbb0979c347753eec1a23d4"}]}

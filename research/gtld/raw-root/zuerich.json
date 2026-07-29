@@ -1,0 +1,1 @@
+{"Status":0,"TC":false,"RD":true,"RA":true,"AD":true,"CD":false,"Question":[{"name":"zuerich","type":43}],"Answer":[{"name":"zuerich","type":43,"TTL":86400,"data":"7399 RSASHA256 2 69407fe45988e2c569855c70330a24520db734481082c668317e8bbb764551d3"},{"name":"zuerich","type":43,"TTL":86400,"data":"48857 RSASHA256 2 c64fde4469567966aa2300c152df46bd230916a54f5bf936083ef79eb894c157"}]}

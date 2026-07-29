@@ -1,0 +1,24 @@
+{
+  "p1_failed_calls_rows": 156,
+  "override_map_reverted_rows": 156,
+  "distinct_txs_in_failed": 156,
+  "validation": {
+    "txs_checked": 156,
+    "receipt_status_failed": 154,
+    "top_level_to_a_registrar": 151,
+    "top_level_direct_import_selector": 151,
+    "beyond_cutoff": 0,
+    "anomalies": [
+      {
+        "tx": "0xe7036fdff03723d2ab0df13e67a6cb4a2acd44e2c2e25518a13533b71625c3f2",
+        "why": "receipt status 0x1 (not a failed tx)"
+      },
+      {
+        "tx": "0xdfe2a8a4bff5f35de75df4189a8f570d0697660da2075084768c1de15ac95099",
+        "why": "receipt status 0x1 (not a failed tx)"
+      }
+    ],
+    "anomaly_count": 2
+  },
+  "completeness": "NOT VERIFIED — requires trace_filter over the full range (gated on this tier)"
+}

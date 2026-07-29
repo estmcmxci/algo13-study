@@ -1,0 +1,1 @@
+{"Status":0,"TC":false,"RD":true,"RA":true,"AD":true,"CD":false,"Question":[{"name":"radio","type":43}],"Answer":[{"name":"radio","type":43,"TTL":86400,"data":"8022 RSASHA512 2 0803cb1e944b9a6416d0e2f7a071d03a87754b0804f8833f63d250dd080a5590"},{"name":"radio","type":43,"TTL":86400,"data":"62727 RSASHA512 2 3863e4a0c36a262785c1703b5cff54cdbd56cd40bb414b45599848ce972e26b9"}]}

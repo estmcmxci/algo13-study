@@ -1,0 +1,1 @@
+{"Status":0,"TC":false,"RD":true,"RA":true,"AD":true,"CD":false,"Question":[{"name":"qpon","type":43}],"Answer":[{"name":"qpon","type":43,"TTL":86400,"data":"2327 RSASHA256 2 3862ebe8922407508c2915d29ada122bfdc2385e90e14f0b98145665d794e347"},{"name":"qpon","type":43,"TTL":86400,"data":"16832 RSASHA256 2 640f8ec05b04bbb53bd37b2ead4360a4fb63e8fc4084d6e5d5ee78facd4f47a3"}]}

@@ -1,0 +1,99 @@
+{
+  "replay_dedup": {
+    "raw_rows": 2716,
+    "distinct_callIds": 2283,
+    "kept": 2282,
+    "callIds_with_no_successful_row": 1,
+    "noSuccess_detail": [
+      {
+        "id": "1:0x1a56de84223c86117563d2d0041f7943e028a1dd903bdc310f1504de92c355c3:",
+        "statuses": [
+          "error:unexpected",
+          "error:unexpected"
+        ]
+      }
+    ],
+    "successful_duplicates_that_disagree": 0,
+    "conflicting_detail": []
+  },
+  "fig1_per_verification": {
+    "method": "OLS slope of whole-oracle exec gas on n13, current-oracle successful calls",
+    "n": 821,
+    "old_slope": 1289484,
+    "old_intercept": 616963,
+    "new_slope": -40226,
+    "new_intercept": 617220
+  },
+  "fig1_crosscheck_mean_delta_over_n13": 1329589,
+  "fig1_bucket_means": {
+    "0": {
+      "n": 43,
+      "old": 581818,
+      "new": 581818
+    },
+    "2": {
+      "n": 548,
+      "old": 3201350,
+      "new": 542244
+    },
+    "3": {
+      "n": 1,
+      "old": 4591858,
+      "new": 584340
+    },
+    "4": {
+      "n": 229,
+      "old": 5768069,
+      "new": 449478
+    }
+  },
+  "fig2": {
+    "ratio_old_over_new": -32.06,
+    "pct_reduction": 103.12
+  },
+  "realized_population": {
+    "calls": 315,
+    "distinct_txs": 315,
+    "all_current_oracle": true,
+    "all_actual_new": true
+  },
+  "fig3_realized_total_gas_saved": 1123866630,
+  "fig4_realized_totals": {
+    "new_total_actual_receipt_gas": 242497608,
+    "old_total_counterfactual": 1366364238,
+    "difference": 1123866630,
+    "receipts_fetched": 315
+  },
+  "fig5_means_per_import": {
+    "imports": 315,
+    "new_mean": 769834,
+    "old_mean": 4337664
+  },
+  "fig9_headroom": {
+    "interpretation": "old mean per import / new mean per import",
+    "value": 5.63
+  },
+  "fig6_verifications": {
+    "method": "independent decoder replay of raw calldata for all 2,127 registrar calls",
+    "total": 9931,
+    "by_algorithm": {
+      "5 (RSASHA1)": 30,
+      "7 (RSASHA1(NSEC3))": 8,
+      "8 (RSASHA256)": 6444,
+      "13 (ECDSAP256SHA256)": 3449
+    },
+    "rsa_sha1_combined_5_and_7": 38,
+    "decode_failures": 0
+  },
+  "fig8_time": {
+    "first_claim_block": 13083904,
+    "last_claim_block": 25622490,
+    "first_ts": 1629752769,
+    "last_ts": 1785135371,
+    "elapsed_days": 1798.41,
+    "elapsed_years_365": 4.927,
+    "elapsed_years_365_2425": 4.924,
+    "imports": 2145,
+    "imports_per_day": 1.193
+  }
+}

@@ -1,0 +1,1 @@
+{"Status":0,"TC":false,"RD":true,"RA":true,"AD":true,"CD":false,"Question":[{"name":"oracle","type":43}],"Answer":[{"name":"oracle","type":43,"TTL":86400,"data":"6291 RSASHA256 2 9f74eccb6080a089661309a8ae8f82146d0ee4cc7ca96f01f62ae47f76368f2a"},{"name":"oracle","type":43,"TTL":86400,"data":"51169 RSASHA256 2 43a2fd7b6df137824c6ee5b145ad5fa8664600165ef0c9772b1d286bcda63873"}]}

@@ -1,0 +1,1 @@
+{"Status":0,"TC":false,"RD":true,"RA":true,"AD":true,"CD":false,"Question":[{"name":"bond","type":43}],"Answer":[{"name":"bond","type":43,"TTL":86400,"data":"6470 RSASHA256 2 a7074c6987d326d776c85c8b378a3ef437099503492c367d67952a9dcec2d229"},{"name":"bond","type":43,"TTL":86400,"data":"35002 RSASHA256 2 fa12aa0eba1f60642345ceefbdd7a36ec310eb1602547beaad5a1793ecca9dd5"}]}

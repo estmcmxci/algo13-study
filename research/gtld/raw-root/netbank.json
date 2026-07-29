@@ -1,0 +1,1 @@
+{"Status":0,"TC":false,"RD":true,"RA":true,"AD":true,"CD":false,"Question":[{"name":"netbank","type":43}],"Answer":[{"name":"netbank","type":43,"TTL":86400,"data":"29050 RSASHA256 2 401dd968541610c0a000139e1462693701042a2931afa1a246d8bfa05ab13c94"}]}

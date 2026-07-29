@@ -1,0 +1,1 @@
+{"Status":0,"TC":false,"RD":true,"RA":true,"AD":true,"CD":false,"Question":[{"name":"tube","type":43}],"Answer":[{"name":"tube","type":43,"TTL":86400,"data":"52096 RSASHA256 2 03e03aced82968f08ebe79b3d8641a366aeb3a9600b6b29671dce8af94492287"},{"name":"tube","type":43,"TTL":86400,"data":"63079 RSASHA256 2 f4d6217a7ff5a1e65a2c31fbd8da3305a4efe10562c3ab82d459421c1437b62d"}]}

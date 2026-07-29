@@ -1,0 +1,108 @@
+{
+  "study": "algorithm13-direct-import-empirical",
+  "task": "#f40b5886",
+  "generatedAtBlock": 25627249,
+  "chainId": 1,
+  "rpc": "https://evm.stupidtech.net/v1/1",
+  "overridePolicy": "Paired replay installs DEPLOYED mainnet runtime bytecode via state override. No verifier is recompiled from source. Measured delta_gas_i is therefore a delta between deployed artifacts as they existed on mainnet, NOT between source revisions.",
+  "boundaries": {
+    "B_precompile": 23935694,
+    "P_ENS": {
+      "block": 24619423,
+      "txIndex": 259,
+      "logIndex": 584
+    }
+  },
+  "eip7951": {
+    "precompile": "0x0000000000000000000000000000000000000100",
+    "measuredGas": 6900,
+    "specGas": 6900,
+    "note": "PR #509 cites ~3500 from a superseded draft constant; delta_13 ~= 193100 not 196500"
+  },
+  "artifacts": [
+    {
+      "role": "alg13_verifier_old_legacy_oracle",
+      "address": "0xe571a50f76ff7404f3ce380d06cbd2c9c6ca3670",
+      "appliesTo": "period 1, legacy registrar 0x58774Bb8 via oracle 0x21745ff6 (1324 claims)",
+      "runtimeBytecodeKeccak256": "0x5236fe2c6c3b6d4f1569211eabd8f1a8bb22a0df380e43db475c80c69cc9b342",
+      "sizeBytes": 10320,
+      "rawFile": "research/raw/bytecode/alg13_verifier_old_legacy_oracle.hex",
+      "rawFileSha256": "d8b8125f8f7b4b3724acc05847130015fec388d7860bfe3d9c8c0ec24bec9b71",
+      "readRepaired": false
+    },
+    {
+      "role": "alg13_verifier_old_current_oracle",
+      "address": "0x0faa24e538bA4620165933f68a9d142f79A68091",
+      "appliesTo": "period 1 current-registrar (428) + period 2 (78) = 506 claims",
+      "runtimeBytecodeKeccak256": "0x5f449daea815401dfc8a06e4da6a07ebcccc887c04acc1396de2b17711c1bbbb",
+      "sizeBytes": 3905,
+      "rawFile": "research/raw/bytecode/alg13_verifier_old_current_oracle.hex",
+      "rawFileSha256": "89a200f386c1cb6f3e557e7e6f2e1d7bac3ad24290f9f48d0b57c7c87de39b7a",
+      "readRepaired": false
+    },
+    {
+      "role": "alg13_verifier_new",
+      "address": "0xb091c4f6fac16edda5ee1e0f4738f80011905878",
+      "appliesTo": "period 3 realized (315 claims); the NEW variant for all paired replays",
+      "runtimeBytecodeKeccak256": "0xe559f583bc570b7929a2a974e071fcd5b3117f65b591d8bc6dcb1fbf2d7e53a3",
+      "sizeBytes": 1039,
+      "rawFile": "research/raw/bytecode/alg13_verifier_new.hex",
+      "rawFileSha256": "95da5372eb45395688eee0eb9857aa9ca2892fb85234c549995460fe47588a0f",
+      "readRepaired": false
+    },
+    {
+      "role": "oracle_current",
+      "address": "0x0fc3152971714E5ed7723FAFa650F86A4BaF30C5",
+      "appliesTo": "current DNSSECImpl",
+      "runtimeBytecodeKeccak256": "0xa599876de4b00994e0941f572f70f15ba716f018cd7c984bde22e3e2cdb84e6d",
+      "sizeBytes": 7588,
+      "rawFile": "research/raw/bytecode/oracle_current.hex",
+      "rawFileSha256": "739129b8128334e9d2f677d95a57b210f0dfe9a40cfd22d5ae238b22181f3a86",
+      "readRepaired": false
+    },
+    {
+      "role": "oracle_legacy",
+      "address": "0x21745ff62108968fbf5ab1e07961cc0fcbeb2364",
+      "appliesTo": "oracle the legacy registrar actually points at",
+      "runtimeBytecodeKeccak256": "0x3c4638e8e00a699c808fd470e2ccef82c51df5e1a6a20a83d8e37dc17f71beae",
+      "sizeBytes": 18467,
+      "rawFile": "research/raw/bytecode/oracle_legacy.hex",
+      "rawFileSha256": "c81027506ec0f3be7be32758a1362ef71b4899e530694c59b0570124057875f7",
+      "readRepaired": false
+    },
+    {
+      "role": "registrar_current",
+      "address": "0xB32cB5677a7C971689228EC835800432B339bA2B",
+      "appliesTo": "current DNSRegistrar",
+      "runtimeBytecodeKeccak256": "0xd2871d938a54bdaf93f8facbef7c81e3225e2ce8229062461f300ddc5293338a",
+      "sizeBytes": 8723,
+      "rawFile": "research/raw/bytecode/registrar_current.hex",
+      "rawFileSha256": "0014f36ba389bb4a59f182fde13b26679f575b93c33a07732bb78b75a49a7948",
+      "readRepaired": false
+    },
+    {
+      "role": "registrar_legacy",
+      "address": "0x58774Bb8acD458A640aF0B88238369A167546ef2",
+      "appliesTo": "legacy DNSRegistrar",
+      "runtimeBytecodeKeccak256": "0xafed417dc35a5d7f8c45dd87b522e7ee0794e7b4b728a337e61f03a89af0379f",
+      "sizeBytes": 12603,
+      "rawFile": "research/raw/bytecode/registrar_legacy.hex",
+      "rawFileSha256": "6447bc06e3f688b0d30c48f123efcfe8406a382d9b15e7fe66b11b07b67fefcc",
+      "readRepaired": false
+    },
+    {
+      "role": "oracle_legacy_original",
+      "address": "0x46c6F79952d3046Bf673a28132ff2a81F306959c",
+      "appliesTo": "legacy registrar calls with block < 13,103,261 (7 rows). Superseded by 0x21745ff6 when setOracle() ran at that block.",
+      "runtimeBytecodeKeccak256": "0xa6acf2a2623ebab00eb5b974d30042e21f8b3a234e5898641d6048534a7e9b5a",
+      "sizeBytes": 17920,
+      "rawFile": "research/raw/bytecode/oracle_legacy_original.hex",
+      "rawFileSha256": "dd2db1b5da9b6294d611ab471bd68aa48630e4ba037b0d15e9aae4da827653c5",
+      "readRepaired": false
+    }
+  ],
+  "correction": {
+    "note": "oracle_legacy_original added after discovering the legacy registrar migrated oracles at block 13,103,261 via setOracle(). The original map read oracle() at latest and mis-routed 7 rows.",
+    "migrationBlock": 13103261
+  }
+}

@@ -1,0 +1,1 @@
+{"Status":0,"TC":false,"RD":true,"RA":true,"AD":true,"CD":false,"Question":[{"name":"banamex","type":43}],"Answer":[{"name":"banamex","type":43,"TTL":86400,"data":"38095 RSASHA256 2 eb04c740fb681ab87a2376cfb9e5ce3a865f930da98246836670d0bb29478229"}]}

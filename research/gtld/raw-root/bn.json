@@ -1,0 +1,1 @@
+{"Status":0,"TC":false,"RD":true,"RA":true,"AD":true,"CD":false,"Question":[{"name":"bn","type":43}],"Answer":[{"name":"bn","type":43,"TTL":86400,"data":"7952 RSASHA256 2 aee5e99a9df33e7ea387e5e5144681fc98cf39c85857a6180c2d04b20808784e"},{"name":"bn","type":43,"TTL":86400,"data":"9806 RSASHA256 2 d60df0220811fb57dcb02c402714ee56a178c9275c6889a30bdc04ec5a31ca96"}]}

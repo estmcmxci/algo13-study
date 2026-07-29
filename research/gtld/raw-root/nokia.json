@@ -1,0 +1,1 @@
+{"Status":0,"TC":false,"RD":true,"RA":true,"AD":true,"CD":false,"Question":[{"name":"nokia","type":43}],"Answer":[{"name":"nokia","type":43,"TTL":86400,"data":"5506 RSASHA256 2 4030a14335a594b8ab850594ba0e85a0ecd1dc145aa7e097341169f70f0f4292"},{"name":"nokia","type":43,"TTL":86400,"data":"43790 RSASHA256 2 7d7d3ebae05f84c911ee972ec6d72f1cc88368297b5fdc6a52db62eb27b76c99"}]}

@@ -1,0 +1,1 @@
+{"Status":0,"TC":false,"RD":true,"RA":true,"AD":true,"CD":false,"Question":[{"name":"viva","type":43}],"Answer":[{"name":"viva","type":43,"TTL":86400,"data":"12386 RSASHA256 2 cfae0771825b368beb345f67a1a08a64415af41076486890eb62c79a32113f71"},{"name":"viva","type":43,"TTL":86400,"data":"49345 RSASHA256 2 85418da0ff0d9ccc1e1eaac43b88dab60fa42e51af3341b9e61d31ee23916875"}]}

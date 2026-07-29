@@ -1,0 +1,21 @@
+{
+ "results": {
+  "alg13_verifier_old_current_oracle": {
+   "codeInstalled": true,
+   "verified": true,
+   "estimateGas": 1364178
+  },
+  "alg13_verifier_old_legacy_oracle": {
+   "codeInstalled": true,
+   "verified": true,
+   "estimateGas": 1669344
+  },
+  "alg13_verifier_new": {
+   "codeInstalled": true,
+   "verified": true,
+   "estimateGas": 33965
+  }
+ },
+ "dCur": 1330213,
+ "dLeg": 1635379
+}

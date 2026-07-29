@@ -1,0 +1,82 @@
+{
+ "basis": "Unified.t.sol — warm, via Probe, deployed mainnet bytecode, all figures one harness",
+ "gas": {
+  "1024": 31807,
+  "1280": 42736,
+  "2048": 81733,
+  "4096": 230837,
+  "p256_old_current": 1340706,
+  "p256_old_legacy": 1645872,
+  "p256_new": 10493,
+  "rsa_rfc5702": 12873
+ },
+ "weighting": {
+  "chosen": "production-weighted over all observed RSA verification instances",
+  "overall": {
+   "n": 6482,
+   "gas": 428140964,
+   "mean": 66050.75038568344
+  },
+  "byLevel": {
+   "root": {
+    "n": 878,
+    "gas": 71761574,
+    "mean": 81733
+   },
+   "tld": {
+    "n": 2539,
+    "gas": 209011127,
+    "mean": 82320.25482473415
+   },
+   "leaf": {
+    "n": 3065,
+    "gas": 147368263,
+    "mean": 48080.99934747145
+   }
+  },
+  "naiveUnweightedAcrossSizes": 96778.25,
+  "shares": {
+   "1024": 27.91,
+   "1032": 0.02,
+   "1280": 6.94,
+   "2048": 64.49,
+   "4096": 0.65
+  },
+  "levelShares": {
+   "root": 13.55,
+   "tld": 39.17,
+   "leaf": 47.28
+  }
+ },
+ "perProofChain": {
+  "chains": 2082,
+  "meanRsaVerificationsPerChain": 3.113,
+  "meanRsaGasPerChain": 205639,
+  "medianRsaGasPerChain": 195273
+ },
+ "ratios": {
+  "OLD_oldP256_over_rfc5702": 104.15,
+  "OLD_rfc5702_over_newP256": 1.227,
+  "oldP256_over_weightedRSA": 20.3,
+  "weightedRSA_over_newP256": 6.29,
+  "oldP256_over_rsa": {
+   "1024": 42.2,
+   "1280": 31.4,
+   "2048": 16.4,
+   "4096": 5.8
+  },
+  "rsa_over_newP256": {
+   "1024": 3.03,
+   "1280": 4.07,
+   "2048": 7.79,
+   "4096": 22
+  },
+  "oldP256legacy_over_weightedRSA": 24.92,
+  "weightedRSA": 66051
+ },
+ "crossCheck": {
+  "censusDeltaPlusNewCost": 1340082,
+  "unifiedOldCost": 1340706,
+  "agreementPct": 0.047
+ }
+}

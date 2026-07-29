@@ -1,0 +1,1 @@
+{"Status":0,"TC":false,"RD":true,"RA":true,"AD":true,"CD":false,"Question":[{"name":"comsec","type":43}],"Answer":[{"name":"comsec","type":43,"TTL":86400,"data":"49881 ECDSAP256SHA256 2 bf4347fb6bb9c988295f26fadad5d8a07d6e2dae7248a99db78e77247a6305db"}]}

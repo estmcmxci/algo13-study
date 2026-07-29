@@ -1,0 +1,1 @@
+{"Status":0,"TC":false,"RD":true,"RA":true,"AD":true,"CD":false,"Question":[{"name":"creditcard","type":43}],"Answer":[{"name":"creditcard","type":43,"TTL":86400,"data":"53764 RSASHA256 2 e405dd422f4a0b2554a51b063d92e9709a2bf309dc2d5bec2c914065636d3fe4"}]}

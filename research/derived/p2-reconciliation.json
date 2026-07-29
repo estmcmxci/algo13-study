@@ -1,0 +1,192 @@
+{
+  "decoder_version": "1.0.0",
+  "input": "research/derived/p1-calls-for-decode.json",
+  "output": "research/derived/p2-decode.jsonl",
+  "total_calls": 2127,
+  "time_checks": "skipped (no block timestamps in input)",
+  "by_cohort": {
+    "legacy": {
+      "n": 1306,
+      "decoded_ok": 1306,
+      "decode_failed": 0,
+      "agree": 1306,
+      "disagree": 0,
+      "delta_distribution": {
+        "0": 1306
+      },
+      "status": {
+        "ok": 1306
+      },
+      "shape": {
+        "rsa-only": 574,
+        "mixed": 687,
+        "alg13-only": 31,
+        "none": 14
+      },
+      "error_codes": {},
+      "agreement_rate_of_decoded": 1
+    },
+    "current": {
+      "n": 821,
+      "decoded_ok": 821,
+      "decode_failed": 0,
+      "agree": 821,
+      "disagree": 0,
+      "delta_distribution": {
+        "0": 821
+      },
+      "status": {
+        "ok": 821
+      },
+      "shape": {
+        "mixed": 778,
+        "rsa-only": 43
+      },
+      "error_codes": {},
+      "agreement_rate_of_decoded": 1
+    }
+  },
+  "by_period": {
+    "historical_hypothetical": {
+      "n": 1734,
+      "decoded_ok": 1734,
+      "decode_failed": 0,
+      "agree": 1734,
+      "disagree": 0,
+      "delta_distribution": {
+        "0": 1734
+      },
+      "status": {
+        "ok": 1734
+      },
+      "shape": {
+        "rsa-only": 610,
+        "mixed": 1079,
+        "alg13-only": 31,
+        "none": 14
+      },
+      "error_codes": {},
+      "agreement_rate_of_decoded": 1
+    },
+    "feasible_counterfactual": {
+      "n": 78,
+      "decoded_ok": 78,
+      "decode_failed": 0,
+      "agree": 78,
+      "disagree": 0,
+      "delta_distribution": {
+        "0": 78
+      },
+      "status": {
+        "ok": 78
+      },
+      "shape": {
+        "mixed": 77,
+        "rsa-only": 1
+      },
+      "error_codes": {},
+      "agreement_rate_of_decoded": 1
+    },
+    "realized": {
+      "n": 315,
+      "decoded_ok": 315,
+      "decode_failed": 0,
+      "agree": 315,
+      "disagree": 0,
+      "delta_distribution": {
+        "0": 315
+      },
+      "status": {
+        "ok": 315
+      },
+      "shape": {
+        "mixed": 309,
+        "rsa-only": 6
+      },
+      "error_codes": {},
+      "agreement_rate_of_decoded": 1
+    }
+  },
+  "by_cohort_period": {
+    "legacy/historical_hypothetical": {
+      "n": 1306,
+      "decoded_ok": 1306,
+      "decode_failed": 0,
+      "agree": 1306,
+      "disagree": 0,
+      "delta_distribution": {
+        "0": 1306
+      },
+      "status": {
+        "ok": 1306
+      },
+      "shape": {
+        "rsa-only": 574,
+        "mixed": 687,
+        "alg13-only": 31,
+        "none": 14
+      },
+      "error_codes": {},
+      "agreement_rate_of_decoded": 1
+    },
+    "current/historical_hypothetical": {
+      "n": 428,
+      "decoded_ok": 428,
+      "decode_failed": 0,
+      "agree": 428,
+      "disagree": 0,
+      "delta_distribution": {
+        "0": 428
+      },
+      "status": {
+        "ok": 428
+      },
+      "shape": {
+        "mixed": 392,
+        "rsa-only": 36
+      },
+      "error_codes": {},
+      "agreement_rate_of_decoded": 1
+    },
+    "current/feasible_counterfactual": {
+      "n": 78,
+      "decoded_ok": 78,
+      "decode_failed": 0,
+      "agree": 78,
+      "disagree": 0,
+      "delta_distribution": {
+        "0": 78
+      },
+      "status": {
+        "ok": 78
+      },
+      "shape": {
+        "mixed": 77,
+        "rsa-only": 1
+      },
+      "error_codes": {},
+      "agreement_rate_of_decoded": 1
+    },
+    "current/realized": {
+      "n": 315,
+      "decoded_ok": 315,
+      "decode_failed": 0,
+      "agree": 315,
+      "disagree": 0,
+      "delta_distribution": {
+        "0": 315
+      },
+      "status": {
+        "ok": 315
+      },
+      "shape": {
+        "mixed": 309,
+        "rsa-only": 6
+      },
+      "error_codes": {},
+      "agreement_rate_of_decoded": 1
+    }
+  },
+  "disagreement_count": 0,
+  "disagreements": []
+}

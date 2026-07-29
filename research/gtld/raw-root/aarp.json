@@ -1,0 +1,1 @@
+{"Status":0,"TC":false,"RD":true,"RA":true,"AD":true,"CD":false,"Question":[{"name":"aarp","type":43}],"Answer":[{"name":"aarp","type":43,"TTL":86400,"data":"26254 RSASHA256 2 bff5bd7c3f7a468cdcc7caf66e978a5d9b5211f39241039a5218b82aa62fb6c6"}]}

@@ -1,0 +1,1 @@
+{"Status":0,"TC":false,"RD":true,"RA":true,"AD":true,"CD":false,"Question":[{"name":"barclaycard","type":43}],"Answer":[{"name":"barclaycard","type":43,"TTL":86400,"data":"8476 RSASHA256 2 5ff69331a1fe54d3d3ea6f4b746444c19c1e61813ac3902e099cb25c369a39c4"}]}

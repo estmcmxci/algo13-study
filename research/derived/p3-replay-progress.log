@@ -1,0 +1,119 @@
+pins: 8 artifacts verified
+census: 2283 rows, 0 already done, 2283 to do, 0 lack calldata
+  [slow startup 56453ms] 1:0x3a8fdfb2322a2536dc458b9da5caaf15db1594a6339426df7b6b54690a88d4b0:
+  25/2283  ok=23 err=2  16.62s/call  medianStartup=5782ms  ETA 625.4min
+  50/2283  ok=48 err=2  12.23s/call  medianStartup=5784ms  ETA 455.3min
+  75/2283  ok=73 err=2  10.72s/call  medianStartup=5783ms  ETA 394.6min
+  100/2283  ok=98 err=2  10.02s/call  medianStartup=5783ms  ETA 364.4min
+pins: 8 artifacts verified
+census: 2283 rows, 112 already done, 2171 to do, 0 lack calldata
+pins: 8 artifacts verified
+census: 2283 rows, 113 succeeded, 2170 to do (2 are retries of prior failures), 0 lack calldata
+  25/2170  ok=25 err=0  2.31s/call  medianStartup=758ms  ETA 82.6min
+  50/2170  ok=50 err=0  2.60s/call  medianStartup=758ms  ETA 91.9min
+  75/2170  ok=75 err=0  2.52s/call  medianStartup=757ms  ETA 87.9min
+  100/2170  ok=100 err=0  2.46s/call  medianStartup=757ms  ETA 84.9min
+  125/2170  ok=125 err=0  2.48s/call  medianStartup=757ms  ETA 84.5min
+  150/2170  ok=150 err=0  2.54s/call  medianStartup=758ms  ETA 85.4min
+  175/2170  ok=175 err=0  2.53s/call  medianStartup=757ms  ETA 84.0min
+  200/2170  ok=200 err=0  2.50s/call  medianStartup=524ms  ETA 82.2min
+  225/2170  ok=225 err=0  2.50s/call  medianStartup=510ms  ETA 80.9min
+  250/2170  ok=250 err=0  2.49s/call  medianStartup=510ms  ETA 79.8min
+  275/2170  ok=275 err=0  2.53s/call  medianStartup=757ms  ETA 79.9min
+  300/2170  ok=300 err=0  2.55s/call  medianStartup=757ms  ETA 79.6min
+  325/2170  ok=325 err=0  2.57s/call  medianStartup=757ms  ETA 79.0min
+  350/2170  ok=350 err=0  2.70s/call  medianStartup=757ms  ETA 81.9min
+  375/2170  ok=375 err=0  2.76s/call  medianStartup=758ms  ETA 82.6min
+  400/2170  ok=400 err=0  2.83s/call  medianStartup=758ms  ETA 83.5min
+  425/2170  ok=425 err=0  2.90s/call  medianStartup=758ms  ETA 84.3min
+  450/2170  ok=450 err=0  2.97s/call  medianStartup=758ms  ETA 85.1min
+  475/2170  ok=475 err=0  3.02s/call  medianStartup=758ms  ETA 85.2min
+  500/2170  ok=500 err=0  3.13s/call  medianStartup=759ms  ETA 87.1min
+  525/2170  ok=525 err=0  3.16s/call  medianStartup=759ms  ETA 86.6min
+  550/2170  ok=550 err=0  3.17s/call  medianStartup=759ms  ETA 85.7min
+  575/2170  ok=575 err=0  3.20s/call  medianStartup=759ms  ETA 85.1min
+  600/2170  ok=600 err=0  3.22s/call  medianStartup=759ms  ETA 84.3min
+  625/2170  ok=625 err=0  3.26s/call  medianStartup=759ms  ETA 84.0min
+  650/2170  ok=650 err=0  3.31s/call  medianStartup=759ms  ETA 83.8min
+  675/2170  ok=675 err=0  3.32s/call  medianStartup=759ms  ETA 82.6min
+  700/2170  ok=700 err=0  3.33s/call  medianStartup=759ms  ETA 81.5min
+  725/2170  ok=725 err=0  3.34s/call  medianStartup=759ms  ETA 80.5min
+  750/2170  ok=750 err=0  3.38s/call  medianStartup=759ms  ETA 80.0min
+  775/2170  ok=775 err=0  3.45s/call  medianStartup=760ms  ETA 80.2min
+  800/2170  ok=800 err=0  3.48s/call  medianStartup=760ms  ETA 79.5min
+  825/2170  ok=825 err=0  3.51s/call  medianStartup=760ms  ETA 78.6min
+  850/2170  ok=850 err=0  3.50s/call  medianStartup=760ms  ETA 77.0min
+  [slow startup 22874ms] 1:0x60caa57fa9e8cf5081e9b7a6e7a1bc5eb9a5553910b464a7dc95ed99d172ea7f:
+  875/2170  ok=875 err=0  3.56s/call  medianStartup=760ms  ETA 76.9min
+  900/2170  ok=900 err=0  3.56s/call  medianStartup=760ms  ETA 75.3min
+  925/2170  ok=925 err=0  3.56s/call  medianStartup=760ms  ETA 73.8min
+  950/2170  ok=950 err=0  3.54s/call  medianStartup=760ms  ETA 72.0min
+  975/2170  ok=975 err=0  3.55s/call  medianStartup=760ms  ETA 70.7min
+  1000/2170  ok=1000 err=0  3.55s/call  medianStartup=760ms  ETA 69.2min
+  1025/2170  ok=1025 err=0  3.58s/call  medianStartup=760ms  ETA 68.4min
+  1050/2170  ok=1050 err=0  3.58s/call  medianStartup=760ms  ETA 66.8min
+  1075/2170  ok=1075 err=0  3.62s/call  medianStartup=760ms  ETA 66.0min
+  1100/2170  ok=1100 err=0  3.62s/call  medianStartup=760ms  ETA 64.6min
+  1125/2170  ok=1125 err=0  3.64s/call  medianStartup=760ms  ETA 63.3min
+  1150/2170  ok=1150 err=0  3.63s/call  medianStartup=760ms  ETA 61.8min
+  1175/2170  ok=1175 err=0  3.65s/call  medianStartup=760ms  ETA 60.5min
+  1200/2170  ok=1200 err=0  3.64s/call  medianStartup=760ms  ETA 58.8min
+  1225/2170  ok=1225 err=0  3.64s/call  medianStartup=760ms  ETA 57.3min
+  1250/2170  ok=1250 err=0  3.64s/call  medianStartup=760ms  ETA 55.8min
+  1275/2170  ok=1275 err=0  3.62s/call  medianStartup=760ms  ETA 54.1min
+  1300/2170  ok=1300 err=0  3.60s/call  medianStartup=760ms  ETA 52.2min
+  1325/2170  ok=1325 err=0  3.58s/call  medianStartup=760ms  ETA 50.4min
+  1350/2170  ok=1350 err=0  3.57s/call  medianStartup=760ms  ETA 48.7min
+  1375/2170  ok=1375 err=0  3.55s/call  medianStartup=760ms  ETA 47.0min
+  1400/2170  ok=1400 err=0  3.55s/call  medianStartup=760ms  ETA 45.5min
+  1425/2170  ok=1425 err=0  3.55s/call  medianStartup=760ms  ETA 44.1min
+  1450/2170  ok=1450 err=0  3.57s/call  medianStartup=760ms  ETA 42.8min
+  1475/2170  ok=1475 err=0  3.58s/call  medianStartup=760ms  ETA 41.4min
+  1500/2170  ok=1500 err=0  3.57s/call  medianStartup=760ms  ETA 39.9min
+  1525/2170  ok=1525 err=0  3.59s/call  medianStartup=760ms  ETA 38.6min
+  1550/2170  ok=1550 err=0  3.60s/call  medianStartup=760ms  ETA 37.2min
+  1575/2170  ok=1575 err=0  3.63s/call  medianStartup=760ms  ETA 36.0min
+  1600/2170  ok=1600 err=0  3.63s/call  medianStartup=760ms  ETA 34.5min
+  1625/2170  ok=1625 err=0  3.65s/call  medianStartup=761ms  ETA 33.2min
+  1650/2170  ok=1650 err=0  3.65s/call  medianStartup=761ms  ETA 31.6min
+  1675/2170  ok=1659 err=16  3.71s/call  medianStartup=761ms  ETA 30.6min
+  1700/2170  ok=1659 err=41  3.77s/call  medianStartup=761ms  ETA 29.5min
+  1725/2170  ok=1659 err=66  3.82s/call  medianStartup=761ms  ETA 28.3min
+  1750/2170  ok=1664 err=86  3.86s/call  medianStartup=761ms  ETA 27.0min
+  1775/2170  ok=1689 err=86  3.85s/call  medianStartup=761ms  ETA 25.4min
+  1800/2170  ok=1714 err=86  3.85s/call  medianStartup=761ms  ETA 23.7min
+  1825/2170  ok=1739 err=86  3.84s/call  medianStartup=761ms  ETA 22.1min
+pins: 8 artifacts verified
+census: 2283 rows, 1852 succeeded, 431 to do (86 are retries of prior failures), 0 lack calldata
+  25/431  ok=25 err=0  3.08s/call  medianStartup=757ms  ETA 20.9min
+  1850/2170  ok=1764 err=86  3.83s/call  medianStartup=760ms  ETA 20.4min
+  50/431  ok=50 err=0  3.42s/call  medianStartup=759ms  ETA 21.7min
+  1875/2170  ok=1789 err=86  3.83s/call  medianStartup=761ms  ETA 18.8min
+  75/431  ok=75 err=0  3.44s/call  medianStartup=758ms  ETA 20.4min
+  1900/2170  ok=1814 err=86  3.83s/call  medianStartup=760ms  ETA 17.2min
+  100/431  ok=100 err=0  3.31s/call  medianStartup=758ms  ETA 18.3min
+  1925/2170  ok=1839 err=86  3.82s/call  medianStartup=760ms  ETA 15.6min
+  125/431  ok=125 err=0  3.26s/call  medianStartup=757ms  ETA 16.6min
+  1950/2170  ok=1864 err=86  3.81s/call  medianStartup=760ms  ETA 14.0min
+  150/431  ok=150 err=0  3.21s/call  medianStartup=757ms  ETA 15.0min
+  1975/2170  ok=1889 err=86  3.80s/call  medianStartup=760ms  ETA 12.3min
+  175/431  ok=175 err=0  3.18s/call  medianStartup=756ms  ETA 13.6min
+  2000/2170  ok=1914 err=86  3.79s/call  medianStartup=760ms  ETA 10.7min
+  200/431  ok=200 err=0  3.16s/call  medianStartup=756ms  ETA 12.2min
+  2025/2170  ok=1938 err=87  3.77s/call  medianStartup=760ms  ETA 9.1min
+  225/431  ok=225 err=0  3.12s/call  medianStartup=755ms  ETA 10.7min
+  2050/2170  ok=1961 err=89  3.76s/call  medianStartup=760ms  ETA 7.5min
+  2075/2170  ok=1979 err=96  3.75s/call  medianStartup=760ms  ETA 5.9min
+  250/431  ok=250 err=0  3.09s/call  medianStartup=754ms  ETA 9.3min
+  275/431  ok=275 err=0  3.12s/call  medianStartup=754ms  ETA 8.1min
+  2100/2170  ok=1999 err=101  3.75s/call  medianStartup=760ms  ETA 4.4min
+  2125/2170  ok=2013 err=112  3.73s/call  medianStartup=760ms  ETA 2.8min
+  300/431  ok=298 err=2  3.09s/call  medianStartup=512ms  ETA 6.8min
+  2150/2170  ok=2031 err=119  3.72s/call  medianStartup=760ms  ETA 1.2min
+  325/431  ok=321 err=4  3.08s/call  medianStartup=511ms  ETA 5.4min
+DONE 2170 rows in 134.0 min — ok=2037 err=133
+  350/431  ok=339 err=11  3.05s/call  medianStartup=510ms  ETA 4.1min
+  375/431  ok=356 err=19  3.02s/call  medianStartup=510ms  ETA 2.8min
+  400/431  ok=374 err=26  2.99s/call  medianStartup=510ms  ETA 1.5min
+  425/431  ok=381 err=44  2.94s/call  medianStartup=510ms  ETA 0.3min
+DONE 431 rows in 21.1 min — ok=384 err=47

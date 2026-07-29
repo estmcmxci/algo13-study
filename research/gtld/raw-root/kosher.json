@@ -1,0 +1,1 @@
+{"Status":0,"TC":false,"RD":true,"RA":true,"AD":true,"CD":false,"Question":[{"name":"kosher","type":43}],"Answer":[{"name":"kosher","type":43,"TTL":86400,"data":"24490 RSASHA256 2 c4a550145923c0f5ef17f8d247e1e1b1e11de20b1caf26605db23d4e6a5010a4"}]}

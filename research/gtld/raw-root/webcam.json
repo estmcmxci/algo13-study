@@ -1,0 +1,1 @@
+{"Status":0,"TC":false,"RD":true,"RA":true,"AD":true,"CD":false,"Question":[{"name":"webcam","type":43}],"Answer":[{"name":"webcam","type":43,"TTL":86400,"data":"55165 RSASHA256 2 90f6b109efa3c0bdee83fbce4f70284b66fb7e61745b4d78a11dc1923db958bb"}]}

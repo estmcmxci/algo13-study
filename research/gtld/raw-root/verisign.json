@@ -1,0 +1,1 @@
+{"Status":0,"TC":false,"RD":true,"RA":true,"AD":true,"CD":false,"Question":[{"name":"verisign","type":43}],"Answer":[{"name":"verisign","type":43,"TTL":86400,"data":"29816 ECDSAP256SHA256 2 f54b156bb5a1c4b07e9ecec5a35ce98ff85b841f08221985c9cf54c01d81c1a8"}]}

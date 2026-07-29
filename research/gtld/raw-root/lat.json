@@ -1,0 +1,1 @@
+{"Status":0,"TC":false,"RD":true,"RA":true,"AD":true,"CD":false,"Question":[{"name":"lat","type":43}],"Answer":[{"name":"lat","type":43,"TTL":86400,"data":"25789 RSASHA256 2 16aae37ef2d2a809d0d1ed18b045161dd63607375e23687ed840c78d8ab4387e"},{"name":"lat","type":43,"TTL":86400,"data":"42520 RSASHA256 2 fae20127b971e74d949e113cd4d738f82d6d53c5091b76cda93a5877554df1f4"}]}

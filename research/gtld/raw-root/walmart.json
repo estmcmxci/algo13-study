@@ -1,0 +1,1 @@
+{"Status":0,"TC":false,"RD":true,"RA":true,"AD":true,"CD":false,"Question":[{"name":"walmart","type":43}],"Answer":[{"name":"walmart","type":43,"TTL":86400,"data":"4411 RSASHA256 2 cee1000fc9a5a5c1e205308ac36910953c589174ca5d18516dcb0549ea450886"},{"name":"walmart","type":43,"TTL":86400,"data":"34531 RSASHA256 2 e09b4ccfa8a68b1d6a13042fa28a343782d0d1b4bf3e79c6a1415d3b2825b922"}]}

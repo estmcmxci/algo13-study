@@ -1,0 +1,1 @@
+{"Status":0,"TC":false,"RD":true,"RA":true,"AD":true,"CD":false,"Question":[{"name":"locker","type":43}],"Answer":[{"name":"locker","type":43,"TTL":86400,"data":"13510 ECDSAP256SHA256 2 2d3be42cc855b6935e8611fb8190cab72b60f2bceb8b16906db2bae3da0a1912"}]}

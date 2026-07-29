@@ -1,0 +1,48 @@
+{
+  "a_basis_test": {
+    "realized_txs": 315,
+    "delta_total": 1123866630,
+    "basis_receipt_gasUsed": 242497608,
+    "basis_registrar_call_gasUsed": 217357127,
+    "missing_trace_files": 0,
+    "reported_new_total": 200395968,
+    "receipt_minus_reported": 42101640,
+    "registrarcall_minus_reported": 16961159,
+    "mean_receipt": 769834,
+    "mean_registrar_call": 690023,
+    "mean_gap": 79811
+  },
+  "b_direct_verifier_cost": {
+    "note": "single Algorithm.verify() call with the RFC 6605 vector, deployed bytecode, keccak-asserted",
+    "intrinsic": 24984,
+    "new": {
+      "role": "alg13_verifier_new",
+      "keccakVerified": true,
+      "total": 33965,
+      "exec": 8981,
+      "failed": false,
+      "returnValue": "0x0000000000000000000000000000000000000000000000000000000000000001"
+    },
+    "old_current_oracle": {
+      "role": "alg13_verifier_old_current_oracle",
+      "keccakVerified": true,
+      "total": 1364178,
+      "exec": 1339194,
+      "failed": false,
+      "returnValue": "0x0000000000000000000000000000000000000000000000000000000000000001"
+    },
+    "old_legacy_oracle": {
+      "role": "alg13_verifier_old_legacy_oracle",
+      "keccakVerified": true,
+      "total": 1669344,
+      "exec": 1644360,
+      "failed": false,
+      "returnValue": "0x0000000000000000000000000000000000000000000000000000000000000001"
+    },
+    "derived": {
+      "delta_old_current_minus_new": 1330213,
+      "ratio_old_over_new": 149.11,
+      "pct_reduction": 99.33
+    }
+  }
+}

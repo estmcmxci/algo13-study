@@ -1,0 +1,1 @@
+{"Status":0,"TC":false,"RD":true,"RA":true,"AD":true,"CD":false,"Question":[{"name":"stream","type":43}],"Answer":[{"name":"stream","type":43,"TTL":86400,"data":"31735 RSASHA256 2 b6a0ac51c5711a40b336884ea349544e664814376c82cf270336799225a7fd99"}]}

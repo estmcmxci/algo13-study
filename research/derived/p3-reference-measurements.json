@@ -1,0 +1,29 @@
+{
+  "purpose": "Independent researcher-side ground truth for validating the replay harness battery. Measured by `researcher`, not by the harness under test.",
+  "environment": {"tool": "foundry 1.5.0", "evm_version": "osaka", "mode": "mainnet fork via Alchemy archive"},
+  "eip7951_precompile": {
+    "address": "0x0000000000000000000000000000000000000100",
+    "base_gas_mainnet_measured": 6900,
+    "derivation": "debug_traceCall total 30436 minus intrinsic (21000 + 2536 calldata) = 6900",
+    "spec_gas": 6900,
+    "pr509_claimed": 3500,
+    "note": "PR #509 quotes ~3500, a superseded draft constant. Measured and spec both 6900.",
+    "valid_returns": "0x...01",
+    "invalid_returns": "empty bytes (length 0) - reproduced in fork"
+  },
+  "rfc6605_vector_verifies_through_precompile": true,
+  "eip2929_access_asymmetry": {
+    "finding": "Precompile 0x100 is PRE-WARMED; ordinary contract addresses are NOT.",
+    "cold_access_premium_gas": {
+      "precompile_0x100": 6,
+      "alg13_verifier_old_current_oracle_0x0faa24e5": 2503,
+      "alg13_verifier_old_legacy_oracle_0xe571a50f": 2504,
+      "control_ens_registry": 2503
+    },
+    "consequence": "delta_gas is NOT n13 * constant. The OLD path pays a one-off ~2,500 gas cold-access charge on the FIRST algorithm-13 dispatch of a transaction that the NEW path does not. Subsequent dispatches are warm on both sides.",
+    "is_this_a_cross_hardfork_artifact": false,
+    "why": "EIP-2929 cold/warm accounting has been live since Berlin (block 12,244,000, Apr 2021). The earliest transaction in this census is block 13,083,904 (Aug 2021). Every call in the population is post-Berlin, so this asymmetry existed on mainnet at execution time and is part of the true saving, not measurement error.",
+    "effect_on_naive_estimator": "n13 * delta_13 UNDER-estimates by ~2,500 gas per eligible transaction."
+  },
+  "in_situ_staticcall_cost_precompile": {"first": 7305, "second": 7299, "note": "1-byte calldata probe; full 160-byte input measured 7582/7568"}
+}

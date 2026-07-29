@@ -1,0 +1,156 @@
+{
+  "dnssecImpl_algorithmUpdated": [
+    {
+      "block": 19020688,
+      "txIndex": 89,
+      "logIndex": 192,
+      "tx": "0xdd937f1107dc6d29b562830f9c5cda46d288c57cb7559724cad33eb72a246cd3",
+      "id": 5,
+      "algo": "0x6ca8624bc207f043d140125486de0f7e624e37a1"
+    },
+    {
+      "block": 19020688,
+      "txIndex": 90,
+      "logIndex": 193,
+      "tx": "0x558ef4589bcf84681e760aa20c127952fc00d233426647136f2a803d0fc8c6b3",
+      "id": 7,
+      "algo": "0x6ca8624bc207f043d140125486de0f7e624e37a1"
+    },
+    {
+      "block": 19020688,
+      "txIndex": 91,
+      "logIndex": 194,
+      "tx": "0x445fb9c084951b345485a56562c6bab388a4c216efeb9127008278d45be62525",
+      "id": 8,
+      "algo": "0x9d1b5a639597f558bc37cf81813724076c5c1e96"
+    },
+    {
+      "block": 19020688,
+      "txIndex": 92,
+      "logIndex": 195,
+      "tx": "0xbe0b3c2331df28a2394f7f3f686cc6a5e9fc65fd121ce6f005e1526e40c6ea95",
+      "id": 13,
+      "algo": "0x0faa24e538ba4620165933f68a9d142f79a68091"
+    },
+    {
+      "block": 24619423,
+      "txIndex": 259,
+      "logIndex": 580,
+      "tx": "0x36cadd8ab8167ec1841b21d4993c01fe183afbe00859532e54762dd28e5a28dd",
+      "id": 5,
+      "algo": "0x58e0383e21f25dab957f6664240445a514e9f5e8"
+    },
+    {
+      "block": 24619423,
+      "txIndex": 259,
+      "logIndex": 582,
+      "tx": "0x36cadd8ab8167ec1841b21d4993c01fe183afbe00859532e54762dd28e5a28dd",
+      "id": 8,
+      "algo": "0xaee0e2c4d5ab2fc164c8b0cc8d3118c1c752c95e"
+    },
+    {
+      "block": 24619423,
+      "txIndex": 259,
+      "logIndex": 584,
+      "tx": "0x36cadd8ab8167ec1841b21d4993c01fe183afbe00859532e54762dd28e5a28dd",
+      "id": 13,
+      "algo": "0xb091c4f6fac16edda5ee1e0f4738f80011905878"
+    },
+    {
+      "block": 24967723,
+      "txIndex": 131,
+      "logIndex": 532,
+      "tx": "0x6660647c157e2dc2e92e0226979c1fc895568fe4bfcdb441ef5dd102474a8fa3",
+      "id": 7,
+      "algo": "0x58e0383e21f25dab957f6664240445a514e9f5e8"
+    }
+  ],
+  "dnssecImplLegacy_algorithmUpdated": [
+    {
+      "block": 13040354,
+      "txIndex": 156,
+      "logIndex": 250,
+      "tx": "0x6299f6b7ef6acfaa5f2992b86f7c9615116eb06933ef52eea5a55a08db7fdbc1",
+      "id": 5,
+      "algo": "0x765653c78f609826dfd091f9208aeb610949a28f"
+    },
+    {
+      "block": 13040354,
+      "txIndex": 157,
+      "logIndex": 251,
+      "tx": "0x9e65245e4492a7f0134225919457f9dd59a6a76d971514f1a0f581e4494bf0d6",
+      "id": 7,
+      "algo": "0x765653c78f609826dfd091f9208aeb610949a28f"
+    },
+    {
+      "block": 13040354,
+      "txIndex": 158,
+      "logIndex": 252,
+      "tx": "0x590d3a90cc307f2715cc0a774770094a1f884cb30938f3e785a0aaa656cf84da",
+      "id": 8,
+      "algo": "0xb83a8ac6900f19d77333e640550bd8830d5fcb26"
+    },
+    {
+      "block": 13040354,
+      "txIndex": 159,
+      "logIndex": 253,
+      "tx": "0xc0caa839e1fa7b7b14071adfcefeddbfb79b56f7d5174da0a776a065f8d0b82d",
+      "id": 13,
+      "algo": "0xe571a50f76ff7404f3ce380d06cbd2c9c6ca3670"
+    }
+  ],
+  "dnssecImpl_code": {
+    "address": "0x0fc3152971714E5ed7723FAFa650F86A4BaF30C5",
+    "size": 7588,
+    "keccak": "0xa599876de4b00994e0941f572f70f15ba716f018cd7c984bde22e3e2cdb84e6d"
+  },
+  "dnssecImplLegacy_code": {
+    "address": "0x46c6F79952d3046Bf673a28132ff2a81F306959c",
+    "size": 17920,
+    "keccak": "0xa6acf2a2623ebab00eb5b974d30042e21f8b3a234e5898641d6048534a7e9b5a"
+  },
+  "registrar_code": {
+    "address": "0xB32cB5677a7C971689228EC835800432B339bA2B",
+    "size": 8723,
+    "keccak": "0xd2871d938a54bdaf93f8facbef7c81e3225e2ce8229062461f300ddc5293338a"
+  },
+  "registrarLegacy_code": {
+    "address": "0x58774Bb8acD458A640aF0B88238369A167546ef2",
+    "size": 12603,
+    "keccak": "0xafed417dc35a5d7f8c45dd87b522e7ee0794e7b4b728a337e61f03a89af0379f"
+  },
+  "p256New_code": {
+    "address": "0xb091c4f6fac16edda5ee1e0f4738f80011905878",
+    "size": 1039,
+    "keccak": "0xe559f583bc570b7929a2a974e071fcd5b3117f65b591d8bc6dcb1fbf2d7e53a3"
+  },
+  "p256Old_code": {
+    "address": "0x0faa24e538bA4620165933f68a9d142f79A68091",
+    "size": 3905,
+    "keccak": "0x5f449daea815401dfc8a06e4da6a07ebcccc887c04acc1396de2b17711c1bbbb"
+  },
+  "dnssecImpl_creation": {
+    "block": 19020686,
+    "timestamp": 1705422983
+  },
+  "dnssecImplLegacy_creation": {
+    "block": 13040286,
+    "timestamp": 1629170626
+  },
+  "registrar_creation": {
+    "block": 19027588,
+    "timestamp": 1705506407
+  },
+  "registrarLegacy_creation": {
+    "block": 13040370,
+    "timestamp": 1629171797
+  },
+  "p256New_creation": {
+    "block": 19220350,
+    "timestamp": 1707842687
+  },
+  "p256Old_creation": {
+    "block": 19020683,
+    "timestamp": 1705422947
+  }
+}

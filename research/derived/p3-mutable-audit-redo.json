@@ -1,0 +1,28 @@
+[
+ {
+  "label": "registrar_current.oracle()  [declared `immutable` in source]",
+  "distinct": 1,
+  "errs": 0,
+  "values": [
+   {
+    "v": "0x0000000000000000000000000fc3152971714e5ed7723fafa650f86a4baf30c5",
+    "first": 19027588,
+    "last": 25627360,
+    "n": 15
+   }
+  ]
+ },
+ {
+  "label": "oracle_current.anchors()  [correct selector 0x98d35f20]",
+  "distinct": 1,
+  "errs": 0,
+  "values": [
+   {
+    "v": "0x0000000000000000000000000000000000000000000000000000000000000020",
+    "first": 19020686,
+    "last": 25627360,
+    "n": 9
+   }
+  ]
+ }
+]

@@ -1,0 +1,1 @@
+{"Status":0,"TC":false,"RD":true,"RA":true,"AD":true,"CD":false,"Question":[{"name":"wme","type":43}],"Answer":[{"name":"wme","type":43,"TTL":86400,"data":"7259 RSASHA256 2 e7cb7561099040db08978f7696320ddaf323f52ddbf951fa5f4c44b2f34e38bd"},{"name":"wme","type":43,"TTL":86400,"data":"60194 RSASHA256 2 a1d20932b733059c4bb7e989fdf75a19a787eb186ce2db5648b1560c1db54495"}]}

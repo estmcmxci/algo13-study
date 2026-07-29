@@ -1,0 +1,1 @@
+{"Status":0,"TC":false,"RD":true,"RA":true,"AD":true,"CD":false,"Question":[{"name":"hangout","type":43}],"Answer":[{"name":"hangout","type":43,"TTL":86400,"data":"12985 RSASHA256 2 007ecbfbf4e92e7ffac278e5830d4fbf869c2eb5a1abe1494463649a279fef9b"}]}

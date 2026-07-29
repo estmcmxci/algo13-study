@@ -1,0 +1,1 @@
+{"Status":0,"TC":false,"RD":true,"RA":true,"AD":true,"CD":false,"Question":[{"name":"whoswho","type":43}],"Answer":[{"name":"whoswho","type":43,"TTL":86400,"data":"1094 RSASHA256 2 b35d9bcf8c51a71118e63f2d38a06e25418db690dbabfb35f0cf9635959b5e5b"}]}

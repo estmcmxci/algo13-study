@@ -1,0 +1,1 @@
+{"Status":0,"TC":false,"RD":true,"RA":true,"AD":true,"CD":false,"Question":[{"name":"yachts","type":43}],"Answer":[{"name":"yachts","type":43,"TTL":86400,"data":"14477 RSASHA256 2 0180abc62cf090f5df1ef074f1958c237261e14633f4ad949298514bda155257"},{"name":"yachts","type":43,"TTL":86400,"data":"17422 RSASHA256 2 dc355a5b3fd478cb3aebdb011d77f40368c5af50df98a38bc219d8f89a372649"}]}

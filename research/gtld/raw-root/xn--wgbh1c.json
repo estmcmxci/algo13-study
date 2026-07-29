@@ -1,0 +1,1 @@
+{"Status":0,"TC":false,"RD":true,"RA":true,"AD":true,"CD":false,"Question":[{"name":"xn--wgbh1c","type":43}],"Answer":[{"name":"xn--wgbh1c","type":43,"TTL":86400,"data":"65350 ECDSAP256SHA256 1 746dd718f1bdae3b4f2578767c4b47a039501641"},{"name":"xn--wgbh1c","type":43,"TTL":86400,"data":"65350 ECDSAP256SHA256 2 5ece34228c4114fc455e07f4bb4b3df8b501d874c4a4070acbb378f41f17a0e5"}]}

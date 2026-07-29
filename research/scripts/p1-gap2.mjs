@@ -1,0 +1,24 @@
+import {rpc} from './rpc.mjs';
+import fs from 'node:fs';
+const ORACLE_LEG='0x21745ff62108968fbf5ab1e07961cc0fcbeb2364';
+const RRSET='0x55ced933cdd5a34dd03eb5d4bef19ec6ebb251dcd7a988eee0c1b9a13baaa88b';
+const B_PRE=23935694,P_ENS=24619423;
+const period=b=>b<B_PRE?'historical_hypothetical':b<P_ENS?'feasible_counterfactual':'realized';
+const logs=await rpc('eth_getLogs',[{fromBlock:'0x0',toBlock:'latest',address:ORACLE_LEG,topics:[RRSET]}],{endpoint:'public'});
+const sub=new Map();
+for(const l of logs){const h=l.transactionHash; if(!sub.has(h)) sub.set(h,{tx:h,block:parseInt(l.blockNumber,16),rrsets:0}); sub.get(h).rrsets++;}
+const claims=JSON.parse(fs.readFileSync('research/derived/p1-claims.json','utf8'));
+const claimTxs=new Set(claims.map(c=>c.tx));
+const overlap=[...sub.keys()].filter(h=>claimTxs.has(h));
+const standalone=[...sub.values()].filter(s=>!claimTxs.has(s.tx));
+console.log(`RRSetUpdated events           : ${logs.length}`);
+console.log(`distinct submission txs       : ${sub.size}`);
+console.log(`  ALSO a Claim tx (proveAndClaim, already in population): ${overlap.length}`);
+console.log(`  STANDALONE submission (NOT in Claim population)       : ${standalone.length}   <-- MISSING`);
+const per={}; for(const s of standalone) per[period(s.block)]=(per[period(s.block)]||0)+1;
+console.log('  standalone by period:', per);
+const rr={}; for(const s of standalone) rr[s.rrsets]=(rr[s.rrsets]||0)+1;
+console.log('  rrsets-per-standalone-tx histogram:', JSON.stringify(rr));
+console.log('  block range:', Math.min(...standalone.map(s=>s.block)), '..', Math.max(...standalone.map(s=>s.block)));
+fs.writeFileSync('research/derived/p1-standalone-submissions.json',JSON.stringify(standalone,null,2));
+console.log(`\nwrote ${standalone.length} standalone submission txs`);

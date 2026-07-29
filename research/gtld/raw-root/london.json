@@ -1,0 +1,1 @@
+{"Status":0,"TC":false,"RD":true,"RA":true,"AD":true,"CD":false,"Question":[{"name":"london","type":43}],"Answer":[{"name":"london","type":43,"TTL":86400,"data":"9956 RSASHA256 2 dded8bee7362bbbf9f4186b413c901ff293f5897412fd92e5ef507765d0a6443"},{"name":"london","type":43,"TTL":86400,"data":"17464 RSASHA256 2 bc991b8aaf8a17d5328d74cf6439bf4ec08b21a2968308af2316f01205cdab09"}]}

@@ -1,0 +1,17 @@
+{
+ "intrinsic": {
+  "measured": 27685,
+  "asserted": 23536,
+  "base": 21000,
+  "calldata": 6685,
+  "arithmetic": 2536
+ },
+ "timestamps": {
+  "sampled": 5,
+  "mismatches": 0
+ },
+ "effectiveGasPrice": {
+  "sampled": 4,
+  "mismatches": 0
+ }
+}

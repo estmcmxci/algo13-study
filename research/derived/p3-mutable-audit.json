@@ -1,0 +1,362 @@
+[
+ {
+  "getter": "registrar_current.oracle()",
+  "distinctValues": 1,
+  "changed": false,
+  "values": [
+   {
+    "value": "ERR:429 from alchemy",
+    "firstSeen": 19027588,
+    "lastSeen": 23741711,
+    "nProbes": 11
+   },
+   {
+    "value": "0x0000000000000000000000000fc3152971714e5ed7723fafa650f86a4baf30c5",
+    "firstSeen": 23935693,
+    "lastSeen": 25627360,
+    "nProbes": 10
+   }
+  ]
+ },
+ {
+  "getter": "registrar_legacy.oracle()",
+  "distinctValues": 2,
+  "changed": true,
+  "values": [
+   {
+    "value": "0x00000000000000000000000046c6f79952d3046bf673a28132ff2a81f306959c",
+    "firstSeen": 13040372,
+    "lastSeen": 13103260,
+    "nProbes": 15
+   },
+   {
+    "value": "0x00000000000000000000000021745ff62108968fbf5ab1e07961cc0fcbeb2364",
+    "firstSeen": 13103261,
+    "lastSeen": 25627360,
+    "nProbes": 27
+   }
+  ]
+ },
+ {
+  "getter": "oracle_current.owner()",
+  "distinctValues": 2,
+  "changed": true,
+  "values": [
+   {
+    "value": "0x0000000000000000000000000904dac3347ea47d208f3fd67402d039a3b99859",
+    "firstSeen": 19020686,
+    "lastSeen": 19020688,
+    "nProbes": 3
+   },
+   {
+    "value": "0x000000000000000000000000fe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+    "firstSeen": 19027587,
+    "lastSeen": 25627360,
+    "nProbes": 22
+   }
+  ]
+ },
+ {
+  "getter": "oracle_current.algorithms(5)",
+  "distinctValues": 3,
+  "changed": true,
+  "values": [
+   {
+    "value": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "firstSeen": 19020686,
+    "lastSeen": 19020687,
+    "nProbes": 2
+   },
+   {
+    "value": "0x0000000000000000000000006ca8624bc207f043d140125486de0f7e624e37a1",
+    "firstSeen": 19020688,
+    "lastSeen": 24619422,
+    "nProbes": 17
+   },
+   {
+    "value": "0x00000000000000000000000058e0383e21f25dab957f6664240445a514e9f5e8",
+    "firstSeen": 24619423,
+    "lastSeen": 25627360,
+    "nProbes": 6
+   }
+  ]
+ },
+ {
+  "getter": "oracle_current.algorithms(7)",
+  "distinctValues": 3,
+  "changed": true,
+  "values": [
+   {
+    "value": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "firstSeen": 19020686,
+    "lastSeen": 19020687,
+    "nProbes": 2
+   },
+   {
+    "value": "0x0000000000000000000000006ca8624bc207f043d140125486de0f7e624e37a1",
+    "firstSeen": 19020688,
+    "lastSeen": 24967722,
+    "nProbes": 20
+   },
+   {
+    "value": "0x00000000000000000000000058e0383e21f25dab957f6664240445a514e9f5e8",
+    "firstSeen": 24967723,
+    "lastSeen": 25627360,
+    "nProbes": 3
+   }
+  ]
+ },
+ {
+  "getter": "oracle_current.algorithms(8)",
+  "distinctValues": 3,
+  "changed": true,
+  "values": [
+   {
+    "value": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "firstSeen": 19020686,
+    "lastSeen": 19020687,
+    "nProbes": 2
+   },
+   {
+    "value": "0x0000000000000000000000009d1b5a639597f558bc37cf81813724076c5c1e96",
+    "firstSeen": 19020688,
+    "lastSeen": 24619422,
+    "nProbes": 17
+   },
+   {
+    "value": "0x000000000000000000000000aee0e2c4d5ab2fc164c8b0cc8d3118c1c752c95e",
+    "firstSeen": 24619423,
+    "lastSeen": 25627360,
+    "nProbes": 6
+   }
+  ]
+ },
+ {
+  "getter": "oracle_current.algorithms(13)",
+  "distinctValues": 3,
+  "changed": true,
+  "values": [
+   {
+    "value": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "firstSeen": 19020686,
+    "lastSeen": 19020687,
+    "nProbes": 2
+   },
+   {
+    "value": "0x0000000000000000000000000faa24e538ba4620165933f68a9d142f79a68091",
+    "firstSeen": 19020688,
+    "lastSeen": 24619422,
+    "nProbes": 17
+   },
+   {
+    "value": "0x000000000000000000000000b091c4f6fac16edda5ee1e0f4738f80011905878",
+    "firstSeen": 24619423,
+    "lastSeen": 25627360,
+    "nProbes": 6
+   }
+  ]
+ },
+ {
+  "getter": "oracle_legacy.owner()",
+  "distinctValues": 3,
+  "changed": true,
+  "values": [
+   {
+    "value": "0x0000000000000000000000000904dac3347ea47d208f3fd67402d039a3b99859",
+    "firstSeen": 13097282,
+    "lastSeen": 13097319,
+    "nProbes": 11
+   },
+   {
+    "value": "0x000000000000000000000000cf60916b6cb4753f58533808fa610fcbd4098ec0",
+    "firstSeen": 13103260,
+    "lastSeen": 18467315,
+    "nProbes": 8
+   },
+   {
+    "value": "0x000000000000000000000000fe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+    "firstSeen": 19020685,
+    "lastSeen": 25627360,
+    "nProbes": 20
+   }
+  ]
+ },
+ {
+  "getter": "oracle_legacy.algorithms(5)",
+  "distinctValues": 2,
+  "changed": true,
+  "values": [
+   {
+    "value": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "firstSeen": 13097282,
+    "lastSeen": 13097288,
+    "nProbes": 2
+   },
+   {
+    "value": "0x000000000000000000000000765653c78f609826dfd091f9208aeb610949a28f",
+    "firstSeen": 13097289,
+    "lastSeen": 25627360,
+    "nProbes": 37
+   }
+  ]
+ },
+ {
+  "getter": "oracle_legacy.algorithms(7)",
+  "distinctValues": 2,
+  "changed": true,
+  "values": [
+   {
+    "value": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "firstSeen": 13097282,
+    "lastSeen": 13097289,
+    "nProbes": 3
+   },
+   {
+    "value": "0x000000000000000000000000765653c78f609826dfd091f9208aeb610949a28f",
+    "firstSeen": 13097300,
+    "lastSeen": 25627360,
+    "nProbes": 36
+   }
+  ]
+ },
+ {
+  "getter": "oracle_legacy.algorithms(8)",
+  "distinctValues": 2,
+  "changed": true,
+  "values": [
+   {
+    "value": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "firstSeen": 13097282,
+    "lastSeen": 13097289,
+    "nProbes": 3
+   },
+   {
+    "value": "0x000000000000000000000000b83a8ac6900f19d77333e640550bd8830d5fcb26",
+    "firstSeen": 13097300,
+    "lastSeen": 25627360,
+    "nProbes": 36
+   }
+  ]
+ },
+ {
+  "getter": "oracle_legacy.algorithms(13)",
+  "distinctValues": 2,
+  "changed": true,
+  "values": [
+   {
+    "value": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "firstSeen": 13097282,
+    "lastSeen": 13097300,
+    "nProbes": 4
+   },
+   {
+    "value": "0x000000000000000000000000e571a50f76ff7404f3ce380d06cbd2c9c6ca3670",
+    "firstSeen": 13097301,
+    "lastSeen": 25627360,
+    "nProbes": 35
+   }
+  ]
+ },
+ {
+  "getter": "oracle_legacy_orig.owner()",
+  "distinctValues": 1,
+  "changed": false,
+  "values": [
+   {
+    "value": "0x0000000000000000000000000904dac3347ea47d208f3fd67402d039a3b99859",
+    "firstSeen": 13040353,
+    "lastSeen": 25627360,
+    "nProbes": 45
+   }
+  ]
+ },
+ {
+  "getter": "oracle_legacy_orig.algorithms(5)",
+  "distinctValues": 2,
+  "changed": true,
+  "values": [
+   {
+    "value": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "firstSeen": 13040353,
+    "lastSeen": 13040353,
+    "nProbes": 1
+   },
+   {
+    "value": "0x000000000000000000000000765653c78f609826dfd091f9208aeb610949a28f",
+    "firstSeen": 13040354,
+    "lastSeen": 25627360,
+    "nProbes": 44
+   }
+  ]
+ },
+ {
+  "getter": "oracle_legacy_orig.algorithms(7)",
+  "distinctValues": 2,
+  "changed": true,
+  "values": [
+   {
+    "value": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "firstSeen": 13040353,
+    "lastSeen": 13040353,
+    "nProbes": 1
+   },
+   {
+    "value": "0x000000000000000000000000765653c78f609826dfd091f9208aeb610949a28f",
+    "firstSeen": 13040354,
+    "lastSeen": 25627360,
+    "nProbes": 44
+   }
+  ]
+ },
+ {
+  "getter": "oracle_legacy_orig.algorithms(8)",
+  "distinctValues": 2,
+  "changed": true,
+  "values": [
+   {
+    "value": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "firstSeen": 13040353,
+    "lastSeen": 13040353,
+    "nProbes": 1
+   },
+   {
+    "value": "0x000000000000000000000000b83a8ac6900f19d77333e640550bd8830d5fcb26",
+    "firstSeen": 13040354,
+    "lastSeen": 25627360,
+    "nProbes": 44
+   }
+  ]
+ },
+ {
+  "getter": "oracle_legacy_orig.algorithms(13)",
+  "distinctValues": 2,
+  "changed": true,
+  "values": [
+   {
+    "value": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "firstSeen": 13040353,
+    "lastSeen": 13040353,
+    "nProbes": 1
+   },
+   {
+    "value": "0x000000000000000000000000e571a50f76ff7404f3ce380d06cbd2c9c6ca3670",
+    "firstSeen": 13040354,
+    "lastSeen": 25627360,
+    "nProbes": 44
+   }
+  ]
+ },
+ {
+  "getter": "oracle_current.anchors()",
+  "distinctValues": 0,
+  "changed": false,
+  "values": [
+   {
+    "value": "ERR:eth_call on alchemy failed after 4: rpc ",
+    "firstSeen": 19020686,
+    "lastSeen": 25627360,
+    "nProbes": 25
+   }
+  ]
+ }
+]
