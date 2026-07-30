@@ -6568,14 +6568,6 @@
   "err": null
  },
  {
-  "tx": "0x78569baee19d55f8820e95124002354863997cb260a506ca7e867da05f2da492",
-  "block": 25628006,
-  "logIndex": 960,
-  "registrarVersion": "current",
-  "name": "clyeh.xyz",
-  "err": null
- },
- {
   "tx": "0x4ac70d1a3aa120967cc62a09145790285ebbae38435fb806a1845a29e8ebb850",
   "block": 13083904,
   "logIndex": 218,

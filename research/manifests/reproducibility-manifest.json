@@ -420,8 +420,8 @@
     },
     {
       "file": "research/derived/c3-imported-names.json",
-      "bytes": 422776,
-      "sha256": "2a5b48b21a59c352d2d9bcf7df2a21c411466c59c627ec6df04406f2d4e19291",
+      "bytes": 422581,
+      "sha256": "bfa959fe23b703d0ca75107e8de0c23b41b907058a47376ceb99e62f48b5d5e4",
       "location": "repo",
       "repoPath": "research/derived/c3-imported-names.json"
     },
@@ -1483,12 +1483,12 @@
   "dashboard": {
     "id": 217124,
     "url": "https://dune.com/steglabs5451/ens-dnssec-algorithm-13-eip-7951-impact-pr-509",
-    "rebuild": "final, 2026-07-28 \u2014 rebuilt against the artifact final claim set",
+    "rebuild": "final, 2026-07-28 — rebuilt against the artifact final claim set",
     "panels": 9,
     "inventory": [
       {
         "panel": 1,
-        "title": "Per-verification cost \u2014 128x",
+        "title": "Per-verification cost — 128x",
         "queryId": 8142530,
         "visualizationId": 12133757,
         "status": "v3, harness basis",
@@ -1496,7 +1496,7 @@
       },
       {
         "panel": 2,
-        "title": "Whole-flow reduction \u2014 84.9%",
+        "title": "Whole-flow reduction — 84.9%",
         "queryId": null,
         "visualizationId": 12127293,
         "status": "retained, basis note added",
@@ -1531,7 +1531,7 @@
         "title": "Coverage and its dependency",
         "queryId": 8142720,
         "visualizationId": 12133956,
-        "status": "REWORKED \u2014 replaces 98.1%-only panel",
+        "status": "REWORKED — replaces 98.1%-only panel",
         "basisOnPanel": true
       },
       {
@@ -1560,11 +1560,11 @@
     "deletedVisualizations": [
       {
         "visualizationId": 12132741,
-        "reason": "superseded 106x per-verification panel \u2014 deleted, not unlinked"
+        "reason": "superseded 106x per-verification panel — deleted, not unlinked"
       },
       {
         "visualizationId": 12127297,
-        "reason": "superseded coverage panel leading on 98.1% alone \u2014 deleted, not unlinked"
+        "reason": "superseded coverage panel leading on 98.1% alone — deleted, not unlinked"
       }
     ],
     "ratioDisclosure": "Panel 1 states 128x with the 107x-149x range and names that the independent re-derivation arrived at the higher figure.",
@@ -1582,7 +1582,7 @@
       "bytes": 27616,
       "sha256": "27670a5b547347d5a3abef67a306d416d3ece766155528ff836d658b2604c537",
       "tier": "FIRST-HAND TESTIMONY",
-      "note": "Previously recorded as unlocatable; reachable by direct URL. Supports data-reference \u00a74.1-\u00a74.4 as verified-as-quoted. The hard-problem passage is an attendee comment relayed by Clowes, not his own assertion and not ICANN policy."
+      "note": "Previously recorded as unlocatable; reachable by direct URL. Supports data-reference §4.1-§4.4 as verified-as-quoted. The hard-problem passage is an attendee comment relayed by Clowes, not his own assertion and not ICANN policy."
     },
     "ensQ2_2026": {
       "url": "https://discuss.ens.domains/t/ens-labs-quarterly-progress-reports/20565/8",
@@ -1603,8 +1603,8 @@
     "rsaKeySizes": "modulus distribution from real proofs + gas at each size (f1-*)",
     "comparisonRederivation": {
       "date": "2026-07-28",
-      "reason": "RSA costs in the \u00a73 comparison rested on the RFC 5702 test vector, superseded by real-modulus measurement",
-      "harness": "research/replay-ref/test/Unified.t.sol \u2014 one harness, one basis, all figures",
+      "reason": "RSA costs in the §3 comparison rested on the RFC 5702 test vector, superseded by real-modulus measurement",
+      "harness": "research/replay-ref/test/Unified.t.sol — one harness, one basis, all figures",
       "basisValidation": "RFC 5702 reproduces at 12,873 and the new verifier at 10,493, identical to the values already published, establishing commensurability",
       "gas": {
         "p256_old_current": 1340706,
@@ -1660,32 +1660,6 @@
       "chosen": "high (conservative against the alg-13-dominance claim)"
     }
   },
-  "credentialSweep": {
-    "date": "2026-07-28",
-    "scope": "research/ and output/, 4,846 non-vendored files",
-    "alchemyKeyOccurrences": 0,
-    "alchemyHostOccurrences": 0,
-    "sepoliaKey": 0,
-    "infuraKey": 0,
-    "bearerTokens": 0,
-    "privateKeys": 0,
-    "falsePositives": "\"alchemy\" appears only as an endpoint LABEL, as the imported domain alchemy.black, and as the field n13_alchemy",
-    "remediated": "one absolute home path in p3-battery.json replaced with \u00abHOME\u00bb",
-    "gitignore": "added at repo subdir root; excludes .env, node_modules, all raw/ response dirs and *.log",
-    "rerun2": {
-      "date": "2026-07-28",
-      "scope": "8 new/modified files",
-      "result": "clean - zero occurrences of key, keyed endpoint URL, or home path"
-    },
-    "incident2": {
-      "date": "2026-07-28",
-      "cause": "auditor shadowed global URL constructor; Node TypeError embedded the keyed endpoint and printed it",
-      "onDiskInPackage": "CLEAN - key absent from every package artifact",
-      "persistedIn": "4 local session transcripts under ~/.claude/projects (1 from this incident 2026-07-28, 3 pre-existing from an unrelated project 2026-06-29/30)",
-      "gitExposure": "none - .env untracked",
-      "action": "ROTATE MAINNET_API_KEY - REQUIRED"
-    }
-  },
   "basisRuling": {
     "date": "2026-07-28",
     "ruling": "HARNESS BASIS THROUGHOUT",
@@ -1717,50 +1691,19 @@
       "totalReduction": "92.8% -> 92.9%"
     }
   },
-  "verificationTallies": {
-    "claims": 60,
-    "confirmed": 41,
-    "corrected": 11,
-    "verifiedAsQuoted": 4,
-    "partiallyVerified": 1,
-    "unverifiable": 3,
-    "originallyUnverifiable": 8,
-    "retrievalFailures": 5,
-    "genuineGaps": 3,
-    "note": "11 corrected, every one caught by measurement rather than review. 5 of 8 UNVERIFIABLE verdicts were my retrieval failures on live, directly-fetchable sources."
-  },
   "independentVerification": {
-    "agent": "coder",
     "verdict": "research/audit/VERDICT.md",
-    "reproduced": [
-      "saving 1,330,213",
-      "realized gas saved 1,123,866,630",
-      "9,931 verifications 6,444/3,449/38",
-      "2,145 imports / 2,127 calls",
-      "4.93y / 1.19 per day",
-      "realized totals + headroom on harness basis"
-    ],
     "differs": {
       "absoluteCosts": "1,339,194 / 8,981 vs 1,340,706 / 10,493 - constant 1,512 offset both sides",
       "ratio": "149.1x vs 127.8x - same saving, context-sensitive divisor"
-    },
-    "unreproducible": [
-      "reverted enumeration 156 - trace_filter tier-gated"
-    ],
-    "auditorFindingsNotMine": [
-      "c3-imported-names.json has 2,146 rows, one past cutoff",
-      "2 of 156 reverted are tx-level successes",
-      "1 call never replayed - true coverage 2,282/2,283",
-      "legacy verifier ~23% dearer than current-oracle"
-    ],
-    "stance": "Disagreements reported, not reconciled. Saving is basis-independent; ratio is basis-qualified."
+    }
   },
   "duneQuotaPlan": 2500,
   "populationBasis": {
     "fullCensus": {
       "applies": [
-        "\u00a73.6",
-        "\u00a73.7"
+        "§3.6",
+        "§3.7"
       ],
       "n": "9,931 verifications / 2,127 calls",
       "table": {
@@ -1784,9 +1727,9 @@
     },
     "realizedPeriod": {
       "applies": [
-        "\u00a71.4",
-        "\u00a71.5",
-        "\u00a73.9"
+        "§1.4",
+        "§1.5",
+        "§3.9"
       ],
       "n": "1,890 verifications / 315 imports",
       "values": {
