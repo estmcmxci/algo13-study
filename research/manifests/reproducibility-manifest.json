@@ -155,10 +155,14 @@
     {
       "file": "output/addendum-volume-response.md",
       "bytes": 10571,
-      "sha256": "1807af170b4697f55d693ce6e17d550e4235873f8db827f52ec62842897eaef7",
+      "sha256": "640d53c46c1e8f3173df7246017f279ee3b9d14473c485239dcb723c364b9ac7",
       "location": "repo",
       "note": "added to this repository at publication; present on main, not in tag study-2026-07-29",
-      "repoPath": "docs/volume-addendum.md"
+      "repoPath": "docs/volume-addendum.md",
+      "supersedes": {
+        "sha256": "1807af170b4697f55d693ce6e17d550e4235873f8db827f52ec62842897eaef7",
+        "reason": "ENS contract names disambiguated at publication — ENSRegistry and BaseRegistrar, which the brief reserves distinctly from \"registry\" (an ICANN TLD operator) and \"DNS operator\""
+      }
     },
     {
       "file": "output/algorithm-adoption-and-cost.md",
@@ -1760,7 +1764,7 @@
       "repo": 163,
       "study": 18,
       "absent": 5,
-      "superseded": 5
+      "superseded": 6
     }
   }
 }
