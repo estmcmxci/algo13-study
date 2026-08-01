@@ -156,8 +156,9 @@
       "file": "output/addendum-volume-response.md",
       "bytes": 10571,
       "sha256": "1807af170b4697f55d693ce6e17d550e4235873f8db827f52ec62842897eaef7",
-      "location": "study",
-      "note": "write-up, published with the study rather than in this repository"
+      "location": "repo",
+      "note": "added to this repository at publication; present on main, not in tag study-2026-07-29",
+      "repoPath": "docs/volume-addendum.md"
     },
     {
       "file": "output/algorithm-adoption-and-cost.md",
@@ -266,10 +267,15 @@
     },
     {
       "file": "output/gtld-algorithm-census.md",
-      "bytes": 9583,
-      "sha256": "15a1a183b1ef91a1be83570d3af255bda95502b1297040eac60f2e7fd19f828e",
-      "location": "study",
-      "note": "write-up, published with the study rather than in this repository"
+      "bytes": 10218,
+      "sha256": "b5f7375bcb08a76abe6bdc619912686a5dc265fafb269fa3e421f5311e3191da",
+      "location": "repo",
+      "note": "added to this repository at publication; present on main, not in tag study-2026-07-29",
+      "repoPath": "docs/gtld-algorithm-census.md",
+      "supersedes": {
+        "sha256": "15a1a183b1ef91a1be83570d3af255bda95502b1297040eac60f2e7fd19f828e",
+        "reason": "reproducibility note added at publication, directing readers to the committed ICANN snapshot at research/gtld/raw/icann-gtlds-v2.json rather than a live fetch, which would not reproduce the counts"
+      }
     },
     {
       "file": "output/inherited-assumptions-inventory.md",
@@ -1479,7 +1485,7 @@
       "repoPath": "research/sources/raw/ens-q2-2026.txt"
     }
   ],
-  "regeneratedAt": "2026-07-28",
+  "regeneratedAt": "2026-08-01",
   "dashboard": {
     "id": 217124,
     "url": "https://dune.com/steglabs5451/ens-dnssec-algorithm-13-eip-7951-impact-pr-509",
@@ -1746,13 +1752,13 @@
     "rule": "Impact figures on the realized period (the window the change affected); structural composition on the full census (where the counts already were). Every published figure names its population inline."
   },
   "manifestScope": {
-    "repository": "https://github.com/estmcmxci/ens-dnssec-alg13-study",
+    "repository": "https://github.com/estmcmxci/algo13-study",
     "pin": "tag study-2026-07-29",
     "howToVerify": "For any artifact with location=repo: sha256 the file at repoPath in the pinned repository and compare. Entries carrying `supersedes` were deliberately changed for publication; the original hash and the reason are recorded there.",
     "selfExcluded": "This manifest cannot checksum itself; its own entry records the pre-publication hash under supersedes.",
     "counts": {
-      "repo": 161,
-      "study": 20,
+      "repo": 163,
+      "study": 18,
       "absent": 5,
       "superseded": 5
     }
