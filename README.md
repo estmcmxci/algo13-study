@@ -11,6 +11,13 @@ deployed mainnet bytecode, using each transaction's real proof.
 means to check any figure in it — deliberately without restating them, so there is one place a
 number can be wrong.
 
+Two derivations are the exception, and live under [`docs/`](docs/): the
+[gTLD algorithm census](docs/gtld-algorithm-census.md) and the
+[volume addendum](docs/volume-addendum.md). Both are *how a figure was arrived at* rather than a
+restatement of it — the census shows why the TLDMinter proposal's allowlist count cannot be
+reproduced, and the addendum retracts and replaces an earlier volume non-finding. Where either
+disagrees with the brief, the brief is canonical.
+
 > **Read the study →** *(link pending publication)*
 
 Extraction cutoff: block **25,627,360** (2026-07-27). Every script here is pinned to it.
@@ -24,8 +31,8 @@ harness measures gas and verifies none of the census figures; the Node scripts d
 and measure no gas.
 
 ```bash
-git clone https://github.com/estmcmxci/ens-dnssec-alg13-study.git
-cd ens-dnssec-alg13-study
+git clone https://github.com/estmcmxci/algo13-study.git
+cd algo13-study
 cp .env.example .env
 forge install foundry-rs/forge-std --no-git
 ```
