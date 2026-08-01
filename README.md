@@ -18,7 +18,7 @@ restatement of it — the census shows why the TLDMinter proposal's allowlist co
 reproduced, and the addendum retracts and replaces an earlier volume non-finding. Where either
 disagrees with the brief, the brief is canonical.
 
-> **Read the study →** *(link pending publication)*
+> **Read the study →** <https://13.emilemarcelagustin.eth.link>
 
 Extraction cutoff: block **25,627,360** (2026-07-27). Every script here is pinned to it.
 
