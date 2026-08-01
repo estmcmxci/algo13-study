@@ -27,8 +27,8 @@ timestamps**, not a blocks-per-day approximation:
 |---|---|---|---|
 | **DNS direct imports** | 113 | 315 | **2.79x** |
 | total mainnet transactions | 264,761,425 | 319,861,137 | **1.21x** |
-| ENS Registry logs | 192,522 | 121,434 | **0.63x** |
-| ENS BaseRegistrar logs | 292,411 | 241,835 | **0.83x** |
+| `ENSRegistry` logs | 192,522 | 121,434 | **0.63x** |
+| `BaseRegistrar` logs | 292,411 | 241,835 | **0.83x** |
 | **median mainnet gas price** | 0.1508 gwei | 0.2150 gwei | **1.43x** |
 
 Two of the proposed confounders are **refuted by measurement**:
@@ -37,7 +37,7 @@ Two of the proposed confounders are **refuted by measurement**:
   the after-window. Whatever drove the increase, cheaper mainnet gas did not.
 - **"General ENS/mainnet activity has its own cycle."** ENS-specific activity **declined** on both
   baselines (0.63x, 0.83x) while DNS imports nearly tripled. Mainnet as a whole grew only 1.21x.
-  Normalised against ENS registry activity, imports rose ~4.4x relative to baseline.
+  Normalised against `ENSRegistry` activity, imports rose ~4.4x relative to baseline.
 
 ## 3. The confounder that does NOT go away
 
