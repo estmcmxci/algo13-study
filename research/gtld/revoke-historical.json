@@ -1,0 +1,13 @@
+{
+  "source": "research/gtld/raw/{tld}.json, archived by census.mjs",
+  "population": 1099,
+  "withDnskey": 1099,
+  "noDnskeyData": 0,
+  "noRawFile": 0,
+  "withRevokedKey": 0,
+  "revokedTlds": [],
+  "flagsHistogram": {
+    "256": 1585,
+    "257": 1139
+  }
+}
