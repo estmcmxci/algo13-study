@@ -2,10 +2,7 @@
  *  not numbers, so the first parse silently produced empty sets. No new queries. */
 import fs from 'node:fs';
 import crypto from 'node:crypto';
-const MNEMONIC = { RSAMD5:1, DH:2, DSA:3, RSASHA1:5, 'DSA-NSEC3-SHA1':6,
-  'RSASHA1-NSEC3-SHA1':7, RSASHA256:8, RSASHA512:10, 'ECC-GOST':12,
-  ECDSAP256SHA256:13, ECDSAP384SHA384:14, ED25519:15, ED448:16 };
-const toNum = s => { const n = parseInt(s,10); return Number.isFinite(n) && String(n)===String(s).trim() ? n : (MNEMONIC[String(s).toUpperCase()] ?? null); };
+import { toNum } from './dnssec.mjs';   // the mnemonic map this script was written for
 const algsFrom = (j, kind) => {
   if (!j || !j.Answer) return [];
   const want = kind === 'DS' ? 43 : 48;

@@ -1,9 +1,8 @@
 /** A4: widen the denominator to the FULL root zone — every delegated TLD. */
 import fs from 'node:fs';
 import crypto from 'node:crypto';
+import { toNum } from './dnssec.mjs';   // local copy of the map was missing DH
 const sleep=ms=>new Promise(r=>setTimeout(r,ms));
-const MN={RSAMD5:1,DSA:3,RSASHA1:5,'DSA-NSEC3-SHA1':6,'RSASHA1-NSEC3-SHA1':7,RSASHA256:8,RSASHA512:10,'ECC-GOST':12,ECDSAP256SHA256:13,ECDSAP384SHA384:14,ED25519:15,ED448:16};
-const toNum=s=>{const n=parseInt(s,10);return Number.isFinite(n)&&String(n)===String(s).trim()?n:(MN[String(s).toUpperCase()]??null);};
 async function q(name,type,tries=4){for(let i=0;i<tries;i++){try{
   const r=await fetch(`https://cloudflare-dns.com/dns-query?name=${name}&type=${type}`,{headers:{accept:'application/dns-json'}});
   if(r.ok)return await r.json();}catch{}await sleep(250*(i+1));}return null;}
