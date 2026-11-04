@@ -827,10 +827,15 @@
     },
     {
       "file": "research/gtld/reparse.mjs",
-      "bytes": 2011,
-      "sha256": "521edf55c7d668a62b48ed924021b8fed5e54fecd7facb30eeab1bdae37386da",
+      "bytes": 1733,
+      "sha256": "1ef115163b5217a712aae5ee6170d607ae785a9a6506bb3234bdb4f07926866d",
       "location": "repo",
-      "repoPath": "research/gtld/reparse.mjs"
+      "repoPath": "research/gtld/reparse.mjs",
+      "supersedes": {
+        "sha256": "521edf55c7d668a62b48ed924021b8fed5e54fecd7facb30eeab1bdae37386da",
+        "bytes": 2011,
+        "reason": "mnemonic map and toNum imported from research/gtld/dnssec.mjs instead of carried inline; re-running the script reproduces research/gtld/census-v2.jsonl byte for byte"
+      }
     },
     {
       "file": "research/gtld/rfc/rfc5702.txt",
@@ -869,10 +874,15 @@
     },
     {
       "file": "research/gtld/root-census.mjs",
-      "bytes": 2107,
-      "sha256": "ec18618ea6e9752d8dea9aa3d4cbe5a291b3698e8cee3f29e45610ae8724046f",
+      "bytes": 1875,
+      "sha256": "d764bf59ea50fe7968062a91f42ace9547824601b88835f3b9c913c1c2c75ee7",
       "location": "repo",
-      "repoPath": "research/gtld/root-census.mjs"
+      "repoPath": "research/gtld/root-census.mjs",
+      "supersedes": {
+        "sha256": "ec18618ea6e9752d8dea9aa3d4cbe5a291b3698e8cee3f29e45610ae8724046f",
+        "bytes": 2107,
+        "reason": "mnemonic map and toNum imported from research/gtld/dnssec.mjs instead of carried inline; the inline copy was missing DH, and the shared map parses all 1,438 archived raw-root answers to the same algorithms recorded in research/gtld/root-census.jsonl"
+      }
     },
     {
       "file": "research/gtld/summary.json",
@@ -1764,7 +1774,7 @@
       "repo": 163,
       "study": 18,
       "absent": 5,
-      "superseded": 6
+      "superseded": 8
     }
   }
 }
